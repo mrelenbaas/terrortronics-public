@@ -49,7 +49,19 @@ KEYWORD = 'Cloud'
 
 def get_path():
     path = ''
-    if os.name == 'posix':
+    if os.path.exists(os.path.expanduser(os.path.join(os.sep, 'Applications'))):
+        path += os.path.expanduser(
+            os.path.join(
+                os.sep,
+                'Applications',
+                'PureBasic.app',
+                'Contents',
+                'Resources',
+                'examples',
+                '3d',
+                'Data',
+                'Textures'))
+    elif os.name == 'posix':
         path += os.path.normpath(
             os.path.expanduser(
                 os.path.join(
@@ -95,15 +107,15 @@ def get_path():
 
 
 def get_filename(path):
-    index = 0
+    length = 0
     cloud_filenames = []
     for root, directory, filenames in os.walk(path):
         for filename in filenames:
             if KEYWORD in filename:
                 cloud_filenames.append(filename)
-                index += 1
-    index = random.randint(0, index - 1)
-    return cloud_filenames[index]
+                length += 1
+    length = random.randint(0, length - 1)
+    return cloud_filenames[length]
 
 
 class Background:
