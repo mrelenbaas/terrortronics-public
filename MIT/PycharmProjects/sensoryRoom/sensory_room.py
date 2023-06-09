@@ -24,6 +24,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 import os
 import random
 import socket
+import sys
 import time
 
 import pygame
@@ -49,60 +50,53 @@ KEYWORD = 'Cloud'
 
 def get_path():
     path = ''
-    if os.path.exists(os.path.expanduser(os.path.join(os.sep, 'Applications'))):
-        path += os.path.expanduser(
-            os.path.join(
-                os.sep,
-                'Applications',
-                'PureBasic.app',
-                'Contents',
-                'Resources',
-                'examples',
-                '3d',
-                'Data',
-                'Textures'))
+    if os.name == 'posix' and sys.platform == 'darwin':
+        path += os.path.join(
+            os.sep,
+            'Applications',
+            'PureBasic.app',
+            'Contents',
+            'Resources',
+            'examples',
+            '3d',
+            'Data',
+            'Textures')
     elif os.name == 'posix':
-        path += os.path.normpath(
-            os.path.expanduser(
-                os.path.join(
-                    os.sep,
-                    'home',
-                    os.getlogin(),
-                    'Apps',
-                    'purebasic_demo',
-                    'examples',
-                    '3d',
-                    'Data',
-                    'Textures')))
+        path += os.path.join(
+            os.sep,
+            'home',
+            os.getlogin(),
+            'Apps',
+            'purebasic_demo',
+            'examples',
+            '3d',
+            'Data',
+            'Textures')
     elif socket.gethostname() == 'DESKTOP-CR5GQ2G':
-        path += os.path.normpath(
-            os.path.expanduser(
-                os.path.join(
-                    'C:',
-                    os.sep,
-                    'Users',
-                    os.getlogin(),
-                    'OneDrive',
-                    'Desktop',
-                    'PureBasic',
-                    'Examples',
-                    '3D',
-                    'Data',
-                    'Textures')))
+        path += os.path.join(
+            'C:',
+            os.sep,
+            'Users',
+            os.getlogin(),
+            'OneDrive',
+            'Desktop',
+            'PureBasic',
+            'Examples',
+            '3D',
+            'Data',
+            'Textures')
     else:
-        path += os.path.normpath(
-            os.path.expanduser(
-                os.path.join(
-                    'C:',
-                    os.sep,
-                    'Users',
-                    os.getlogin(),
-                    'Desktop',
-                    'PureBasic',
-                    'Examples',
-                    '3D',
-                    'Data',
-                    'Textures')))
+        path += os.path.join(
+            'C:',
+            os.sep,
+            'Users',
+            os.getlogin(),
+            'Desktop',
+            'PureBasic',
+            'Examples',
+            '3D',
+            'Data',
+            'Textures')
     return path
 
 
