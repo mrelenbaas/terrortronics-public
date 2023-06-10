@@ -21,8 +21,6 @@ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
 
-#!/usr/bin/env python
-
 import os
 import socket
 import sys
@@ -74,9 +72,6 @@ def is_raspberry_pi():
 class Mac:
 
     def __int__(self):
-        pass
-
-    def main(self):
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         sock.bind(('', PORT))
         sock.listen(TIMEOUT)
@@ -100,9 +95,6 @@ class Mac:
 class Windows:
 
     def __int__(self):
-        pass
-
-    def main(self):
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         sock.bind(('', PORT))
         sock.listen(TIMEOUT)
@@ -138,7 +130,7 @@ class Windows:
                         data.close()
                 time.sleep(DELAY)
                 total_data = b''
-            except:
+            except OSError:
                 total_data += binary_data
 
 
@@ -146,13 +138,11 @@ class Main:
 
     def __init__(self):
         if is_windows():
-            windows = Windows()
-            windows.main()
+            Windows()
         if is_mac():
-            mac = Mac()
-            mac.main()
+            Mac()
 
 
 if __name__ == '__main__':
-    print('IP Address: '+ socket.gethostbyname(socket.gethostname()))
+    print('IP Address: ' + socket.gethostbyname(socket.gethostname()))
     main = Main()

