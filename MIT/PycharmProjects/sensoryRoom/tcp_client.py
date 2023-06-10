@@ -21,177 +21,173 @@ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
 
-'''
-import socket
-
-FILENAME = 'image_to_process_'
-EXTENSION = '.png'
-
-with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
-    sock.connect(('192.168.0.47', 5005)) # Connect
-    sock.sendall(bytes(data + "\n", "utf-8")) # Send data
-    received = str(sock.recv(1024), "utf-8") # Receive data synchronically
-
-print('complete')
-'''
-
 #!/usr/bin/env python
 
 import os
-import random
-import socket, select
-from time import gmtime, strftime, sleep
-from random import randint
+import socket
+import sys
+import time
 
-#image = "tux.png"
-FILENAME = 'image_to_process_'
-OTHER_FILENAME = 'previous_pingtest.txt'
-FILENAME_MAC = 'hosts.txt'
-EXTENSION = '.png'
-
-#HOST = '192.168.1.2'
-hosts = []
+DELAY = 1
+MAC_EXTENSION = '.png'
+MAC_FILENAME = 'hosts.txt'
+MAC_KEYWORD = 'image_to_process_'
+WINDOWS_FILENAME_CLEAN = 'clean_pingtest.txt'
+WINDOWS_FILENAME_RAW = 'previous_pingtest.txt'
+PACKET_SIZE = 1024
 PORT = 5005
 
-counter = 0
-currentFilename = b''
 
-is_windows_discovery = False
-if os.name != 'posix':
-    print('windows found')
-    is_windows_discovery = True
-else:
-    print('posix found')
+def is_windows():
+    result = False
+    if os.name == 'nt' and sys.platform == 'win32':
+        result = True
+    return result
 
 
-class SomeClass():
-    
+def is_mac():
+    result = False
+    if os.name == 'posix' and sys.platform == 'darwin':
+        result = True
+    return result
+
+
+class Mac:
+
     def __init__(self):
-        print('CONSTRUCTOR')
-        
-    def some_function(self, image, host):
-        try:
-            print('image: ' + image)
-            myfile = open(image, 'rb')
-            bytesToSend = myfile.read()
-            size = len(bytesToSend)
-            print('size: ' + str(size))
+        self.__current_filename = ''
+        self.__hosts = []
 
-            max_size = 1024
-            packet_count = int(size / max_size) + 1
-            print('packet count: ' + str(packet_count))
+    def main(self):
+        desktop = os.path.expanduser("~/Desktop")
+        while True:
+            is_top = True
+            for root, directory, filenames in os.walk(desktop):
+                if is_top is False:
+                    continue
+                is_top = False
+                for filename in filenames:
+                    if MAC_KEYWORD in filename:
+                        self.__current_filename = filename.encode('ascii')
+                        host_filename = os.path.join(desktop, MAC_FILENAME)
+                        with open(host_filename) as file:
+                            while line := file.readline():
+                                self.__hosts.append(line.rstrip())
+                        for host in self.__hosts:
+                            image = os.path.join(desktop, filename)
+                            if os.path.exists(image):
+                                file = open(image, 'rb')
+                                bytes_to_send = file.read()
+                                size = len(bytes_to_send)
+                                max_size = PACKET_SIZE
+                                packet_count = int(size / max_size) + 1
+                                for i in range(packet_count):
+                                    start = i * max_size
+                                    end = (i + 1) * max_size
+                                    if i < packet_count - 1:
+                                        with socket.socket(
+                                                socket.AF_INET,
+                                                socket.SOCK_STREAM) as sock:
+                                            sock.connect((host, PORT))
+                                            sock.sendall(
+                                                bytes_to_send[start:end])
+                                            sock.close()
+                                    else:
+                                        with socket.socket(
+                                                socket.AF_INET,
+                                                socket.SOCK_STREAM) as sock:
+                                            sock.connect((host, PORT))
+                                            sock.sendall(
+                                                bytes_to_send[start:])
+                                            sock.close()
+                                with socket.socket(
+                                        socket.AF_INET,
+                                        socket.SOCK_STREAM) as sock:
+                                    sock.connect((host, PORT))
+                                    sock.sendall(self.__current_filename)
+                                    sock.close()
+                                os.remove(os.path.join(desktop, filename))
+                            else:
+                                time.sleep(DELAY)
 
-            for i in range(packet_count):
-                start = i * max_size
-                end = (i + 1) * max_size
-                print('{}: {}:{}'.format(i, start, end))
-                if i < packet_count - 1:
-                    with socket.socket(
-                            socket.AF_INET,
-                            socket.SOCK_STREAM) as sock:
-                        sock.connect((host, 5005)) # Connect
-                        sock.sendall(bytesToSend[start:end]) # Send data
-                        sock.close()
-                else:
-                    with socket.socket(
-                            socket.AF_INET,
-                            socket.SOCK_STREAM) as sock:
-                        sock.connect((host, 5005)) # Connect
-                        sock.sendall(bytesToSend[start:]) # Send data
-                        sock.close()
-            with socket.socket(
-                    socket.AF_INET,
-                    socket.SOCK_STREAM) as sock:
-                sock.connect((host, 5005)) # Connect
-                sock.sendall(currentFilename) # Send data
-                sock.close()
-        except:
-            myfile.close()
-            sock.close()
-        finally:
-            sock.close()
 
-    def some_function_windows_discovery(self, image, host):
-        try:
-            print('---')
+class Windows:
+
+    def __init__(self):
+        self.__hosts = []
+
+    def main(self):
+        print('main start')
+        raw_filename = ''
+        clean_filename = ''
+        if socket.gethostname() == 'DESKTOP-CR5GQ2G':
+            raw_filename += os.path.join(
+                'C:',
+                os.sep,
+                'Users',
+                os.getlogin(),
+                'OneDrive',
+                'Desktop',
+                WINDOWS_FILENAME_RAW)
+            clean_filename += os.path.join(
+                'C:',
+                os.sep,
+                'Users',
+                os.getlogin(),
+                'OneDrive',
+                'Desktop',
+                WINDOWS_FILENAME_CLEAN)
+        else:
+            raw_filename += os.path.join(
+                'C:',
+                os.sep,
+                'Users',
+                os.getlogin(),
+                'Desktop',
+                WINDOWS_FILENAME_RAW)
+            clean_filename += os.path.join(
+                'C:',
+                os.sep,
+                'Users',
+                os.getlogin(),
+                'Desktop',
+                WINDOWS_FILENAME_CLEAN)
+        print('raw_filename: ' + raw_filename)
+        print('clean_filename: ' + clean_filename)
+        with open(raw_filename) as file:
+            while line := file.readline():
+                clean_line = line.rstrip()
+                clean_line = clean_line.split('Reply from ')[-1]
+                clean_line = clean_line.split(':')[0]
+                self.__hosts.append(clean_line)
+        with open(clean_filename, 'w') as file:
+            file.write('')
+        with open(clean_filename, 'a') as file:
+            for host in self.__hosts:
+                file.write(host)
+        for host in self.__hosts:
+            file = open(clean_filename, 'rb')
+            package = file.read()
             print('host: ' + host)
-            print('image: ' + image)
-            myfile = open(image, 'rb')
-            bytesToSend = myfile.read()
-            size = len(bytesToSend)
-            print(bytesToSend)
-            print('size: ' + str(size))
-
-            max_size = 1024
-            packet_count = int(size / max_size) + 1
-            print('packet count: ' + str(packet_count))
-
             with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
-                #sock.settimeout(time.time() + 5.0)
-                sock.connect((host, 5005)) # Connect
-                sock.send(bytesToSend) # Send data
+                sock.connect((host, PORT))
+                sock.send(package)
                 sock.close()
-        except:
-            myfile.close()
-            sock.close()
-        finally:
-            sock.close()
+        #os.remove(raw_filename)
+        #os.remove(clean_filename)
+
+
+class Main:
+
+    def __init__(self):
+        if is_windows():
+            windows = Windows()
+            windows.main()
+        if is_mac():
+            mac = Mac()
+            mac.main()
+
 
 if __name__ == '__main__':
-    someClass = SomeClass()
-    is_running = True
-    while(is_running):
-        if is_windows_discovery:
-            desktop = os.path.expanduser('~/Desktop')
-            if socket.gethostname() == 'DESKTOP-CR5GQ2G':
-                desktop = os.path.expanduser("~\OneDrive\Desktop")
-            filenames = next(os.walk(desktop), (None, None, []))[2]
-            for filename in filenames:
-                #//print(desktop + '\filename: ' + filename)
-                if OTHER_FILENAME in filename:
-                    currentFilename = filename.encode('ascii')
-                    print('Found filename: ' + filename)
-                    path = '' + desktop + '\\' + filename
-                    print('path: ' + path)
-                    with open(path) as file:
-                        while line := file.readline():
-                            clean_line = line.rstrip()
-                            clean_line = clean_line.split('Reply from ')[-1]
-                            clean_line = clean_line.split(':')[0]
-                            hosts.append(clean_line)
-                            print('hosts: ' + hosts[-1])
-                    for host in hosts:
-                        someClass.some_function_windows_discovery(
-                            desktop + '/' + filename,
-                            host)
-                    os.remove(
-                        os.path.expanduser(desktop) + '/' + filename)
-                    is_running = False
-        else:
-            desktop = os.path.expanduser("~/Desktop")
-            filenames = next(os.walk(desktop), (None, None, []))[2]
-            for filename in filenames:
-                if FILENAME in filename:
-                    currentFilename = filename.encode('ascii')
-                    print('Found filename: ' + filename)
-                    host_filename = '' + desktop + '/' + FILENAME_MAC
-                    with open(host_filename) as file:
-                        while line := file.readline():
-                            clean_line = line.rstrip()
-                            print(clean_line)
-                            clean_line = clean_line.split('Reply from ')[-1]
-                            print(clean_line)
-                            clean_line = clean_line.split(':')[0]
-                            print(clean_line)
-                            hosts.append(clean_line)
-                            print('hosts: ' + hosts[-1])
-                    for host in hosts:
-                        print('host: ' + host)
-                        someClass.some_function(desktop + '/' + filename, host)
-                    os.remove(os.path.expanduser("~/Desktop") + '/' + filename)
-
-        sleep(1)
-        print(counter)
-        counter += 1
-    print('complete')
+    Main()
 
