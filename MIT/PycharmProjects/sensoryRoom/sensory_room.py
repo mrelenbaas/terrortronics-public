@@ -118,7 +118,18 @@ class Background:
         self.__game = game
 
     def update(self):
-        self.__game.fill((BACKGROUND_R, BACKGROUND_G, BACKGROUND_B))
+        line = '0,0,0,'
+        try:
+            with open(os.path.join(os.path.expanduser('~/Desktop'), 'udp_received.txt')) as file:
+                line = file.readline()
+            messages = line.split(',')
+            print(messages)
+            red = int(messages[0])
+            green = int(messages[1])
+            blue = int(messages[2])
+            self.__game.fill((red, green, blue))
+        except:
+            pass
 
 
 class Cloud:

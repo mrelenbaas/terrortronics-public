@@ -25,9 +25,8 @@ import os
 import socket
 import sys
 
-import subprocess
 
-
+FILENAME = 'udp_received.txt'
 PACKET_SIZE = 1024
 PORT = 5005
 
@@ -62,6 +61,9 @@ def is_windows():
 class UDP:
 
     def __init__(self):
+        self.red = 0
+        self.green = 0
+        self.blue = 0
         sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         sock.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1)
         sock.bind(("0.0.0.0", PORT))
@@ -69,12 +71,19 @@ class UDP:
             connection, address = sock.recvfrom(PACKET_SIZE)
             connection = connection.decode('ascii')
             print(connection)
-            if connection[0] == '0':
-                print('shutdown')
-                if is_windows():
-                    subprocess.run([os.path.join(get_path(), 'SHUTDOWN.BAT')])
-                else:
-                    print('mac detected')
+            with open(os.path.join(
+                    os.path.expanduser('~/Desktop'), FILENAME), 'w+') as file:
+                messages = connection.split(',')
+                print(messages)
+                for message in messages:
+                    print(message)
+                try:
+                    file.write('{},{},{}'.format(
+                        messages[0],
+                        messages[1],
+                        messages[2]))
+                except:
+                    pass
 
 
 class Main:

@@ -20,7 +20,7 @@ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
-
+import random
 import socket
 
 import pygame
@@ -40,11 +40,19 @@ class UDP:
         while True:
             pygame.display.update()
             clock.tick(60)
-            message = b'1'
+            message = '{},{},{}'.format(
+                random.randrange(0, 255),
+                random.randrange(0, 255),
+                random.randrange(0, 255))
+            messages = message.split(',')
+            print(messages)
+            for m in messages:
+                print(m)
+            message = bytes(message, 'utf-8')
             for event in pygame.event.get():
                 if event.type == pygame.KEYDOWN:
                     if event.key == pygame.K_0:
-                        message = b'0'
+                        message = b'000000000'
             if ser is not None and ser.in_waiting > 0:
                 line = ser.readline().decode('utf-8').rstrip()
                 print(line)
