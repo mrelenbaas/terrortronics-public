@@ -57,7 +57,7 @@ class UDP:
             if ser is not None and ser.in_waiting > 0:
                 line = ser.readline().decode('utf-8').rstrip()
                 print(line)
-                message = b'{}'.format(line)
+                message = bytes(line, 'utf-8')
             sock = socket.socket(
                 socket.AF_INET,
                 socket.SOCK_DGRAM,
@@ -74,7 +74,7 @@ class Main:
         ser = None
         try:
             ser = serial.Serial('/dev/ttyACM0', 9600, timeout=1)
-        except:
+        except serial.SerialException:
             pass
         UDP(ser=ser)
 
