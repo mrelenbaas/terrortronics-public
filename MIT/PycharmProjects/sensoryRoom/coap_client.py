@@ -20,30 +20,28 @@ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
-#!/usr/bin/env python3
 
-# SPDX-FileCopyrightText: Christian Amsüss and the aiocoap contributors
-#
-# SPDX-License-Identifier: MIT
+import os
 
-"""This is a usage example of aiocoap that demonstrates how to implement a
-simple client. See the "Usage Examples" section in the aiocoap documentation
-for some more information."""
-
-import logging
 import asyncio
+import aiocoap
 
-from aiocoap import *
-
-logging.basicConfig(level=logging.INFO)
 
 async def main():
-    context = await Context.create_client_context()
+    context = await aiocoap.Context.create_client_context()
     await asyncio.sleep(2)
     payload = b"0"
-    request = Message(code=PUT, payload=payload, uri="coap://192.168.1.2/resource/update")
-    response = await context.request(request).response
-    print('Result: %s\n%r'%(response.code, response.payload))
+    filename = os.path.expanduser('~/Desktop')
+    filename = os.path.join(filename, 'hosts.txt')
+    with open (filename, 'r') as file:
+        while line := file.readline():
+            print("line: " + line)
+            request = aiocoap.Message(
+                code=aiocoap.PUT,
+                payload=payload,
+                uri="coap://" + line + "/resource/update")
+            response = await context.request(request).response
+            print('Result: %s\n%r'%(response.code, response.payload))
 
 if __name__ == "__main__":
     asyncio.run(main())
