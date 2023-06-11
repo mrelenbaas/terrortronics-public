@@ -98,7 +98,10 @@ class Main:
     def __init__(self):
         self.__root = resource.Site()
         self.__root.add_resource(['resource', 'update'], Resource())
-        self.__my_ip_address = socket.gethostbyname(socket.gethostname())
+        sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        sock.connect(("8.8.8.8", 80))
+        self.__my_ip_address = sock.getsockname()[0]
+        print(self.__my_ip_address)
         asyncio.run(self.__main())
 
     async def __main(self):
