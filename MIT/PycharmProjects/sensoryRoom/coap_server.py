@@ -57,7 +57,7 @@ class GetPutResource(resource.Resource): # Receive request.
                                payload=self.content)
 
 
-def main(): # Setup resource, then wait.
+def main():
     root = resource.Site()
     
     root.add_resource(('.well-known', 'core'),

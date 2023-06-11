@@ -13,7 +13,7 @@ class Object(pygame.sprite.Sprite):
     # Init
     def __init__(self):
         super(Object, self).__init__()
-        self.og_surf = pygame.transform.smoothscale(pygame.image.load("C:\Users\mrele\Desktop\PureBasic\Examples\3D\Data\Textures\VGM CON 7.png"), (640, 640))
+        self.og_surf = pygame.transform.smoothscale(pygame.image.load(r"C:\Users\mrele\Desktop\PureBasic\Examples\3D\Data\Textures\Cloud000.png"), (640, 640))
         self.surf = self.og_surf
         self.rect = self.surf.get_rect(center=(400, 400))
         self.angle = 0
@@ -30,9 +30,9 @@ class Object(pygame.sprite.Sprite):
     def move(self, li):
         self.change_angle = 0
         if li[K_LEFT]:
-            self.change_angle = 10
+            self.change_angle = 1
         elif li[K_RIGHT]:
-            self.change_angle = -10
+            self.change_angle = -1
         obj.rot()
 
 

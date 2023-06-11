@@ -20,6 +20,7 @@ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
+from pickle import PUT
 
 """CoAP client example from Internet of Things for Architects.
 """
@@ -42,7 +43,7 @@ async def main(): # Send request, get response.
     payload = b"20.2 C"
     request = Message(code=PUT, payload=payload)
     
-    request.opt.uri_host = '127.0.0.1'
+    request.opt.uri_host = '192.168.0.232'
     request.opt.uri_path = ("temp", "celcius")
     
     response = await context.request(request).response
