@@ -21,10 +21,11 @@ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
 
-import pyautogui
 import time
 
+import pyautogui
 from screeninfo import get_monitors
+
 
 for monitor in get_monitors():
     print(monitor.width)

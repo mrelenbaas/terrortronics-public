@@ -40,6 +40,7 @@ CLOUDS_SPEED_X_MIN = 4
 CLOUDS_SPEED_Y_MAX = 0
 CLOUDS_SPEED_Y_MIN = 1
 CLOUDS_TOTAL = 40
+FILENAME = 'udp_received.txt'
 FRAMES_PER_SECOND = 60
 IMAGE_MAX = 8
 IMAGE_SIZE = 1024
@@ -48,7 +49,7 @@ IMAGE_SIZE_MIN = int(IMAGE_SIZE * 0.40)
 KEYWORD = 'Cloud'
 
 
-def get_path():
+def get_path() -> str:
     path = ''
     if os.name == 'posix' and sys.platform == 'darwin':
         path += os.path.join(
@@ -100,7 +101,7 @@ def get_path():
     return path
 
 
-def get_filename(path):
+def get_filename(path: str) -> str:
     length = 0
     cloud_filenames = []
     for root, directory, filenames in os.walk(path):
@@ -112,29 +113,72 @@ def get_filename(path):
     return cloud_filenames[length]
 
 
+def teardown():
+    pygame.quit()
+
+
+class Game:
+    """PyGame specific calls."""
+
+    def __init__(self):
+        pygame.init()
+        self.is_running = True
+        self.__screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
+        self.__clock = pygame.time.Clock()
+
+    def blit(self, source: pygame.Surface, destingation: tuple):
+        self.__screen.blit(source, destingation)
+
+    def fill(self, color: tuple):
+        self.__screen.fill(color)
+
+    def input(self):
+        """Close the window with [x] button or ESC"""
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                self.is_running = False
+            if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
+                self.is_running = False
+
+    def get_height(self) -> int:
+        return self.__screen.get_height()
+
+    def get_width(self) -> int:
+        return self.__screen.get_width()
+
+    def update(self):
+        pygame.display.update()
+        self.__clock.tick(FRAMES_PER_SECOND)
+
+
 class Background:
 
-    def __init__(self, game):
+    def __init__(self, game: Game):
         self.__game = game
 
     def update(self):
-        line = '0,0,0,'
+        messages = '0,0,0,'
         try:
-            with open(os.path.join(os.path.expanduser('~/Desktop'), 'udp_received.txt')) as file:
-                line = file.readline()
-            messages = line.split(',')
-            print(messages)
-            red = int(messages[0])
-            green = int(messages[1])
-            blue = int(messages[2])
-            self.__game.fill((red, green, blue))
-        except:
-            pass
+            filename = os.path.expanduser('~/Desktop')
+            filename = os.path.join(filename, FILENAME)
+            with open(filename) as file:
+                messages = file.readline()
+            messages = messages.split(',')
+            self.__game.fill((
+                int(messages[0]),
+                int(messages[1]),
+                int(messages[2])))
+        except OSError:
+            messages = messages.split(',')
+            self.__game.fill((
+                int(messages[0]),
+                int(messages[1]),
+                int(messages[2])))
 
 
 class Cloud:
 
-    def __init__(self, game, is_warming=True):
+    def __init__(self, game: Game, is_warming=True):
         self.__game = game
         self.__is_warming = is_warming
         self.__duration = 0.0
@@ -195,7 +239,7 @@ class Cloud:
 
 class Clouds:
 
-    def __init__(self, game):
+    def __init__(self, game: Game):
         self.__game = game
         self.__clouds = self.__generate_clouds(CLOUDS_TOTAL)
 
@@ -208,43 +252,6 @@ class Clouds:
     def update(self):
         for cloud in self.__clouds:
             cloud.update()
-
-
-class Game:
-    """PyGame specific calls."""
-
-    def __init__(self):
-        pygame.init()
-        self.is_running = True
-        self.__screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
-        self.__clock = pygame.time.Clock()
-
-    def blit(self, image, position):
-        self.__screen.blit(image, position)
-
-    def exit(self):
-        pygame.quit()
-
-    def fill(self, color):
-        self.__screen.fill(color)
-
-    def input(self):
-        """Close the window with [x] button or ESC"""
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                self.is_running = False
-            if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
-                self.is_running = False
-
-    def get_height(self):
-        return self.__screen.get_height()
-
-    def get_width(self):
-        return self.__screen.get_width()
-
-    def update(self):
-        pygame.display.update()
-        self.__clock.tick(FRAMES_PER_SECOND)
 
 
 class Main:
@@ -260,7 +267,7 @@ class Main:
             self.__background.update()
             self.__clouds.update()
             self.__game.update()
-        self.__game.exit()
+        teardown()
 
 
 if __name__ == '__main__':
