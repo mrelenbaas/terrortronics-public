@@ -20,39 +20,39 @@ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
-from pickle import PUT
+#!/usr/bin/env python3
 
-"""CoAP client example from Internet of Things for Architects.
-"""
+# SPDX-FileCopyrightText: Christian Amsüss and the aiocoap contributors
+#
+# SPDX-License-Identifier: MIT
 
+"""This is a usage example of aiocoap that demonstrates how to implement a
+simple client. See the "Usage Examples" section in the aiocoap documentation
+for some more information."""
 
-__version__ = '0.1'
-__author__ = 'Bradley Elenbaas'
-
-
+import logging
 import asyncio
 
 from aiocoap import *
 
+logging.basicConfig(level=logging.INFO)
 
-async def main(): # Send request, get response.
+async def main():
+    """Perform a single PUT request to localhost on the default port, URI
+    "/other/block". The request is sent 2 seconds after initialization.
+
+    The payload is bigger than 1kB, and thus sent as several blocks."""
+
     context = await Context.create_client_context()
-    
+
     await asyncio.sleep(2)
-    
-    payload = b"20.2 C"
-    request = Message(code=PUT, payload=payload)
-    
-    request.opt.uri_host = '192.168.0.232'
-    request.opt.uri_path = ("temp", "celcius")
-    
+
+    payload = b"The quick brown fox jumps over the lazy dog.\n" * 30
+    request = Message(code=PUT, payload=payload, uri="coap://192.168.0.232/other/block")
+
     response = await context.request(request).response
-    
-    print('code:    {}'.format(response.code))
-    print('payload: {}'.format(response.payload))
-    
 
+    print('Result: %s\n%r'%(response.code, response.payload))
 
-if __name__ == '__main__':
-    """Start main."""
-    asyncio.get_event_loop().run_until_complete(main())
+if __name__ == "__main__":
+    asyncio.run(main())
