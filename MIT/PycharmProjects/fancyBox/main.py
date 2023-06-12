@@ -31,6 +31,7 @@ root.set_theme("radiance")
 # playlist - contains full path and filename
 # playlistbox - contains just the filename
 playlist = []
+global filename_path
 
 
 def browse_file():
@@ -56,8 +57,9 @@ subMenu.add_command(label="Exit", command=root.destroy)
 
 
 def about_us():
-    tkinter.messagebox.showinfo('About Melody',
-                                'This is a music player built using Python and tkinter.')
+    tkinter.messagebox.showinfo(
+        'About Melody',
+        'This is a music player built using Python and tkinter.')
 
 
 subMenu = Menu(menubar, tearoff=0)
@@ -69,9 +71,6 @@ mixer.init()  # initializing the mixer
 # root.geometry('500x500')
 root.title("Melody")
 root.iconphoto(True, PhotoImage(file='images/JVClickIcon.png'))
-
-##filelabel = ttk.Label(root, text='Lets make some noise!')
-##filelabel.pack(pady=10)
 
 playPhoto = PhotoImage(file='images/play.png')
 
@@ -111,7 +110,7 @@ currenttimelabel.pack()
 
 
 def show_details(play_song):
-    # global filename_path
+    global filename_path
     file_data = os.path.splitext(play_song)
 
     if file_data[1] == '.mp3':
@@ -134,7 +133,8 @@ def show_details(play_song):
 
 def start_count(t):
     global paused
-    # The get_busy() function returns false when we press the stop button, or music stop playing.
+    # The get_busy() function returns false when we press the stop
+    # button, or music stop playing.
     current_time = 0
     while current_time <= t and mixer.music.get_busy():
         if paused:
@@ -151,7 +151,6 @@ def start_count(t):
 
 def play_music():
     global paused
-    global filename_path
     if paused:
         mixer.music.unpause()
         statusbar['text'] = "Music Resumed"
@@ -167,9 +166,10 @@ def play_music():
             mixer.music.play()
             statusbar['text'] = "Playing music - " + os.path.basename(play_it)
             show_details(play_it)
-        except:
-            tkinter.messagebox.showerror('File not found',
-                                         'Melody could not find the file. Please check again.')
+        except OSError:
+            tkinter.messagebox.showerror(
+                'File not found',
+                'Melody could not find the file. Please check again.')
 
 
 def stop_music():
@@ -195,10 +195,6 @@ def rewind_music():
 def set_vol(val):
     volume = float(val) / 100
     mixer.music.set_volume(volume)
-
-
-def mute_music():
-    pass
 
 
 muted = FALSE
