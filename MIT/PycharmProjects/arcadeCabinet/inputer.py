@@ -21,6 +21,14 @@ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
 
+
+# 2nd-party libraries.
+import game
+from timer import Timer
+# 3rd-party libraries.
+import pygame
+
+
 """Input manager.
 
 Description
@@ -41,11 +49,7 @@ Copyright (c) 2020 Bradley Elenbaas.  All rights reserved.
 Members
 -------
 """
-# 2nd-party libraries.
-import game
-from timer import Timer
-# 3rd-party libraries.
-import pygame
+
 
 # Global Constants.
 PRINT = 'Click: '
@@ -72,8 +76,7 @@ class Inputer:
         self.__pressed_blocked = False
         self.__pressed_count = 0
 
-    def decrement(self, something):
-        ##        print(self.__count)
+    def decrement(self, blank=None):
         if self.__count <= 0:
             return
         self.__count -= 1
@@ -105,44 +108,35 @@ class Inputer:
     def updater(self):
         """Increment count if button is pressed."""
         self.__timer.updater()
-        try:
-            ##            if result and self.__count > 0:
-            ##                self.__count -= 1
-            pressed = False
-            events = pygame.event.get()
-            for event in events:
-                if event.type == pygame.QUIT:
-                    game.Game.quit()
-                if event.type == pygame.KEYDOWN:
-                    print(event.unicode)
-                    pressed = True
+        pressed = False
+        events = pygame.event.get()
+        for event in events:
+            if event.type == pygame.QUIT:
+                game.Game.quit()
+            if event.type == pygame.KEYDOWN:
+                print(event.unicode)
+                pressed = True
+                self.__pressed_count += 1
+                if not self.__pressed_blocked:
+                    self.__pressed_blocked = True
+            if event.type == pygame.KEYUP:
+                self.__pressed_count -= 1
+                if self.__pressed_blocked:
+                    if self.__pressed_count <= 0:
+                        self.__pressed_blocked = False
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                if 0 < event.button <= 3:
+                    print(repr(event.button))
                     self.__pressed_count += 1
+                    pressed = True
                     if not self.__pressed_blocked:
                         self.__pressed_blocked = True
-                if event.type == pygame.KEYUP:
-                    self.__pressed_count -= 1
-                    if self.__pressed_blocked:
-                        if self.__pressed_count <= 0:
-                            self.__pressed_blocked = False
-                if event.type == pygame.MOUSEBUTTONDOWN:
-                    ##                    if event.button == 4 or event.button == 5:
-                    ##                        pass
-                    ##                    else:
-                    if event.button > 0 and event.button <= 3:
-                        print(repr(event.button))
-                        self.__pressed_count += 1
-                        pressed = True
-                        if not self.__pressed_blocked:
-                            self.__pressed_blocked = True
-                if event.type == pygame.MOUSEBUTTONUP:
-                    self.__pressed_count -= 1
-                    if self.__pressed_blocked:
-                        if self.__pressed_count <= 0:
-                            self.__pressed_blocked = False
-            if self.is_pressed(pressed):
-                self.increment()
-                self.output()
-            return self.__pressed_blocked, self.__count
-        except:
-            print('ERROR in Inputer.updater')
-
+            if event.type == pygame.MOUSEBUTTONUP:
+                self.__pressed_count -= 1
+                if self.__pressed_blocked:
+                    if self.__pressed_count <= 0:
+                        self.__pressed_blocked = False
+        if self.is_pressed(pressed):
+            self.increment()
+            self.output()
+        return self.__pressed_blocked, self.__count

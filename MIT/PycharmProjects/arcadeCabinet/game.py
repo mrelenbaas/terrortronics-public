@@ -21,6 +21,16 @@ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
 
+
+# 1st-party libraries.
+import sys
+# 2nd-party libraries.
+import inputer
+import outputer
+# 3rd-party libraries.
+import pygame
+
+
 """Game manager.
 
 Description
@@ -37,17 +47,16 @@ Copyright (c) 2020 Bradley Elenbaas.  All rights reserved.
 Members
 -------
 """
-# 1st-party libraries.
-import sys
-# 2nd-party libraries.
-import inputer
-import outputer
-# 3rd-party libraries.
-import pygame
+
+
+def teardown():
+    """Quit everything."""
+    pygame.quit()
+    sys.exit()
 
 
 class Game:
-    '''
+    """
     Game manager.
 
     Attributes
@@ -56,7 +65,7 @@ class Game:
         Input manager.
     __outputer : Outputer
         Output manager.
-    '''
+    """
 
     def __init__(self):
         """Pseudo-constructor."""
@@ -65,16 +74,7 @@ class Game:
         self.__inputer = inputer.Inputer()
         self.__outputer = outputer.Outputer()
 
-    def quit():
-        """Quit everything."""
-        pygame.quit()
-        sys.exit()
-
     def updater(self):
         """Update input and output."""
-        try:
-            pressed, count = self.__inputer.updater()
-            self.__outputer.updater(pressed, count)
-        except:
-            print('ERROR in Game.updater')
-            quit()
+        pressed, count = self.__inputer.updater()
+        self.__outputer.updater(pressed, count)

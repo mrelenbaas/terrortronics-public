@@ -22,14 +22,12 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
 
 # 1st-party libraries.
-import sys
 import tkinter
 import tkinter.messagebox
 # 2nd-party libraries.
 import game
 from timer import Timer
-# 3rd-party libraries.
-import pygame
+
 
 ABOUT_CAPTION = 'About SoftfootFalls'
 ABOUT_LABEL = 'About'
@@ -42,13 +40,17 @@ STATUS_TEXT = 'FPS'
 WINDOW_CAPTION = 'SoftfootFalls'
 
 
+def callback_about():
+    tkinter.messagebox.showinfo(ABOUT_CAPTION, ABOUT_TEXT)
+
+
 class GUI:
-    '''
+    """
     Manages the tkinter library.
 
     Attributes
     ----------
-    '''
+    """
 
     def __init__(self):
         # Local variables.
@@ -56,7 +58,7 @@ class GUI:
         root.protocol(ROOT_PROTOCOL, self.callback_quit)
         root.title(WINDOW_CAPTION)
         menubar = tkinter.Menu(root)
-        menubar.add_command(label=ABOUT_LABEL, command=self.callback_about)
+        menubar.add_command(label=ABOUT_LABEL, command=callback_about)
         root.config(menu=menubar)
         # Class variables.
         self.__main_dialog = tkinter.Frame(root)
@@ -74,20 +76,11 @@ class GUI:
     def set_status_line(self, text):
         self.__status_line.config(text=text)
 
-    def callback_about(self):
-        tkinter.messagebox.showinfo(ABOUT_CAPTION, ABOUT_TEXT)
-
     def callback_quit(self):
         if tkinter.messagebox.askokcancel(QUIT_CAPTION, QUIT_TEXT):
             self.__main_dialog.destroy()
             game.Game.quit()
 
     def updater(self):
-        try:
-            self.__main_dialog.update()
-            self.__timer.updater()
-        ##            self.__status_line.config(text='{}{}'.format(PRINT,
-        ##                                                         self.__timer.fps))
-        except:
-            print(' in GUI.updater')
-
+        self.__main_dialog.update()
+        self.__timer.updater()

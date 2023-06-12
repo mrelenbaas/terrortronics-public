@@ -21,6 +21,13 @@ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
 
+
+# 2nd-party libraries.
+import game
+import gui
+import profiler
+
+
 """The main file. Houses the main function and Main class.
 
 Description
@@ -37,21 +44,6 @@ Copyright (c) 2020 Bradley Elenbaas.  All rights reserved.
 Members
 -------
 """
-# 1st-party libraries.
-import cProfile
-import io
-import re
-import pstats
-import sys
-import tkinter
-import tkinter.messagebox
-# 2nd-party libraries.
-import game
-import gui
-import profiler
-##from timer import Timer
-# 3rd-party libraries.
-import pygame
 
 
 class Main:

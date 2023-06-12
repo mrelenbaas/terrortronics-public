@@ -33,7 +33,7 @@ async def main():
     payload = b"0"
     filename = os.path.expanduser('~/Desktop')
     filename = os.path.join(filename, 'hosts.txt')
-    with open (filename, 'r') as file:
+    with open(filename, 'r') as file:
         while line := file.readline():
             print("line: " + line)
             request = aiocoap.Message(
@@ -41,7 +41,7 @@ async def main():
                 payload=payload,
                 uri="coap://" + line + "/resource/update")
             response = await context.request(request).response
-            print('Result: %s\n%r'%(response.code, response.payload))
+            print('Result: %s\n%r' % (response.code, response.payload))
 
 if __name__ == "__main__":
     asyncio.run(main())

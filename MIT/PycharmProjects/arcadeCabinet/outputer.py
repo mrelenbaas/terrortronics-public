@@ -177,8 +177,6 @@ class Outputer:
                                ((x_start + (NUMBER_WIDTH * i)), y_start))
 
     def __draw_grid(self):
-        color = pygame.Color(150, 150, 150)
-        width = 1
         vertical_offset = 10
         for j in range(1, NUMBER_COUNT_VERTICAL - 2):
             for i in range(1, (NUMBER_COUNT - 2)):
@@ -217,7 +215,7 @@ class Outputer:
                         self.__rotation),
                     (x, MONITOR_Y))
 
-    def __update_position(self, something=''):
+    def __update_position(self):
         self.__animation_now = time.time()
         self.__delta = self.__animation_now - self.__animation_previous
         self.__animation_previous = self.__animation_now
@@ -227,7 +225,6 @@ class Outputer:
             self.__animation_current = 0.0
             self.__wiggle_right = not self.__wiggle_right
             return
-        step = 0.1
         position = self.__wiggle_max * self.__percent
         if self.__wiggle_right:
             self.__wiggle_position = position

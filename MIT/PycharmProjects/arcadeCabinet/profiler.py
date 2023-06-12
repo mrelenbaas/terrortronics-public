@@ -21,6 +21,12 @@ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
 
+import cProfile
+import io
+import pstats
+from pstats import SortKey
+
+
 """Profiler file.
 
 Description
@@ -37,11 +43,27 @@ Copyright (c) 2020 Bradley Elenbaas.  All rights reserved.
 Members
 -------
 """
-import cProfile
-import io
-import pstats
-from pstats import SortKey
-import re
+
+
+def parse(filename, s):
+    for i in range(len(s)):
+        if i < 5:
+            continue
+        if i > len(s) - 3:
+            continue
+        if not '{}.py'.format(filename) in s[i]:
+            continue
+        if '(updater)' in s[i]:
+            pass
+        else:
+            continue
+        d = []
+        for c in s[i].split(' '):
+            if c == '':
+                continue
+            else:
+                d.append(c)
+        print('[{}] {}'.format(filename, d[3]))
 
 
 class Profiler:
@@ -49,7 +71,8 @@ class Profiler:
 
     def __init__(self):
         """Pseudo-constructor."""
-        self.start()
+        self.__profiler = None
+        self.__start()
 
         self.__count = 0
         self.__column_counter = 0
@@ -57,54 +80,27 @@ class Profiler:
     def dump(self):
         """Print and clear profile."""
         self.stop()
-        self.start()
+        self.__start()
 
     def output(self):
         """Print profile."""
         s = io.StringIO()
         sortby = SortKey.CUMULATIVE
-        ps = pstats.Stats(self.__pr, stream=s).sort_stats(sortby)
+        ps = pstats.Stats(self.__profiler, stream=s).sort_stats(sortby)
         ps.print_stats()
-        ##        print(s.getvalue())
         s = s.getvalue().splitlines()
-        ##        for x in s:
-        ##            print(x)
-        ##        print('4:  {}'.format(s[4]))
         # Note: this is working, though is shows that the Python version
         # spends its time performing output, and the Ardino verion spends
         # its time performing input.
-        self.parse('inputer', s)
-        self.parse('outputer', s)
-
-    def parse(self, filename, s):
-        for i in range(len(s)):
-            if i < 5:
-                continue
-            if i > len(s) - 3:
-                continue
-            if not '{}.py'.format(filename) in s[i]:
-                continue
-            if not '(updater)' in s[i]:
-                continue
-            d = []
-            for c in s[i].split(' '):
-                if c == '':
-                    continue
-                else:
-                    ##                    print(c)
-                    d.append(c)
-            print('[{}] {}'.format(filename, d[3]))
-
-    ##            print('{}: {}'.format(i, s[i]))
+        parse('inputer', s)
+        parse('outputer', s)
 
     def stop(self):
         """Stop profiler."""
-        self.__pr.disable()
+        self.__profiler.disable()
         self.output()
 
-    def start(self):
+    def __start(self):
         """Start profiler."""
-        self.__pr = cProfile.Profile()
-        self.__pr.enable()
-
-
+        self.__profiler = cProfile.Profile()
+        self.__profiler.enable()
