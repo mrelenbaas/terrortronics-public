@@ -32,7 +32,7 @@ void setup() {
   //  Serial.println("IP address: ");
   //  Serial.println(WiFi.localIP());
   //}
-  state.startWaiting();
+  state.startAttract();
 }
 
 void loop() {
@@ -57,10 +57,16 @@ void loop() {
           if (buttons[i].debounceByBlockPress() == 1) {
             if (buttons[i].debounceByTargetPress() == 1) {
               switch (state.getState()) {
-                case stateWaiting:
+                case stateAttract:
                   // Do nothing.
                   break;
                 case stateRunning:
+                  // Do nothing.
+                  break;
+                case stateTarget:
+                  // Do nothing.
+                  break;
+                case stateUntarget:
                   // Do nothing.
                   break;
               }
@@ -75,10 +81,16 @@ void loop() {
           if (buttons[i].debounceByBlockRelease() == 1) {
             if (buttons[i].debounceByTargetRelease() == 1) {
               switch (state.getState()) {
-                case stateWaiting:
+                case stateAttract:
                   // Do nothing.
                   break;
                 case stateRunning:
+                  // Do nothing.
+                  break;
+                case stateTarget:
+                  // Do nothing.
+                  break;
+                case stateUntarget:
                   // Do nothing.
                   break;
               }
@@ -133,6 +145,45 @@ void loop() {
     client.stop();
     Serial.println("Client Disconnected.");
   }
+  if (Serial.available() > 0) {
+    switch (serialClient.readData()) {
+      case '0':
+        break;
+      case '1':
+        break;
+      case '2':
+        break;
+      case '3':
+        break;
+      case '4':
+        break;
+      case '5':
+        break;
+      case '6':
+        break;
+      case '7':
+        //lights[lightDebug].turnOff();
+        //isTarget = false;
+        //state.startUntarget();
+        for (unsigned int i = 0; i < (sizeof(lights) / sizeof(Light)); ++i) {
+          lights[i].turnOff();
+        }
+        break;
+      case '8':
+        //lights[lightDebug].turnOn();
+        //isTarget = true;
+        //state.startTarget();
+        for (unsigned int i = 0; i < (sizeof(lights) / sizeof(Light)); ++i) {
+          lights[i].turnOn();
+        }
+        break;
+      case '9':
+        break;
+      default:
+        break;
+    }
+  }
+  serialClient.reset();
 }
 
 ////////////////////////////////////////////////////////////////////////
@@ -143,51 +194,119 @@ void loop() {
 // Timers //////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
 void mainTimerFunction() {
-  Serial.println(millis());
+  sprintf(serialBuffer, "%d%d\0", connectedFeather, 9);
+  Serial.print(serialBuffer);
 }
 
 void minorTimerFunction() {
+  /*
   switch (state.getState()) {
-    case stateWaiting:
+    case stateAttract:
       for (unsigned int i = 0; i < (sizeof(lights) / sizeof(Light)); ++i) {
         lights[i].toggle();
       }
       break;
     case stateRunning:
-      // Do nothing.
+      for (unsigned int i = 0; i < (sizeof(lights) / sizeof(Light)); ++i) {
+        lights[i].turnOff();
+      }
+      break;
+    case stateTarget:
+      for (unsigned int i = 0; i < (sizeof(lights) / sizeof(Light)); ++i) {
+        lights[i].turnOn();
+      }
+      break;
+    case stateUntarget:
+      for (unsigned int i = 0; i < (sizeof(lights) / sizeof(Light)); ++i) {
+        lights[i].turnOff();
+      }
       break;
   }
   //if (wifiMulti.run() != WL_CONNECTED) {
   //  Serial.println("WiFi not connected!");
   //}
+  */
 }
 
 void timeoutTimerFunction() {
+  /*
   switch (state.getState()) {
-    case stateWaiting:
+    case stateAttract:
       // Do nothing.
       break;
     case stateRunning:
-      state.startWaiting();
+      state.startAttract();
+      break;
+    case stateTarget:
+      // Do nothing.
+      break;
+    case stateUntarget:
+      // Do nothing.
       break;
   }
+  */
 }
 
 ////////////////////////////////////////////////////////////////////////
 // Buttons /////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
 void startButtonFunctionPress() {
-  for (unsigned int i = 0; i < (sizeof(lights) / sizeof(Light)); ++i) {
-    lights[i].turnOn();
-  }
-  timeoutTimer.reset();
+  //for (unsigned int i = 0; i < (sizeof(lights) / sizeof(Light)); ++i) {
+  //  lights[i].turnOn();
+  //}
+  //timeoutTimer.reset();
 }
 
 void startButtonFunctionRelease() {
+  //for (unsigned int i = 0; i < (sizeof(lights) / sizeof(Light)); ++i) {
+  //  lights[i].turnOff();
+  //}
+  //timeoutTimer.reset();
+  //state.startRunning();
+}
+
+void redButtonFunctionPress() {
+  lights[lightRed].turnOn();
+  timeoutTimer.reset();
+}
+
+void redButtonFunctionRelease() {
+  lights[lightRed].turnOff();
+  state.startRunning();
+}
+
+void greenButtonFunctionPress() {
+  lights[lightGreen].turnOn();
+  timeoutTimer.reset();
+}
+
+void greenButtonFunctionRelease() {
+  lights[lightGreen].turnOff();
+  state.startRunning();
+}
+
+void blueButtonFunctionPress() {
+  lights[lightBlue].turnOn();
+  timeoutTimer.reset();
+}
+
+void blueButtonFunctionRelease() {
+  lights[lightBlue].turnOff();
+  state.startRunning();
+}
+
+void yellowButtonFunctionPress() {
+  //lights[lightYellow].turnOn();
+  for (unsigned int i = 0; i < (sizeof(lights) / sizeof(Light)); ++i) {
+    lights[i].turnOn();
+  }
+}
+
+void yellowButtonFunctionRelease() {
+  //lights[lightYellow].turnOff();
   for (unsigned int i = 0; i < (sizeof(lights) / sizeof(Light)); ++i) {
     lights[i].turnOff();
   }
-  timeoutTimer.reset();
   state.startRunning();
 }
 

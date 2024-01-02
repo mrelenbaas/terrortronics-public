@@ -6,6 +6,14 @@
 void mainTimerFunction();
 void minorTimerFunction();
 void timeoutTimerFunction();
+void redButtonFunctionPress();
+void redButtonFunctionRelease();
+void greenButtonFunctionPress();
+void greenButtonFunctionRelease();
+void blueButtonFunctionPress();
+void blueButtonFunctionRelease();
+void yellowButtonFunctionPress();
+void yellowButtonFunctionRelease();
 
 ////////////////////////////////////////////////////////////////////////
 // Pins ////////////////////////////////////////////////////////////////
@@ -35,22 +43,27 @@ State state = State();
 ////////////////////////////////////////////////////////////////////////
 // Serial //////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
+char serialBuffer[2];
+SerialClient serialClient;
 
 ////////////////////////////////////////////////////////////////////////
 // Timers //////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
-unsigned int MAIN_PERIOD = 1000L;
-unsigned int TIMEOUT_PERIOD = 3000L;
+const unsigned int MAIN_PERIOD = 3000L;
 Timer mainTimer = Timer(MAIN_PERIOD, mainTimerFunction);
 Timer timeoutTimer = Timer(TIMEOUT_PERIOD, timeoutTimerFunction);
 
 ////////////////////////////////////////////////////////////////////////
 // Buttons /////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
-unsigned long DEBOUNCE_PERIOD_START = 10L;
-unsigned long DEBOUNCE_PERIOD_STOP = 5L;
+const unsigned long DEBOUNCE_PERIOD_START = 10L;
+const unsigned long DEBOUNCE_PERIOD_STOP = 5L;
 enum buttonEnum {
-  buttonStart = 0
+  buttonStart = 0,
+  buttonRed = 1,
+  buttonGreen = 2,
+  buttonBlue = 3,
+  buttonYellow = 4
 };
 ButtonActiveLow buttons[] = {
   ButtonActiveLow(
@@ -59,7 +72,35 @@ ButtonActiveLow buttons[] = {
     DEBOUNCE_PERIOD_START,
     DEBOUNCE_PERIOD_STOP,
     startButtonFunctionPress,
-    startButtonFunctionRelease)
+    startButtonFunctionRelease),
+  ButtonActiveLow(
+    pinButtonRed,
+    ButtonTimer(),
+    DEBOUNCE_PERIOD_START,
+    DEBOUNCE_PERIOD_STOP,
+    redButtonFunctionPress,
+    redButtonFunctionRelease),
+  ButtonActiveLow(
+    pinButtonGreen,
+    ButtonTimer(),
+    DEBOUNCE_PERIOD_START,
+    DEBOUNCE_PERIOD_STOP,
+    greenButtonFunctionPress,
+    greenButtonFunctionRelease),
+  ButtonActiveLow(
+    pinButtonBlue,
+    ButtonTimer(),
+    DEBOUNCE_PERIOD_START,
+    DEBOUNCE_PERIOD_STOP,
+    blueButtonFunctionPress,
+    blueButtonFunctionRelease),
+  ButtonActiveLow(
+    pinButtonYellow,
+    ButtonTimer(),
+    DEBOUNCE_PERIOD_START,
+    DEBOUNCE_PERIOD_STOP,
+    yellowButtonFunctionPress,
+    yellowButtonFunctionRelease)
 };
 
 ////////////////////////////////////////////////////////////////////////
@@ -87,3 +128,4 @@ Light lights[] {
 // Reused Variables ////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
 int result;
+bool isTarget;

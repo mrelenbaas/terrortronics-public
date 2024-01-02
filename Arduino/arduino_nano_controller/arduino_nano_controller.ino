@@ -2,7 +2,7 @@
 
 void setup() {
   Serial.begin(BAUD_RATE);
-  state.startWaiting();
+  state.startAttract();
 }
 
 void loop() {
@@ -26,10 +26,16 @@ void loop() {
           if (buttons[i].debounceByBlockPress() == 1) {
             if (buttons[i].debounceByTargetPress() == 1) {
               switch (state.getState()) {
-                case stateWaiting:
+                case stateAttract:
                   // Do nothing.
                   break;
                 case stateRunning:
+                  // Do nothing.
+                  break;
+                case stateTarget:
+                  // Do nothing.
+                  break;
+                case stateUntarget:
                   // Do nothing.
                   break;
               }
@@ -44,10 +50,16 @@ void loop() {
           if (buttons[i].debounceByBlockRelease() == 1) {
             if (buttons[i].debounceByTargetRelease() == 1) {
               switch (state.getState()) {
-                case stateWaiting:
+                case stateAttract:
                   // Do nothing.
                   break;
                 case stateRunning:
+                  // Do nothing.
+                  break;
+                case stateTarget:
+                  // Do nothing.
+                  break;
+                case stateUntarget:
                   // Do nothing.
                   break;
               }
@@ -59,6 +71,35 @@ void loop() {
       }
     }
   }
+  if (Serial.available() > 0) {
+    switch (serialClient.readData()) {
+      case '0':
+        break;
+      case '1':
+        break;
+      case '2':
+        break;
+      case '3':
+        break;
+      case '4':
+        break;
+      case '5':
+        break;
+      case '6':
+        break;
+      case '7':
+        //isTarget = false;
+        break;
+      case '8':
+        //isTarget = true;
+        break;
+      case '9':
+        break;
+      default:
+        break;
+    }
+  }
+  serialClient.reset();
 }
 
 ////////////////////////////////////////////////////////////////////////
@@ -81,15 +122,22 @@ void loop() {
 // Timers //////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
 void mainTimerFunction() {
-  Serial.println(millis());
+  sprintf(serialBuffer, "%d%d\0", connectedNano, 9);
+  Serial.print(serialBuffer);
 }
 
 void minorTimerFunction() {
   switch (state.getState()) {
-    case stateWaiting:
+    case stateAttract:
       lights[lightDebug].toggle();
       break;
     case stateRunning:
+      // Do nothing.
+      break;
+    case stateTarget:
+      // Do nothing.
+      break;
+    case stateUntarget:
       // Do nothing.
       break;
   }
@@ -97,11 +145,17 @@ void minorTimerFunction() {
 
 void timeoutTimerFunction() {
   switch (state.getState()) {
-    case stateWaiting:
+    case stateAttract:
       // Do nothing.
       break;
     case stateRunning:
-      state.startWaiting();
+      state.startAttract();
+      break;
+    case stateTarget:
+      // Do nothing.
+      break;
+    case stateUntarget:
+      // Do nothing.
       break;
   }
 }
