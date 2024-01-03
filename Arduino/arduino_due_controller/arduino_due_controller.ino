@@ -1,3 +1,4 @@
+// 2nd-party libraries.
 #include "arduino_due_controller.h"
 
 void setup() {
@@ -26,7 +27,6 @@ void loop() {
     case updateTimerErrorOverflow:
       return;
     case updateTimerSuccessLessThanPeriod:
-      // Do nothing.
       break;
     case updateTimerSuccessGreaterThanPeriod:
       // The mainTimerFunction() is called automatically.
@@ -42,16 +42,12 @@ void loop() {
             if (buttons[i].debounceByTargetPress() == 1) {
               switch (state.getState()) {
                 case stateAttract:
-                  // Do nothing.
                   break;
                 case stateRunning:
-                  // Do nothing.
                   break;
                 case stateTarget:
-                  // Do nothing.
                   break;
                 case stateUntarget:
-                  // Do nothing.
                   break;
               }
             }
@@ -66,16 +62,12 @@ void loop() {
             if (buttons[i].debounceByTargetRelease() == 1) {
               switch (state.getState()) {
                 case stateAttract:
-                  // Do nothing.
                   break;
                 case stateRunning:
-                  // Do nothing.
                   break;
                 case stateTarget:
-                  // Do nothing.
                   break;
                 case stateUntarget:
-                  // Do nothing.
                   break;
               }
             }
@@ -92,9 +84,21 @@ void loop() {
     Serial.print(serialBuffer);
     isIncoming = false;
   } else if (digitalRead(50) == LOW) {
+    sprintf(serialBuffer, "%de\0", connectedDue);
+    Serial.print(serialBuffer);
+    isIncoming = false;
   } else if (digitalRead(51) == LOW) {
+    sprintf(serialBuffer, "%df\0", connectedDue);
+    Serial.print(serialBuffer);
+    isIncoming = false;
   } else if (digitalRead(52) == LOW) {
+    sprintf(serialBuffer, "%dg\0", connectedDue);
+    Serial.print(serialBuffer);
+    isIncoming = false;
   } else if (digitalRead(53) == LOW) {
+    sprintf(serialBuffer, "%dh\0", connectedDue);
+    Serial.print(serialBuffer);
+    isIncoming = false;
   }
   if (Serial.available() > 0) {
     switch (serialClient.readData()) {
@@ -125,19 +129,23 @@ void loop() {
         break;
       case '7':
         lights[lightDebug].turnOff();
-        //isTarget = false;
-        //state.startUntarget();
-        //for (unsigned int i = 0; i < (sizeof(lights) / sizeof(Light)); ++i) {
-        //  lights[i].turnOff();
-        //}
+        /*
+        if (digitalRead(pinLightDebug) == LOW) {
+          lights[lightDebug].turnOn();
+        } else {
+          lights[lightDebug].turnOff();
+        }
+        */
         break;
       case '8':
         lights[lightDebug].turnOn();
-        //isTarget = true;
-        //state.startTarget();
-        //for (unsigned int i = 0; i < (sizeof(lights) / sizeof(Light)); ++i) {
-        //  lights[i].turnOn();
-        //}
+        /*
+        if (digitalRead(pinLightDebug) == LOW) {
+          lights[lightDebug].turnOn();
+        } else {
+          lights[lightDebug].turnOff();
+        }
+        */
         break;
       case '9':
         break;
@@ -233,7 +241,6 @@ void minorTimerFunction() {
       result = lights[lightDebug].toggle();
       break;
     case stateRunning:
-      // Do nothing.
       break;
     case stateTarget:
       for (unsigned int i = 0; i < (sizeof(lights) / sizeof(Light)); ++i) {
@@ -253,16 +260,13 @@ void timeoutTimerFunction() {
   /*
   switch (state.getState()) {
     case stateAttract:
-      // Do nothing.
       break;
     case stateRunning:
       state.startAttract();
       break;
     case stateTarget:
-      // Do nothing.
       break;
     case stateUntarget:
-      // Do nothing.
       break;
   }
   */

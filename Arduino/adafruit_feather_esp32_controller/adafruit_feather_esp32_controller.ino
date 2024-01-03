@@ -1,7 +1,7 @@
+// 1st-party libraries.
 #include <WiFi.h>
-//#include <WiFiMulti.h>
-//#include <WiFiClient.h>
 #include <WiFiAP.h>
+// 2nd-party libraries.
 #include "adafruit_feather_esp32_controller.h"
 
 // Set these to your desired credentials.
@@ -162,20 +162,28 @@ void loop() {
       case '6':
         break;
       case '7':
-        //lights[lightDebug].turnOff();
-        //isTarget = false;
-        //state.startUntarget();
         for (unsigned int i = 0; i < (sizeof(lights) / sizeof(Light)); ++i) {
           lights[i].turnOff();
         }
+        /*
+        if (digitalRead(pinButtonRed) == LOW) {
+          lights[pinButtonRed].turnOn();
+        } else {
+          lights[pinButtonRed].turnOff();
+        }
+        */
         break;
       case '8':
-        //lights[lightDebug].turnOn();
-        //isTarget = true;
-        //state.startTarget();
         for (unsigned int i = 0; i < (sizeof(lights) / sizeof(Light)); ++i) {
           lights[i].turnOn();
         }
+        /*
+        if (digitalRead(pinButtonRed) == LOW) {
+          lights[pinButtonRed].turnOn();
+        } else {
+          lights[pinButtonRed].turnOff();
+        }
+        */
         break;
       case '9':
         break;
@@ -320,4 +328,8 @@ void yellowButtonFunctionRelease() {
 
 ////////////////////////////////////////////////////////////////////////
 // Reused Variables ////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////
+// Untested ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////

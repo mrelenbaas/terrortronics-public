@@ -1,3 +1,4 @@
+// 2nd-party libraries.
 #include "arduino_uno_controller.h"
 
 void setup() {
@@ -11,7 +12,6 @@ void loop() {
     case updateTimerErrorOverflow:
       return;
     case updateTimerSuccessLessThanPeriod:
-      // Do nothing.
       break;
     case updateTimerSuccessGreaterThanPeriod:
       // The mainTimerFunction() is called automatically.
@@ -27,16 +27,12 @@ void loop() {
             if (buttons[i].debounceByTargetPress() == 1) {
               switch (state.getState()) {
                 case stateAttract:
-                  // Do nothing.
                   break;
                 case stateRunning:
-                  // Do nothing.
                   break;
                 case stateTarget:
-                  // Do nothing.
                   break;
                 case stateUntarget:
-                  // Do nothing.
                   break;
               }
             }
@@ -51,16 +47,12 @@ void loop() {
             if (buttons[i].debounceByTargetRelease() == 1) {
               switch (state.getState()) {
                 case stateAttract:
-                  // Do nothing.
                   break;
                 case stateRunning:
-                  // Do nothing.
                   break;
                 case stateTarget:
-                  // Do nothing.
                   break;
                 case stateUntarget:
-                  // Do nothing.
                   break;
               }
             }
@@ -71,49 +63,66 @@ void loop() {
       }
     }
   }
-  if (Serial.available() > 0) {
-    switch (serialClient.readData()) {
-      case '0':
-        break;
-      case '1':
-        break;
-      case '2':
-        break;
-      case '3':
-        break;
-      case '4':
-        break;
-      case '5':
-        break;
-      case '6':
-        break;
-      case '7':
-        //sprintf(serialBuffer, "%d%d\0", connectedUno, 7);
-        //Serial.print(serialBuffer);
-        lights[lightDebug].turnOff();
-        //isTarget = false;
-        //state.startUntarget();
-        //for (unsigned int i = 0; i < (sizeof(lights) / sizeof(Light)); ++i) {
-        //  lights[i].turnOff();
-        //}
-        break;
-      case '8':
-        //sprintf(serialBuffer, "%d%d\0", connectedUno, 8);
-        //Serial.print(serialBuffer);
-        lights[lightDebug].turnOn();
-        //isTarget = true;
-        //state.startTarget();
-        //for (unsigned int i = 0; i < (sizeof(lights) / sizeof(Light)); ++i) {
-        //  lights[i].turnOn();
-        //}
-        break;
-      case '9':
-        break;
-      default:
-        break;
+  //if (!isBlocked) {
+    //if (isPumping) {
+      Serial.print((byte)9);
+    //  isPumping = false;
+    //}
+    if (Serial.available() > 0) {
+      //isBlocked = true;
+      switch (serialClient.readData()) {
+        case '0':
+          Serial.print((unsigned char)0);
+          //isHeartbeatReceived = true;
+          break;
+        case '1':
+          Serial.print((unsigned char)1);
+          break;
+        case '2':
+          Serial.print((unsigned char)2);
+          break;
+        case '3':
+          Serial.print((unsigned char)3);
+          break;
+        case '4':
+          Serial.print((unsigned char)4);
+          break;
+        case '5':
+          Serial.print((unsigned char)5);
+          break;
+        case '6':
+          Serial.print((unsigned char)6);
+          break;
+        case '7':
+          //sprintf(serialBuffer, "%d%d\0", connectedUno, 7);
+          Serial.print((unsigned char)7);
+          if (!isBlocked) {
+            lights[lightDebug].turnOff();
+            isBlocked = true;
+          }
+          //isBlocked = true;
+          //isPumping = true;
+          break;
+        case '8':
+          //sprintf(serialBuffer, "%d%d\0", connectedUno, 8);
+          Serial.print((unsigned char)8);
+          if (!isBlocked) {
+            lights[lightDebug].turnOn();
+            isBlocked = true;
+          }
+          //isBlocked = true;
+          //isPumping = true;
+          break;
+        case '9':
+          Serial.print((unsigned char)9);
+          break;
+        default:
+          break;
+      }
     }
-  }
+  //}
   serialClient.reset();
+  delay(10);
 }
 
 ////////////////////////////////////////////////////////////////////////
@@ -136,21 +145,21 @@ void loop() {
 // Timers //////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
 void mainTimerFunction() {
-  sprintf(serialBuffer, "%d%d\0", connectedUno, 9);
-  Serial.print(serialBuffer);
+  //sprintf(serialBuffer, "%d%d\0", connectedUno, 9);
+  //Serial.print(serialBuffer);
+  //Serial.print((byte)9);
+  isBlocked = false;
 }
 
 void minorTimerFunction() {
-  /*
   switch (state.getState()) {
     case stateAttract:
-      lights[lightDebug].toggle();
+      //lights[lightDebug].toggle();
       break;
     case stateRunning:
-      // Do nothing.
       break;
     case stateTarget:
-      lights[lightDebug].turnOn();
+      //lights[lightDebug].turnOn();
       //for (unsigned int i = 0; i < (sizeof(lights) / sizeof(Light)); ++i) {
       //  lights[i].turnOn();
       //}
@@ -161,26 +170,20 @@ void minorTimerFunction() {
       //}
       break;
   }
-  */
 }
 
 void timeoutTimerFunction() {
-  /*
   switch (state.getState()) {
     case stateAttract:
-      // Do nothing.
       break;
     case stateRunning:
       state.startAttract();
       break;
     case stateTarget:
-      // Do nothing.
       break;
     case stateUntarget:
-      // Do nothing.
       break;
   }
-  */
 }
 
 ////////////////////////////////////////////////////////////////////////
@@ -207,4 +210,8 @@ void startButtonFunctionRelease() {
 
 ////////////////////////////////////////////////////////////////////////
 // Reused Variables ////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////
+// Untested ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////

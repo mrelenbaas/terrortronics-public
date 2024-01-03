@@ -1,3 +1,4 @@
+// 2nd-party libraries.
 #include "arduino_nano_controller.h"
 
 void setup() {
@@ -11,7 +12,6 @@ void loop() {
     case updateTimerErrorOverflow:
       return;
     case updateTimerSuccessLessThanPeriod:
-      // Do nothing.
       break;
     case updateTimerSuccessGreaterThanPeriod:
       // The mainTimerFunction() is called automatically.
@@ -27,16 +27,12 @@ void loop() {
             if (buttons[i].debounceByTargetPress() == 1) {
               switch (state.getState()) {
                 case stateAttract:
-                  // Do nothing.
                   break;
                 case stateRunning:
-                  // Do nothing.
                   break;
                 case stateTarget:
-                  // Do nothing.
                   break;
                 case stateUntarget:
-                  // Do nothing.
                   break;
               }
             }
@@ -51,16 +47,12 @@ void loop() {
             if (buttons[i].debounceByTargetRelease() == 1) {
               switch (state.getState()) {
                 case stateAttract:
-                  // Do nothing.
                   break;
                 case stateRunning:
-                  // Do nothing.
                   break;
                 case stateTarget:
-                  // Do nothing.
                   break;
                 case stateUntarget:
-                  // Do nothing.
                   break;
               }
             }
@@ -132,13 +124,10 @@ void minorTimerFunction() {
       lights[lightDebug].toggle();
       break;
     case stateRunning:
-      // Do nothing.
       break;
     case stateTarget:
-      // Do nothing.
       break;
     case stateUntarget:
-      // Do nothing.
       break;
   }
 }
@@ -146,16 +135,13 @@ void minorTimerFunction() {
 void timeoutTimerFunction() {
   switch (state.getState()) {
     case stateAttract:
-      // Do nothing.
       break;
     case stateRunning:
       state.startAttract();
       break;
     case stateTarget:
-      // Do nothing.
       break;
     case stateUntarget:
-      // Do nothing.
       break;
   }
 }
@@ -184,4 +170,8 @@ void startButtonFunctionRelease() {
 
 ////////////////////////////////////////////////////////////////////////
 // Reused Variables ////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////
+// Untested ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
