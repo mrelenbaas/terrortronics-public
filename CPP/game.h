@@ -223,5 +223,9 @@ bool isEightReceived;
 char previousChar;
 bool isPreviousSeven;
 bool isPreviousEight;
+bool isUnoTarget;
+bool isDueTarget;
+bool isFeatherTarget;
+bool isMicroTarget;
 
 #endif

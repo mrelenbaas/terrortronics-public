@@ -90,46 +90,20 @@ void loop() {
         break;
       case '7':
         if (!isBlocked) {
-          //previousChar = 8;
-          //sprintf(serialBuffer, "%d%d\0", connectedMicro, 7);
-          Serial.print((byte)7);
-          //digitalWrite(pinLightDebug, LOW);
-          //lights[lightDebug].turnOff();
-          if (digitalRead(pinLightDebug) == LOW) {
-            lights[lightDebug].turnOn();
-          } else {
-            lights[lightDebug].turnOff();
-          }
-          mainTimer.reset();
-          //serialClient.reset();
-          //isTarget = false;
-          //state.startUntarget();
-          //for (unsigned int i = 0; i < (sizeof(lights) / sizeof(Light)); ++i) {
-          //  lights[i].turnOff();
-          //}
+          Serial.print((unsigned char)7);
+          lights[lightDebug].turnOff();
           isBlocked = true;
+          isTarget = false;
+          isScoreSent = false;
         }
         break;
       case '8':
         if (!isBlocked) {
-          //previousChar = 7;
-          //sprintf(serialBuffer, "%d%d\0", connectedMicro, 8);
-          Serial.print((byte)8);
-          //digitalWrite(pinLightDebug, HIGH);
-          //lights[lightDebug].turnOn();
-          if (digitalRead(pinLightDebug) == LOW) {
-            lights[lightDebug].turnOn();
-          } else {
-            lights[lightDebug].turnOff();
-          }
-          mainTimer.reset();
-          //serialClient.reset();
-          //isTarget = true;
-          //state.startTarget();
-          //for (unsigned int i = 0; i < (sizeof(lights) / sizeof(Light)); ++i) {
-          //  lights[i].turnOn();
-          //}
+          Serial.print((unsigned char)8);
+          lights[lightDebug].turnOn();
           isBlocked = true;
+          isTarget = true;
+          isScoreSent = false;
         }
         break;
       case '9':
@@ -145,7 +119,8 @@ void loop() {
         break;
     }
   }
-  serialClient.reset();
+  //serialClient.reset();
+  //delay(10);
 }
 
 ////////////////////////////////////////////////////////////////////////
@@ -169,7 +144,7 @@ void loop() {
 ////////////////////////////////////////////////////////////////////////
 void mainTimerFunction() {
   //sprintf(serialBuffer, "%d%d\0", connectedMicro, previousChar);
-  Serial.print("29\0");
+  //Serial.print("29\0");
   isBlocked = false;
   //mainTimer.reset();
 }
@@ -217,13 +192,24 @@ void timeoutTimerFunction() {
 ////////////////////////////////////////////////////////////////////////
 void startButtonFunctionPress() {
   lights[lightDebug].turnOn();
-  timeoutTimer.reset();
+  //pinMode(13, INPUT);
+  //if (digitalRead(13) == HIGH) {
+    //if (isTarget) {
+      //if (!isScoreSent) {
+        Serial.print((unsigned char)1);
+        //isIncoming = false;
+        //isScoreSent = true;
+      //}
+    //}
+  //}
+  //pinMode(13, OUTPUT);
+  //timeoutTimer.reset();
 }
 
 void startButtonFunctionRelease() {
   lights[lightDebug].turnOff();
-  timeoutTimer.reset();
-  state.startRunning();
+  //timeoutTimer.reset();
+  //state.startRunning();
 }
 
 ////////////////////////////////////////////////////////////////////////

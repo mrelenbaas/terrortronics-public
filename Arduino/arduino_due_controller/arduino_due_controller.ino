@@ -19,6 +19,7 @@ void setup() {
   //keyboardTimer.reset();
   //startTerminal();
   //startServer();
+  lights[lightDebug].turnOff();
 }
 
 void loop() {
@@ -79,47 +80,65 @@ void loop() {
     }
   }
   // The Due, Uno, Micro, or Teensy sets this after their own double-confirmation.
-  if (digitalRead(49) == LOW) {
-    sprintf(serialBuffer, "%dd\0", connectedDue);
-    Serial.print(serialBuffer);
-    isIncoming = false;
-  } else if (digitalRead(50) == LOW) {
-    sprintf(serialBuffer, "%de\0", connectedDue);
-    Serial.print(serialBuffer);
-    isIncoming = false;
-  } else if (digitalRead(51) == LOW) {
-    sprintf(serialBuffer, "%df\0", connectedDue);
-    Serial.print(serialBuffer);
-    isIncoming = false;
-  } else if (digitalRead(52) == LOW) {
-    sprintf(serialBuffer, "%dg\0", connectedDue);
-    Serial.print(serialBuffer);
-    isIncoming = false;
-  } else if (digitalRead(53) == LOW) {
-    sprintf(serialBuffer, "%dh\0", connectedDue);
-    Serial.print(serialBuffer);
-    isIncoming = false;
-  }
+  /*
+    if (digitalRead(49) == LOW) {
+    pinMode(13, INPUT);
+    if (digitalRead(13) == HIGH) {
+      if (isTarget) {
+        if (!isScoreSent) {
+          Serial.print((unsigned char)1);
+          isIncoming = false;
+          isScoreSent = true;
+        }
+      }
+    }
+    pinMode(13, OUTPUT);
+    }
+  */
+  //Serial.print((unsigned char)9);
   if (Serial.available() > 0) {
     switch (serialClient.readData()) {
       case '0':
-        sprintf(serialBuffer, "%d%d\0", connectedDue, 1);
-        Serial.print(serialBuffer);
+        //sprintf(serialBuffer, "%d%d\0", connectedDue, 1);
+        //Serial.print(serialBuffer);
         break;
       case '1':
-        sprintf(serialBuffer, "%d%d\0", connectedDue, 2);
-        Serial.print(serialBuffer);
+        //sprintf(serialBuffer, "%d%d\0", connectedDue, 2);
+        //Serial.print(serialBuffer);
         break;
       case '2':
-        targetIndex = 0;
-        if (targetIndex == 0) {
-          sprintf(serialBuffer, "%d%d\0", connectedDue, random(3, 7));
+        targetIndex = random(3, 7);
+        if (targetIndex == 3) {
+          //sprintf(serialBuffer, "%d%d\0", connectedDue, random(3, 7));
+          Serial.print((unsigned char)3);
+          lights[lightDebug].turnOff();
+          isTarget = true;
+          isScoreSent = false;
+        } else if (targetIndex == 4) {
+          Serial.print((unsigned char)4);
+          lights[lightDebug].turnOn();
+          isTarget = true;
+          isScoreSent = false;
+        } else if (targetIndex == 5) {
+          Serial.print((unsigned char)5);
+          lights[lightDebug].turnOff();
+          isTarget = true;
+          isScoreSent = false;
+        } else if (targetIndex == 6) {
+          Serial.print((unsigned char)6);
+          lights[lightDebug].turnOff();
+          isTarget = true;
+          isScoreSent = false;
         }
-        Serial.print(serialBuffer);
+        //++targetIndex;
+        //if (targetIndex >= 7) {
+        //  targetIndex = 3;
+        //}
+        //Serial.print(serialBuffer);
         break;
       case '3':
-        digitalWrite(44, LOW);
-        isIncoming = true;
+        //digitalWrite(44, LOW);
+        //isIncoming = true;
         break;
       case '4':
         break;
@@ -128,24 +147,18 @@ void loop() {
       case '6':
         break;
       case '7':
-        lights[lightDebug].turnOff();
-        /*
-        if (digitalRead(pinLightDebug) == LOW) {
-          lights[lightDebug].turnOn();
-        } else {
-          lights[lightDebug].turnOff();
-        }
-        */
+        //if (!isTargetBlocked) {
+        //  Serial.print((unsigned char)7);
+        //  lights[lightDebug].turnOff();
+        //  isTargetBlocked = true;
+        //}
         break;
       case '8':
-        lights[lightDebug].turnOn();
-        /*
-        if (digitalRead(pinLightDebug) == LOW) {
-          lights[lightDebug].turnOn();
-        } else {
-          lights[lightDebug].turnOff();
-        }
-        */
+        //if (!isTargetBlocked) {
+        //  Serial.print((unsigned char)8);
+        //  lights[lightDebug].turnOn();
+        //  isTargetBlocked = true;
+        //}
         break;
       case '9':
         break;
@@ -155,7 +168,7 @@ void loop() {
   }
   serialClient.reset();
   /*
-  if (Serial.available() > 0) {
+    if (Serial.available() > 0) {
     incomingMessage = Serial.read();
     switch (incomingMessage) {
       case '0':
@@ -193,10 +206,11 @@ void loop() {
       default:
         break;
     }
-  }
-  incomingMessage = -1;
-  Serial.flush();
+    }
+    incomingMessage = -1;
+    Serial.flush();
   */
+  delay(10);
 }
 
 ////////////////////////////////////////////////////////////////////////
@@ -215,19 +229,20 @@ void loop() {
 // Serial //////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
 void serialReset() {
-  for (unsigned int i = 0; i < (sizeof(serialBuffer) / sizeof(serialBuffer[0])); ++i) {
-    serialBuffer[i] = '\0';
-  }
+  //for (unsigned int i = 0; i < (sizeof(serialBuffer) / sizeof(serialBuffer[0])); ++i) {
+  //  serialBuffer[i] = '\0';
+  //}
 }
 
 ////////////////////////////////////////////////////////////////////////
 // Timers //////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
 void mainTimerFunction() {
-  sprintf(serialBuffer, "%d%d\0", connectedDue, 9);
-  Serial.print(serialBuffer);
-  isBlocked = false;
-  isBlocked2 = false;
+  //sprintf(serialBuffer, "%d%d\0", connectedDue, 9);
+  Serial.print((unsigned char)9);
+  //isBlocked = false;
+  //isBlocked2 = false;
+  //isTargetBlocked = false;
   //if (!isBlocked) {
   //  sprintf(serialBuffer, "%d\0", 0);
   //  Serial.print(serialBuffer);
@@ -236,7 +251,7 @@ void mainTimerFunction() {
 
 void minorTimerFunction() {
   /*
-  switch (state.getState()) {
+    switch (state.getState()) {
     case stateAttract:
       result = lights[lightDebug].toggle();
       break;
@@ -252,13 +267,13 @@ void minorTimerFunction() {
         lights[i].turnOff();
       }
       break;
-  }
+    }
   */
 }
 
 void timeoutTimerFunction() {
   /*
-  switch (state.getState()) {
+    switch (state.getState()) {
     case stateAttract:
       break;
     case stateRunning:
@@ -268,7 +283,7 @@ void timeoutTimerFunction() {
       break;
     case stateUntarget:
       break;
-  }
+    }
   */
 }
 
@@ -276,14 +291,25 @@ void timeoutTimerFunction() {
 // Buttons /////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
 void startButtonFunctionPress() {
-  lights[lightDebug].turnOn();
+  //lights[lightDebug].turnOn();
   //digitalWrite(7, LOW);
-  timeoutTimer.reset();
-  state.startRunning();
+  //timeoutTimer.reset();
+  //state.startRunning();
+  //pinMode(13, INPUT);
+  //if (digitalRead(13) == HIGH) {
+    if (isTarget) {
+      if (!isScoreSent) {
+        Serial.print((unsigned char)1);
+        isIncoming = false;
+        isScoreSent = true;
+      }
+    }
+  //}
+  //pinMode(13, OUTPUT);
 }
 
 void startButtonFunctionRelease() {
-  lights[lightDebug].turnOff();
+  //lights[lightDebug].turnOff();
   //digitalWrite(7, HIGH);
   timeoutTimer.reset();
   //state.startRunning();

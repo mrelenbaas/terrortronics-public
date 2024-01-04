@@ -19,16 +19,40 @@ int _tmain(int argc, _TCHAR* argv[]) {
     findNextConnection();
   }
   incomingData[0] = '\0';
-  incomingData[1] = '\0';
-  incomingData[2] = '\0';
 	int dataLength = 1;
   while(1) {
+    //serialUno->WriteData(setTarget);
+    //serialDue->WriteData(setTarget);
+    //serialFeather->WriteData(setTarget);
+    //serialMicro->WriteData(setTarget);
+    /*
+    if (isUnoTarget) {
+      serialUno->WriteData(setTarget);
+    } else {
+      serialUno->WriteData(setUntarget);
+    }
+    if (isDueTarget) {
+      serialDue->WriteData(setTarget);
+    } else {
+      serialDue->WriteData(setUntarget);
+    }
+    if (isFeatherTarget) {
+      serialFeather->WriteData(setTarget);
+    } else {
+      serialFeather->WriteData(setUntarget);
+    }
+    if (isMicroTarget) {
+      serialMicro->WriteData(setTarget);
+    } else {
+      serialMicro->WriteData(setUntarget);
+    }
+    */
     if (serialFeather && serialFeather->IsConnected()) {
       readSize = serialFeather->ReadData(incomingData, dataLength);
       if (readSize > 0) {
-        //printf("---\nincomingData: %s, %d\n", incomingData, readSize);
+        //printf("---\n(Feather) incomingData: %s, %d\n", incomingData, readSize);
       }
-      switch (incomingData[1]) {
+      switch (incomingData[0]) {
         case '1':
           break;
         case '2':
@@ -46,25 +70,27 @@ int _tmain(int argc, _TCHAR* argv[]) {
         case '8':
           break;
         case '9':
-          printf("Heartbeat (Feather):\n");
+          //printf("Heartbeat (Feather):\n");
+          //serialFeather->WriteData(setTarget);
           break;
       };
     }
     if (serialDue && serialDue->IsConnected()) {
       readSize = serialDue->ReadData(incomingData, dataLength);
       if (readSize > 0) {
-        //printf("---\nincomingData: %s, %d\n", incomingData, readSize);
+        //printf("(Due) incomingData: %s, %d\n", incomingData, readSize);
       }
+      /*
       if (isIncoming) {
-        if (incomingData[1] == '0') {
-        } else if (incomingData[1] == '1') {
-        } else if (incomingData[1] == '2') {
-        } else if (incomingData[1] == '3') {
-        } else if (incomingData[1] == 'd' || 
-                   incomingData[1] == 'e' ||
-                   incomingData[1] == 'f' ||
-                   incomingData[1] == 'g' ||
-                   incomingData[1] == 'h') {
+        if (incomingData[0] == '0') {
+        } else if (incomingData[0] == '1') {
+        } else if (incomingData[0] == '2') {
+        } else if (incomingData[0] == '3') {
+        } else if (incomingData[0] == 'd' || 
+                   incomingData[0] == 'e' ||
+                   incomingData[0] == 'f' ||
+                   incomingData[0] == 'g' ||
+                   incomingData[0] == 'h') {
           ++score;
           if (score > 9) {
             score = 9;
@@ -115,74 +141,108 @@ int _tmain(int argc, _TCHAR* argv[]) {
           system("adb -s 192.168.4.5 shell input tap 965 1977");
           //system("adb push ./state.txt ./");
           printf("score: %d\n", score);
-          isIncoming = false;
+          //isIncoming = false;
           isHeartbeatReceived = false;
-        } else if (incomingData[1] == '5') {
-        } else if (incomingData[1] == '6') {
-        } else if (incomingData[1] == '7') {
-        } else if (incomingData[1] == '8') {
-        } else if (incomingData[1] == '9') {
-        }
-        if (incomingData[1]) {
-          if (incomingData[1] == 'd') {
-            serialUno->WriteData(setUntarget);
-          } else if (incomingData[1] == 'e') {
-            serialDue->WriteData(setUntarget);
-          } else if (incomingData[1] == 'f') {
-            serialFeather->WriteData(setUntarget);
-          } else if (incomingData[1] == 'g') {
-            serialMicro->WriteData(setUntarget);
-          } else if (incomingData[1] == 'h') {
-          }
-        }
-      } else {
-        if (incomingData[1] == '0') {
-        } else if (incomingData[1] == '1') {
-          printf("%c\n", incomingData[1]);
-        } else if (incomingData[1] == '2') {
-          printf("%c\n", incomingData[1]);
-        } else if (incomingData[1] == '3') {
-          printf("target (Feather): %c\n", incomingData[1]);
-          //serialUno->WriteData(setUntarget);
-          //serialDue->WriteData(setUntarget);
-          serialFeather->WriteData(setTarget);
-          //serialMicro->WriteData(setUntarget);
-          isIncoming = true;
-        } else if (incomingData[1] == '4') {
-          printf("target (Due): %c\n", incomingData[1]);
-          //serialUno->WriteData(setUntarget);
-          serialDue->WriteData(setTarget);
-          //serialFeather->WriteData(setUntarget);
-          //serialMicro->WriteData(setUntarget);
-          isIncoming = true;
-        } else if (incomingData[1] == '5') {
-          printf("target (Micro): %c\n", incomingData[1]);
-          //serialUno->WriteData(setUntarget);
-          //serialDue->WriteData(setUntarget);
-          //serialFeather->WriteData(setUntarget);
-          serialMicro->WriteData(setTarget);
-          isIncoming = true;
-        } else if (incomingData[1] == '6') {
-          printf("target (Uno): %c\n", incomingData[1]);
-          serialUno->WriteData(setTarget);
-          //serialDue->WriteData(setUntarget);
-          //serialFeather->WriteData(setUntarget);
-          //serialMicro->WriteData(setUntarget);
-          isIncoming = true;
-        } else if (incomingData[1] == '7') {
-        } else if (incomingData[1] == '8') {
-        } else if (incomingData[1] == '9') {
-          printf("Heartbeat (Due):\n");
+        } else if (incomingData[0] == '5') {
+        } else if (incomingData[0] == '6') {
+        } else if (incomingData[0] == '7') {
+        } else if (incomingData[0] == '8') {
+        } else if (incomingData[0] == '9') {
+          printf("Heartbeat (Due) (Incoming):\n");
           serialDue->WriteData(requestRandom);
         }
-      }
+        if (incomingData[0]) {
+          if (incomingData[0] == '3') {
+            //printf("target (Feather): %c\n", incomingData[0]);
+            //isIncoming = true;
+          } else if (incomingData[0] == '4') {
+            //printf("target (Due): %c\n", incomingData[0]);
+            //isIncoming = true;
+          } else if (incomingData[0] == '5') {
+            //printf("target (Micro): %c\n", incomingData[0]);
+            //isIncoming = true;
+          } else if (incomingData[0] == '6') {
+            //printf("target (Uno): %c\n", incomingData[0]);
+            //isIncoming = true;
+          } else if (incomingData[0] == '7') {
+          } else if (incomingData[0] == '8') {
+          } else if (incomingData[0] == '9') {
+            printf("Heartbeat (Due) (Incoming):\n");
+            serialDue->WriteData(requestRandom);
+          } else if (incomingData[0] == 'd') {
+          } else if (incomingData[0] == 'e') {
+          } else if (incomingData[0] == 'f') {
+          } else if (incomingData[0] == 'g') {
+          } else if (incomingData[0] == 'h') {
+          }
+        }
+        */
+      //} else {
+        if (incomingData[0] == '0') {
+        } else if (incomingData[0] == '1') {
+          printf("HERE HERE HERE: %d\n", score);
+          ++score;
+          printf("%c\n", incomingData[0]);
+        } else if (incomingData[0] == '2') {
+          printf("%c\n", incomingData[0]);
+        } else if (incomingData[0] == '3') {
+          printf("target (Feather): %c\n", incomingData[0]);
+          serialUno->WriteData(setUntarget);
+          //serialDue->WriteData(setUntarget);
+          serialFeather->WriteData(setTarget);
+          serialMicro->WriteData(setUntarget);
+          //isUnoTarget = false;
+          //isDueTarget = false;
+          //isFeatherTarget = true;
+          //isMicroTarget = false;
+          //isIncoming = true;
+        } else if (incomingData[0] == '4') {
+          printf("target (Due): %c\n", incomingData[0]);
+          serialUno->WriteData(setUntarget);
+          //serialDue->WriteData(setTarget);
+          serialFeather->WriteData(setUntarget);
+          serialMicro->WriteData(setUntarget);
+          //isUnoTarget = false;
+          //isDueTarget = true;
+          //isFeatherTarget = false;
+          //isMicroTarget = false;
+          //isIncoming = true;
+        } else if (incomingData[0] == '5') {
+          printf("target (Micro): %c\n", incomingData[0]);
+          serialUno->WriteData(setUntarget);
+          //serialDue->WriteData(setUntarget);
+          serialFeather->WriteData(setUntarget);
+          serialMicro->WriteData(setTarget);
+          //isUnoTarget = false;
+          //isDueTarget = false;
+          //isFeatherTarget = false;
+          //isMicroTarget = true;
+          //isIncoming = true;
+        } else if (incomingData[0] == '6') {
+          printf("target (Uno): %c\n", incomingData[0]);
+          serialUno->WriteData(setTarget);
+          //serialDue->WriteData(setUntarget);
+          serialFeather->WriteData(setUntarget);
+          serialMicro->WriteData(setUntarget);
+          //isUnoTarget = true;
+          //isDueTarget = false;
+          //isFeatherTarget = false;
+          //isMicroTarget = false;
+          //isIncoming = true;
+        } else if (incomingData[0] == '7') {
+        } else if (incomingData[0] == '8') {
+        } else if (incomingData[0] == '9') {
+          //printf("Heartbeat (Due) (Not Incoming):\n");
+          serialDue->WriteData(requestRandom);
+        }
+      //}
     }
     if (serialMicro && serialMicro->IsConnected()) {
       readSize = serialMicro->ReadData(incomingData, dataLength);
       if (readSize > 0) {
-        //printf("---\nincomingData: %s, %d\n", incomingData, readSize);
+        //printf("(Micro) incomingData: %s, %d\n", incomingData, readSize);
       }
-      switch (incomingData[1]) {
+      switch (incomingData[0]) {
         case '1':
           break;
         case '2':
@@ -196,8 +256,10 @@ int _tmain(int argc, _TCHAR* argv[]) {
         case '6':
           break;
         case '7':
+          //printf("(Micro) 7\n");
           break;
         case '8':
+          //printf("(Micro) 8\n");
           break;
         case '9':
           //printf("Heartbeat (Micro):\n");
@@ -220,63 +282,63 @@ int _tmain(int argc, _TCHAR* argv[]) {
       //serialUno->WriteData(receivedHeartbeat);
       readSize = serialUno->ReadData(incomingData, dataLength);
       if (readSize > 0) {
-        //printf("---\nincomingData: %s, %d\n", incomingData, readSize);
+        //printf("---\n(Uno) incomingData: %s, %d\n", incomingData, readSize);
       }
       switch (incomingData[0]) {
           case '0':
             if (isZeroExpected) {
-              printf("Uno: 0\n");
+              //printf("Uno: 0\n");
               isZeroExpected = false;
             }
             break;
           case '1':
             if (isOneExpected) {
-              printf("Uno: 1\n");
+              //printf("Uno: 1\n");
               isOneExpected = false;
             }
             break;
           case '2':
             if (isTwoExpected) {
-              printf("Uno: 2\n");
+              //printf("Uno: 2\n");
               isTwoExpected = false;
             }
             break;
           case '3':
             if (isThreeExpected) {
-              printf("Uno: 3\n");
+              //printf("Uno: 3\n");
               isThreeExpected = false;
             }
             break;
           case '4':
             if (isFourExpected) {
-              printf("Uno: 4\n");
+              //printf("Uno: 4\n");
               isFourExpected = false;
             }
             break;
           case '5':
             if (isFiveExpected) {
-              printf("Uno: 5\n");
+              //printf("Uno: 5\n");
               isFiveExpected = false;
             }
             break;
           case '6':
             if (isSixExpected) {
-              printf("Uno: 6\n");
+              //printf("Uno: 6\n");
               isSixExpected = false;
             }
             break;
           case '7':
             if (isPreviousEight) {
-              printf("Uno: 7\n");
-              serialUno->WriteData(setUntarget);
+              //printf("Uno: 7\n");
+              //serialUno->WriteData(setUntarget);
             }
             isPreviousSeven = true;
             isPreviousEight = false;
             break;
           case '8':
             if (isPreviousSeven) {
-              serialUno->WriteData(setTarget);
-              printf("Uno: 8\n");
+              //serialUno->WriteData(setTarget);
+              //printf("Uno: 8\n");
             }
             isPreviousSeven = false;
             isPreviousEight = true;
@@ -287,15 +349,15 @@ int _tmain(int argc, _TCHAR* argv[]) {
                 //printf("Uno: 9\n");
               //}
               //printf("Uno: 9\n");
-              if (isLightOn) {
+              //if (isLightOn) {
                 //serialUno->WriteData(setTarget);
                 //isEightExpected = true;
-                isLightOn = false;
-              } else {
-                serialUno->WriteData(setUntarget);
+                //isLightOn = false;
+              //} else {
+                //serialUno->WriteData(setUntarget);
                 //isSevenExpected = true;
-                isLightOn = true;
-              }
+                //isLightOn = true;
+              //}
               //if (isSevenReceived && isEightReceived) {
               //  isNineExpected = false;
               //}
@@ -306,9 +368,8 @@ int _tmain(int argc, _TCHAR* argv[]) {
         };
     }
     incomingData[0] = '\0';
-    //incomingData[1] = '\0';
-    //incomingData[2] = '\0';
-    //Sleep(10);
+    //Sleep(3000);
+    //printf("HERE\n");
 	}
 	return 0;
 }

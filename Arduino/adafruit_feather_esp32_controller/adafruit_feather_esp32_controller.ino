@@ -162,28 +162,26 @@ void loop() {
       case '6':
         break;
       case '7':
-        for (unsigned int i = 0; i < (sizeof(lights) / sizeof(Light)); ++i) {
-          lights[i].turnOff();
+        if (!isBlocked) {
+          Serial.print((unsigned char)7);
+          for (unsigned int i = 0; i < (sizeof(lights) / sizeof(Light)); ++i) {
+            lights[i].turnOff();
+          }
+          isBlocked = true;
+          //isTarget = false;
+          isScoreSent = false;
         }
-        /*
-        if (digitalRead(pinButtonRed) == LOW) {
-          lights[pinButtonRed].turnOn();
-        } else {
-          lights[pinButtonRed].turnOff();
-        }
-        */
         break;
       case '8':
-        for (unsigned int i = 0; i < (sizeof(lights) / sizeof(Light)); ++i) {
-          lights[i].turnOn();
+        if (!isBlocked) {
+          Serial.print((unsigned char)8);
+          for (unsigned int i = 0; i < (sizeof(lights) / sizeof(Light)); ++i) {
+            lights[i].turnOn();
+          }
+          isBlocked = true;
+          //isTarget = true;
+          isScoreSent = false;
         }
-        /*
-        if (digitalRead(pinButtonRed) == LOW) {
-          lights[pinButtonRed].turnOn();
-        } else {
-          lights[pinButtonRed].turnOff();
-        }
-        */
         break;
       case '9':
         break;
@@ -192,6 +190,7 @@ void loop() {
     }
   }
   serialClient.reset();
+  delay(10);
 }
 
 ////////////////////////////////////////////////////////////////////////
@@ -202,13 +201,14 @@ void loop() {
 // Timers //////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
 void mainTimerFunction() {
-  sprintf(serialBuffer, "%d%d\0", connectedFeather, 9);
-  Serial.print(serialBuffer);
+  //sprintf(serialBuffer, "%d%d\0", connectedFeather, 9);
+  //Serial.print(serialBuffer);
+  isBlocked = false;
 }
 
 void minorTimerFunction() {
   /*
-  switch (state.getState()) {
+    switch (state.getState()) {
     case stateAttract:
       for (unsigned int i = 0; i < (sizeof(lights) / sizeof(Light)); ++i) {
         lights[i].toggle();
@@ -229,16 +229,16 @@ void minorTimerFunction() {
         lights[i].turnOff();
       }
       break;
-  }
-  //if (wifiMulti.run() != WL_CONNECTED) {
-  //  Serial.println("WiFi not connected!");
-  //}
+    }
+    //if (wifiMulti.run() != WL_CONNECTED) {
+    //  Serial.println("WiFi not connected!");
+    //}
   */
 }
 
 void timeoutTimerFunction() {
   /*
-  switch (state.getState()) {
+    switch (state.getState()) {
     case stateAttract:
       // Do nothing.
       break;
@@ -251,7 +251,7 @@ void timeoutTimerFunction() {
     case stateUntarget:
       // Do nothing.
       break;
-  }
+    }
   */
 }
 
@@ -274,48 +274,59 @@ void startButtonFunctionRelease() {
 }
 
 void redButtonFunctionPress() {
-  lights[lightRed].turnOn();
-  timeoutTimer.reset();
+  //lights[lightRed].turnOn();
+  //timeoutTimer.reset();
+  pinMode(lightRed, INPUT);
+  if (digitalRead(lightRed) == HIGH) {
+    if (isTarget) {
+      if (!isScoreSent) {
+        Serial.print((unsigned char)1);
+        isScoreSent = true;
+      }
+    }
+  }
+  pinMode(lightRed, OUTPUT);
 }
 
 void redButtonFunctionRelease() {
-  lights[lightRed].turnOff();
-  state.startRunning();
+  //lights[lightRed].turnOff();
+  //state.startRunning();
+  isBlocked = false;
 }
 
 void greenButtonFunctionPress() {
-  lights[lightGreen].turnOn();
-  timeoutTimer.reset();
+  //lights[lightGreen].turnOn();
+  //timeoutTimer.reset();
 }
 
 void greenButtonFunctionRelease() {
-  lights[lightGreen].turnOff();
-  state.startRunning();
+  //lights[lightGreen].turnOff();
+  //state.startRunning();
 }
 
 void blueButtonFunctionPress() {
-  lights[lightBlue].turnOn();
-  timeoutTimer.reset();
+  //lights[lightBlue].turnOn();
+  //timeoutTimer.reset();
 }
 
 void blueButtonFunctionRelease() {
-  lights[lightBlue].turnOff();
-  state.startRunning();
+  //lights[lightBlue].turnOff();
+  //state.startRunning();
 }
 
 void yellowButtonFunctionPress() {
   //lights[lightYellow].turnOn();
-  for (unsigned int i = 0; i < (sizeof(lights) / sizeof(Light)); ++i) {
-    lights[i].turnOn();
-  }
+  //for (unsigned int i = 0; i < (sizeof(lights) / sizeof(Light)); ++i) {
+  //  lights[i].turnOn();
+  //}
 }
 
 void yellowButtonFunctionRelease() {
   //lights[lightYellow].turnOff();
-  for (unsigned int i = 0; i < (sizeof(lights) / sizeof(Light)); ++i) {
-    lights[i].turnOff();
-  }
-  state.startRunning();
+  //for (unsigned int i = 0; i < (sizeof(lights) / sizeof(Light)); ++i) {
+  //  lights[i].turnOff();
+  //}
+  //state.startRunning();
 }
 
 ////////////////////////////////////////////////////////////////////////

@@ -64,62 +64,60 @@ void loop() {
     }
   }
   //if (!isBlocked) {
-    //if (isPumping) {
-      Serial.print((byte)9);
-    //  isPumping = false;
-    //}
-    if (Serial.available() > 0) {
-      //isBlocked = true;
-      switch (serialClient.readData()) {
-        case '0':
-          Serial.print((unsigned char)0);
-          //isHeartbeatReceived = true;
-          break;
-        case '1':
-          Serial.print((unsigned char)1);
-          break;
-        case '2':
-          Serial.print((unsigned char)2);
-          break;
-        case '3':
-          Serial.print((unsigned char)3);
-          break;
-        case '4':
-          Serial.print((unsigned char)4);
-          break;
-        case '5':
-          Serial.print((unsigned char)5);
-          break;
-        case '6':
-          Serial.print((unsigned char)6);
-          break;
-        case '7':
-          //sprintf(serialBuffer, "%d%d\0", connectedUno, 7);
+  //if (isPumping) {
+  Serial.print((byte)9);
+  //  isPumping = false;
+  //}
+  if (Serial.available() > 0) {
+    //isBlocked = true;
+    switch (serialClient.readData()) {
+      case '0':
+        Serial.print((unsigned char)0);
+        //isHeartbeatReceived = true;
+        break;
+      case '1':
+        Serial.print((unsigned char)1);
+        break;
+      case '2':
+        Serial.print((unsigned char)2);
+        break;
+      case '3':
+        Serial.print((unsigned char)3);
+        break;
+      case '4':
+        Serial.print((unsigned char)4);
+        break;
+      case '5':
+        Serial.print((unsigned char)5);
+        break;
+      case '6':
+        Serial.print((unsigned char)6);
+        break;
+      case '7':
+        if (!isBlocked) {
           Serial.print((unsigned char)7);
-          if (!isBlocked) {
-            lights[lightDebug].turnOff();
-            isBlocked = true;
-          }
-          //isBlocked = true;
-          //isPumping = true;
-          break;
-        case '8':
-          //sprintf(serialBuffer, "%d%d\0", connectedUno, 8);
+          lights[lightDebug].turnOff();
+          isBlocked = true;
+          isTarget = false;
+          isScoreSent = false;
+        }
+        break;
+      case '8':
+        if (!isBlocked) {
           Serial.print((unsigned char)8);
-          if (!isBlocked) {
-            lights[lightDebug].turnOn();
-            isBlocked = true;
-          }
-          //isBlocked = true;
-          //isPumping = true;
-          break;
-        case '9':
-          Serial.print((unsigned char)9);
-          break;
-        default:
-          break;
-      }
+          lights[lightDebug].turnOn();
+          isBlocked = true;
+          isTarget = true;
+          isScoreSent = false;
+        }
+        break;
+      case '9':
+        //Serial.print((unsigned char)9);
+        break;
+      default:
+        break;
     }
+  }
   //}
   serialClient.reset();
   delay(10);
@@ -190,14 +188,25 @@ void timeoutTimerFunction() {
 // Buttons /////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
 void startButtonFunctionPress() {
-  lights[lightDebug].turnOn();
-  timeoutTimer.reset();
+  //lights[lightDebug].turnOn();
+  //timeoutTimer.reset();
+  //pinMode(13, INPUT);
+  if (digitalRead(13) == HIGH) {
+    if (isTarget) {
+      if (!isScoreSent) {
+        Serial.print((unsigned char)1);
+        //isIncoming = false;
+        isScoreSent = true;
+      }
+    }
+  }
+  //pinMode(13, OUTPUT);
 }
 
 void startButtonFunctionRelease() {
-  lights[lightDebug].turnOff();
-  timeoutTimer.reset();
-  state.startRunning();
+  //lights[lightDebug].turnOff();
+  //timeoutTimer.reset();
+  //state.startRunning();
 }
 
 ////////////////////////////////////////////////////////////////////////
