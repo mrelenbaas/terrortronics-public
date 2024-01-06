@@ -14,7 +14,6 @@ void loop() {
     case updateTimerSuccessLessThanPeriod:
       break;
     case updateTimerSuccessGreaterThanPeriod:
-      // The mainTimerFunction() is called automatically.
       minorTimerFunction();
       break;
   }
@@ -80,10 +79,8 @@ void loop() {
       case '6':
         break;
       case '7':
-        //isTarget = false;
         break;
       case '8':
-        //isTarget = true;
         break;
       case '9':
         break;
@@ -114,8 +111,16 @@ void loop() {
 // Timers //////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
 void mainTimerFunction() {
-  sprintf(serialBuffer, "%d%d\0", connectedNano, 9);
-  Serial.print(serialBuffer);
+  switch (state.getState()) {
+    case stateAttract:
+      break;
+    case stateRunning:
+      break;
+    case stateTarget:
+      break;
+    case stateUntarget:
+      break;
+  }
 }
 
 void minorTimerFunction() {

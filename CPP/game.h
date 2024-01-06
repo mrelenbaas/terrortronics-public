@@ -13,6 +13,7 @@
 ////////////////////////////////////////////////////////////////////////
 // Function Stubs //////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
+void incrementScore();
 
 ////////////////////////////////////////////////////////////////////////
 // Pins ////////////////////////////////////////////////////////////////
@@ -57,9 +58,9 @@ class Serial {
     public:
         Serial(const char *);
         ~Serial();
-        int ReadData(char *, unsigned int);
-        void WriteData(const char *);
-        bool IsConnected();
+        int readData(char *, unsigned int);
+        void writeData(const char *);
+        bool isConnected();
     private:
         HANDLE hSerial;
         bool connected;
@@ -71,7 +72,7 @@ void findNextConnection();
 Serial* SP;
 Serial* serialFeather = NULL;
 Serial* serialDue = NULL;
-Serial* serialMicro = NULL;
+//Serial* serialMicro = NULL;
 Serial* serialUno = NULL;
 int deviceIndex;
 char device[DEVICE_SIZE] = {
@@ -128,6 +129,7 @@ char deviceFeather[DEVICE_SIZE] = {
   '\0',
   '\0'
 };
+/*
 char deviceMicro[DEVICE_SIZE] = {
   '\\',
   '\\',
@@ -141,6 +143,7 @@ char deviceMicro[DEVICE_SIZE] = {
   '\0',
   '\0'
 };
+* */
 
 ////////////////////////////////////////////////////////////////////////
 // Timers //////////////////////////////////////////////////////////////
@@ -204,7 +207,6 @@ bool isIncoming;
 int readSize;
 bool isHeartbeatReceived;
 bool isAllHeartbeatsReceived;
-bool isHeartbeatOn;
 bool isLightOn;
 bool isDiscoveryComplete;
 bool isUnoCleared;
@@ -220,12 +222,22 @@ bool isEightExpected;
 bool isNineExpected = true;
 bool isSevenReceived;
 bool isEightReceived;
-char previousChar;
-bool isPreviousSeven;
-bool isPreviousEight;
 bool isUnoTarget;
 bool isDueTarget;
 bool isFeatherTarget;
 bool isMicroTarget;
+char stateBuffer[5];
+std::ofstream myfile;
+bool isRunning = true;
+int returnCode;
+const int COM_MAX = 256;
+const int TEN = 10;
+const int ONE_HUNDRED = 100;
+const int ASCII_ZERO = '0';
+const int COM_DIGIT_ZERO = 7;
+const int COM_DIGIT_ONE = 8;
+const int COM_DIGIT_TWO = 9;
+const char NULL_TERMINATOR = '\0';
+const int SCORE_MAX = 9;
 
 #endif

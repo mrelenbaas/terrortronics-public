@@ -3,7 +3,11 @@
 
 void setup() {
   Serial.begin(BAUD_RATE);
-  state.startAttract();
+  pinMode(12, OUTPUT);
+  digitalWrite(12, HIGH);
+  digitalWrite(12, LOW);
+  delay(1000);
+  digitalWrite(12, HIGH);
 }
 
 void loop() {
@@ -14,7 +18,6 @@ void loop() {
     case updateTimerSuccessLessThanPeriod:
       break;
     case updateTimerSuccessGreaterThanPeriod:
-      // The mainTimerFunction() is called automatically.
       minorTimerFunction();
       break;
   }
@@ -63,17 +66,10 @@ void loop() {
       }
     }
   }
-  //if (!isBlocked) {
-  //if (isPumping) {
-  Serial.print((byte)9);
-  //  isPumping = false;
-  //}
   if (Serial.available() > 0) {
-    //isBlocked = true;
     switch (serialClient.readData()) {
       case '0':
         Serial.print((unsigned char)0);
-        //isHeartbeatReceived = true;
         break;
       case '1':
         Serial.print((unsigned char)1);
@@ -112,13 +108,11 @@ void loop() {
         }
         break;
       case '9':
-        //Serial.print((unsigned char)9);
         break;
       default:
         break;
     }
   }
-  //}
   serialClient.reset();
   delay(10);
 }
@@ -143,29 +137,28 @@ void loop() {
 // Timers //////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
 void mainTimerFunction() {
-  //sprintf(serialBuffer, "%d%d\0", connectedUno, 9);
-  //Serial.print(serialBuffer);
-  //Serial.print((byte)9);
   isBlocked = false;
+  switch (state.getState()) {
+    case stateAttract:
+      break;
+    case stateRunning:
+      break;
+    case stateTarget:
+      break;
+    case stateUntarget:
+      break;
+  }
 }
 
 void minorTimerFunction() {
   switch (state.getState()) {
     case stateAttract:
-      //lights[lightDebug].toggle();
       break;
     case stateRunning:
       break;
     case stateTarget:
-      //lights[lightDebug].turnOn();
-      //for (unsigned int i = 0; i < (sizeof(lights) / sizeof(Light)); ++i) {
-      //  lights[i].turnOn();
-      //}
       break;
     case stateUntarget:
-      //for (unsigned int i = 0; i < (sizeof(lights) / sizeof(Light)); ++i) {
-      //  lights[i].turnOff();
-      //}
       break;
   }
 }
@@ -188,25 +181,20 @@ void timeoutTimerFunction() {
 // Buttons /////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
 void startButtonFunctionPress() {
-  //lights[lightDebug].turnOn();
-  //timeoutTimer.reset();
-  //pinMode(13, INPUT);
-  if (digitalRead(13) == HIGH) {
+  if (digitalRead(pinLightDebug) == HIGH) {
     if (isTarget) {
       if (!isScoreSent) {
         Serial.print((unsigned char)1);
-        //isIncoming = false;
         isScoreSent = true;
+        delay(1000);
+        digitalWrite(12, LOW);
       }
     }
   }
-  //pinMode(13, OUTPUT);
 }
 
 void startButtonFunctionRelease() {
-  //lights[lightDebug].turnOff();
-  //timeoutTimer.reset();
-  //state.startRunning();
+  digitalWrite(12, HIGH);
 }
 
 ////////////////////////////////////////////////////////////////////////

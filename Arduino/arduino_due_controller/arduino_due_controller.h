@@ -1,12 +1,9 @@
-// 1st-party libraries.
-#include <Keyboard.h>
 // 2nd-party libraries.
 #include "terrortronics_library.h"
 
 ////////////////////////////////////////////////////////////////////////
 // Function Stubs //////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
-void serialReset();
 void mainTimerFunction();
 void minorTimerFunction();
 void timeoutTimerFunction();
@@ -15,9 +12,6 @@ void targetTimerFunction9();
 void targetTimerFunction10();
 void targetTimerFunction11();
 void targetTimerFunction12();
-//void keyboardRelease();
-void startTerminal();
-void startServer();
 
 ////////////////////////////////////////////////////////////////////////
 // Pins ////////////////////////////////////////////////////////////////
@@ -38,25 +32,14 @@ State state = State();
 ////////////////////////////////////////////////////////////////////////
 // Serial //////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
-//char serialBuffer[2];
 SerialClient serialClient;
 
 ////////////////////////////////////////////////////////////////////////
 // Timers //////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
-const unsigned int MAIN_PERIOD = 10000L;
+const unsigned int MAIN_PERIOD = 3000L;
 Timer mainTimer = Timer(MAIN_PERIOD, mainTimerFunction);
 Timer timeoutTimer = Timer(TIMEOUT_PERIOD, timeoutTimerFunction);
-Timer targetTimer8 = Timer(1000L, targetTimerFunction8);
-Timer targetTimer9 = Timer(1000L, targetTimerFunction9);
-Timer targetTimer10 = Timer(1000L, targetTimerFunction10);
-Timer targetTimer11 = Timer(1000L, targetTimerFunction11);
-Timer targetTimer12 = Timer(1000L, targetTimerFunction12);
-//char key = '0';
-//int keyIndex;
-//bool isKeyboardBlocked;
-//Timer keyboardTimer = Timer(10L, keyboardRelease);
-const long DELAY_BETWEEN_KEY_PRESS = 10;
 
 ////////////////////////////////////////////////////////////////////////
 // Buttons /////////////////////////////////////////////////////////////
@@ -113,4 +96,3 @@ bool isIncoming;
 bool isTargetSet;
 bool isTarget;
 bool isScoreSent;
-//bool isTargetBlocked;

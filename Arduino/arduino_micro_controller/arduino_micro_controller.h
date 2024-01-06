@@ -1,3 +1,5 @@
+// 1st-party libraries.
+#include <Keyboard.h>
 // 2nd-party libraries.
 #include "terrortronics_library.h"
 
@@ -7,6 +9,10 @@
 void mainTimerFunction();
 void minorTimerFunction();
 void timeoutTimerFunction();
+void startTerminal();
+void startServer();
+void stopServer();
+void restartServer();
 
 ////////////////////////////////////////////////////////////////////////
 // Pins ////////////////////////////////////////////////////////////////
@@ -36,6 +42,7 @@ SerialClient serialClient;
 const unsigned int MAIN_PERIOD = 3000L;
 Timer mainTimer = Timer(MAIN_PERIOD, mainTimerFunction);
 Timer timeoutTimer = Timer(TIMEOUT_PERIOD, timeoutTimerFunction);
+const long DELAY_BETWEEN_KEY_PRESS = 10;
 
 ////////////////////////////////////////////////////////////////////////
 // Buttons /////////////////////////////////////////////////////////////
@@ -73,7 +80,6 @@ Light lights[] {
 // Reused Variables ////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
 int result;
-//bool isTarget;
 
 ////////////////////////////////////////////////////////////////////////
 // Untested ////////////////////////////////////////////////////////////
@@ -82,3 +88,4 @@ int previousChar = 9;
 bool isBlocked;
 bool isTarget;
 bool isScoreSent;
+bool isTerminalStarted;
