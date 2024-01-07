@@ -21,6 +21,8 @@ void setup() {
   server.begin();
   Serial.println("Server started");
   state.startAttract();
+  buttonsSize = sizeof(buttons) / sizeof(ButtonActiveLow);
+  lightsSize = sizeof(lights) / sizeof(Light);
 }
 
 void loop() {
@@ -36,7 +38,7 @@ void loop() {
       break;
   }
   timeoutTimer.updateTimer();
-  for (unsigned int i = 0; i < (sizeof(buttons) / sizeof(ButtonActiveLow)); ++i) {
+  for (unsigned int i = 0; i < buttonsSize; ++i) {
     if (buttons[i].updateButton() == 1) {
       if (buttons[i].debounceByTimePress() == 1) {
         if (buttons[i].debounceByPositionPress() == 1) {
@@ -128,7 +130,7 @@ void loop() {
       case '7':
         if (!isBlocked) {
           Serial.print((unsigned char)7);
-          for (unsigned int i = 0; i < (sizeof(lights) / sizeof(Light)); ++i) {
+          for (unsigned int i = 0; i < lightsSize; ++i) {
             lights[i].turnOff();
           }
           isBlocked = true;
@@ -137,7 +139,7 @@ void loop() {
       case '8':
         if (!isBlocked) {
           Serial.print((unsigned char)8);
-          for (unsigned int i = 0; i < (sizeof(lights) / sizeof(Light)); ++i) {
+          for (unsigned int i = 0; i < lightsSize; ++i) {
             lights[i].turnOn();
           }
           isBlocked = true;

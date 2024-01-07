@@ -14,6 +14,8 @@
 // Function Stubs //////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
 void incrementScore();
+char digit(char);
+void com(int);
 
 ////////////////////////////////////////////////////////////////////////
 // Pins ////////////////////////////////////////////////////////////////
@@ -68,6 +70,7 @@ class Serial {
         DWORD errors;
 };
 char incomingData[BUFFER_SIZE];
+char data;
 void findNextConnection();
 Serial* SP;
 Serial* serialFeather = NULL;
@@ -75,6 +78,7 @@ Serial* serialDue = NULL;
 //Serial* serialMicro = NULL;
 Serial* serialUno = NULL;
 int deviceIndex;
+unsigned int deviceSize;
 char device[DEVICE_SIZE] = {
   '\\',
   '\\',

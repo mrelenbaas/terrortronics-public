@@ -4,6 +4,7 @@
 void setup() {
   Serial.begin(BAUD_RATE);
   state.startAttract();
+  buttonsSize = sizeof(buttons) / sizeof(ButtonActiveLow);
 }
 
 void loop() {
@@ -18,7 +19,7 @@ void loop() {
       break;
   }
   timeoutTimer.updateTimer();
-  for (unsigned int i = 0; i < (sizeof(buttons) / sizeof(ButtonActiveLow)); ++i) {
+  for (unsigned int i = 0; i < buttonsSize; ++i) {
     if (buttons[i].updateButton() == 1) {
       if (buttons[i].debounceByTimePress() == 1) {
         if (buttons[i].debounceByPositionPress() == 1) {
