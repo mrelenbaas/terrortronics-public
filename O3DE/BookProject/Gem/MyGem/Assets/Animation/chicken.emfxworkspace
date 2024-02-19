@@ -1,0 +1,3 @@
+[General]
+version=1
+startScript=ImportActor -filename \"objects/cloth/chicken/actor/chicken.actor\"\nLoadMotionSet -filename \"@products@/Gem/MyGem/Assets/Animation/chicken.motionset\"\nLoadAnimGraph -filename \"@products@/Gem/MyGem/Assets/Animation/chicken.animgraph\"\nActivateAnimGraph -actorInstanceID -1 -animGraphID %LASTRESULT1% -motionSetID %LASTRESULT2% -visualizeScale 1.000000\n

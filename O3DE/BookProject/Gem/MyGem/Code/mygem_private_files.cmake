@@ -1,0 +1,19 @@
+
+set(FILES
+    Source/MyGemModuleInterface.cpp
+    Source/MyGemModuleInterface.h
+    Source/Clients/MyGemSystemComponent.cpp
+    Source/Clients/MyGemSystemComponent.h
+    Source/Clients/ChickenControllerComponent.cpp
+    Source/Clients/ChickenControllerComponent.h
+    Source/Clients/UiScoreBus.h
+    Source/Clients/GoalDetectorComponent.cpp
+    Source/Clients/GoalDetectorComponent.h
+    Source/Clients/UiScoreComponent.cpp
+    Source/Clients/UiScoreComponent.h
+    Source/Clients/KickingComponent.cpp
+    Source/Clients/KickingComponent.h
+    Source/Clients/ChickenBus.h
+    Source/Clients/ChickenAnimationComponent.cpp
+    Source/Clients/ChickenAnimationComponent.h
+)

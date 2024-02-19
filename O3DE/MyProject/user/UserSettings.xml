@@ -1,0 +1,6 @@
+<ObjectStream version="3">
+	<Class name="UserSettingsContainer" version="3" type="{42C087CF-4F19-4DAF-B2B1-2927D94AA295}">
+		<Class name="AZStd::unordered_map&lt;unsigned int, AZStd::intrusive_ptr&lt;AZ::UserSettings&gt;, AZStd::hash&lt;unsigned int&gt;, AZStd::equal_to&lt;unsigned int&gt;, allocator&gt;" field="Map" type="{79C4F23B-19F1-58AE-9C3A-8CDFD2D00AB0}"/>
+	</Class>
+</ObjectStream>
+

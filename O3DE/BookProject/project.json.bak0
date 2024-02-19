@@ -1,0 +1,46 @@
+{
+    "project_name": "BookProject",
+    "version": "1.0.0",
+    "project_id": "{61BB8CA3-D037-47D4-8B96-7E650B3D5F3E}",
+    "origin": "The primary repo for BookProject goes here: i.e. http://www.mydomain.com",
+    "license": "What license BookProject uses goes here: i.e. https://opensource.org/licenses/Apache-2.0 Or https://opensource.org/licenses/MIT etc.",
+    "display_name": "BookProject",
+    "summary": "A short description of BookProject.",
+    "canonical_tags": [
+        "Project"
+    ],
+    "user_tags": [
+        "BookProject"
+    ],
+    "icon_path": "preview.png",
+    "engine": "o3de",
+    "external_subdirectories": [
+        "Gem"
+    ],
+    "restricted": "BookProject",
+    "gem_names": [
+        "BookProject",
+        "Atom",
+        "AudioSystem",
+        "AWSCore",
+        "CameraFramework",
+        "Compression",
+        "DebugDraw",
+        "DiffuseProbeGrid",
+        "EditorPythonBindings",
+        "EMotionFX",
+        "GameState",
+        "ImGui",
+        "LandscapeCanvas",
+        "LyShine",
+        "PhysX",
+        "PrimitiveAssets",
+        "PrefabBuilder",
+        "SaveData",
+        "ScriptCanvasPhysics",
+        "ScriptEvents",
+        "StartingPointInput",
+        "TextureAtlas",
+        "WhiteBox"
+    ]
+}
