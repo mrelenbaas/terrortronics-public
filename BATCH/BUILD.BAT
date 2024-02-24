@@ -269,7 +269,6 @@ REM Displays the manual.
     ECHO Runs cmake build calls.
     ECHO Parameter #1. Source directory.
     ECHO Parameter #2. Destination directory.
-    ECHO /? flag. Displays the manual.
 GOTO TEARDOWN
 
 REM Success function.
