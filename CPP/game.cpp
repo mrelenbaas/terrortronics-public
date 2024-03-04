@@ -1,7 +1,22 @@
+// Copyright 2024 Bradley Elenbaas
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
 // 2nd-party libraries.
 #include "game.h"
 
 int _tmain(int argc, _TCHAR* argv[]) {
+  std::cout << "Game start." << std::endl;
   deviceSize = sizeof(device) / sizeof(device[0]);
   stateBuffer[0] = '0';
   stateBuffer[1] = ',';
@@ -13,10 +28,13 @@ int _tmain(int argc, _TCHAR* argv[]) {
   myfile.close();
   system("adb shell \"cd /sdcard && rm -rf *.txt\"");
   system("adb -s 192.168.4.5 push ./state.txt ./sdcard/");
+  std::cout << "Discovery start." << std::endl;
   while (!isDiscoveryComplete) {
     findNextConnection();
   }
 	int dataLength = 1;
+  
+  std::cout << "Runtime start." << std::endl;
   while(isRunning) {
     try {
       if (serialFeather && serialFeather->isConnected()) {
