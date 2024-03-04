@@ -1,0 +1,20 @@
+^C:\USERS\MRELE\DOCUMENTS\TERRORTRONICS-PUBLIC\O3DE\BOOKPROJECT\CMAKEFILES\5D0CE02DA15397A1EBFD78C07749C8B2\BOOKPROJECT.GAMELAUNCHER.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -P C:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject/runtime_dependencies/profile/BookProject.GameLauncher.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\O3DE\23.10.0\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject -BC:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject --check-stamp-file C:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject/o3de/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

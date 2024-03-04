@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ResolveNugetPackages>false</ResolveNugetPackages>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="profile|x64">
+      <Configuration>profile</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E1244884-8F6F-374E-BD50-E11446815272}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22000.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='profile|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='profile|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='profile|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='profile|x64'">Building Custom Rule C:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='profile|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject -BC:/Users/mrele/Documents/terrortronics-public/03DE/BuildBookProject --check-stamp-file C:/Users/mrele/Documents/terrortronics-public/03DE/BuildBookProject/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='profile|x64'">C:\O3DE\23.10.0\cmake\CompilerSettings.cmake;C:\O3DE\23.10.0\cmake\Findo3de.cmake;C:\O3DE\23.10.0\cmake\o3deConfigVersion.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\WindowsPaths.cmake;C:\Users\mrele\Documents\terrortronics-public\03DE\BuildBookProject\CMakeFiles\3.28.0\CMakeCCompiler.cmake;C:\Users\mrele\Documents\terrortronics-public\03DE\BuildBookProject\CMakeFiles\3.28.0\CMakeCXXCompiler.cmake;C:\Users\mrele\Documents\terrortronics-public\03DE\BuildBookProject\CMakeFiles\3.28.0\CMakeRCCompiler.cmake;C:\Users\mrele\Documents\terrortronics-public\03DE\BuildBookProject\CMakeFiles\3.28.0\CMakeSystem.cmake;C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\cmake\EngineFinder.cmake;C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\project.json;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='profile|x64'">C:\Users\mrele\Documents\terrortronics-public\03DE\BuildBookProject\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='profile|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\mrele\Documents\terrortronics-public\03DE\BuildBookProject\ZERO_CHECK.vcxproj">
+      <Project>{DBC5442E-C6B6-36FC-A0C9-2E933C30BDF6}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\mrele\Documents\terrortronics-public\03DE\BuildBookProject\External\Gem-34bae4f8\BookProject.vcxproj">
+      <Project>{51582C16-D8F5-3CB3-A766-AED896D43324}</Project>
+      <Name>BookProject</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\mrele\Documents\terrortronics-public\03DE\BuildBookProject\o3de\BookProject.GameLauncher.vcxproj">
+      <Project>{0850BD09-DEBA-3122-8D67-2BF10066162A}</Project>
+      <Name>BookProject.GameLauncher</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\mrele\Documents\terrortronics-public\03DE\BuildBookProject\External\Gem-34bae4f8\BookProject.Private.Object.vcxproj">
+      <Project>{65457718-37AF-3AA1-873F-945E2B846DC6}</Project>
+      <Name>BookProject.Private.Object</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\mrele\Documents\terrortronics-public\03DE\BuildBookProject\o3de\BookProject.ServerLauncher.vcxproj">
+      <Project>{F38CD443-E342-3D20-8CEA-495E2543D986}</Project>
+      <Name>BookProject.ServerLauncher</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\mrele\Documents\terrortronics-public\03DE\BuildBookProject\o3de\BookProject.UnifiedLauncher.vcxproj">
+      <Project>{5CFDA4C3-8C61-380A-89D6-C12F9ACF4EA3}</Project>
+      <Name>BookProject.UnifiedLauncher</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\mrele\Documents\terrortronics-public\03DE\BuildBookProject\External\MyGem-c19403bc\Code\MyGem.vcxproj">
+      <Project>{0EF5928E-560B-3635-BA94-EC588F03E8C4}</Project>
+      <Name>MyGem</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\mrele\Documents\terrortronics-public\03DE\BuildBookProject\External\MyGem-c19403bc\Code\MyGem.API.vcxproj">
+      <Project>{3CEE17C1-E068-3F16-893B-80F4CF0446C2}</Project>
+      <Name>MyGem.API</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\mrele\Documents\terrortronics-public\03DE\BuildBookProject\External\MyGem-c19403bc\Code\MyGem.Editor.vcxproj">
+      <Project>{C9CABA1A-7EA9-32FE-8186-5417DC8F15E8}</Project>
+      <Name>MyGem.Editor</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\mrele\Documents\terrortronics-public\03DE\BuildBookProject\External\MyGem-c19403bc\Code\MyGem.Editor.API.vcxproj">
+      <Project>{A71BFCE2-CB1C-3472-8150-765FDD682B78}</Project>
+      <Name>MyGem.Editor.API</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\mrele\Documents\terrortronics-public\03DE\BuildBookProject\External\MyGem-c19403bc\Code\MyGem.Editor.Private.Object.vcxproj">
+      <Project>{63CA6DBC-A7F7-32BF-B2A2-7CF67CE78F58}</Project>
+      <Name>MyGem.Editor.Private.Object</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\mrele\Documents\terrortronics-public\03DE\BuildBookProject\External\MyGem-c19403bc\Code\MyGem.Private.Object.vcxproj">
+      <Project>{A1A44753-C939-3B3A-B5A6-E0F66BB5F704}</Project>
+      <Name>MyGem.Private.Object</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

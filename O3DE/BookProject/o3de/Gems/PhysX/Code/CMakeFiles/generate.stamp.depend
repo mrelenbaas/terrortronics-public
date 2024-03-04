@@ -1,0 +1,14 @@
+# CMake generation dependency list for this directory.
+C:/O3DE/23.10.0/Gems/PhysX/Code/CMakeLists.txt
+C:/O3DE/23.10.0/Gems/PhysX/Code/Platform/Windows/Default/PhysX.Editor.Static_profile.cmake
+C:/O3DE/23.10.0/Gems/PhysX/Code/Platform/Windows/Default/PhysX.Editor_profile.cmake
+C:/O3DE/23.10.0/Gems/PhysX/Code/Platform/Windows/Default/PhysX.Static_profile.cmake
+C:/O3DE/23.10.0/Gems/PhysX/Code/Platform/Windows/Default/PhysX_profile.cmake
+C:/O3DE/23.10.0/Gems/PhysX/Code/Platform/Windows/Default/permutation.cmake
+C:/O3DE/23.10.0/Gems/PhysX/Code/Platform/Windows/platform_windows.cmake
+C:/Users/mrele/.o3de/3rdParty/packages/PhysX-4.1.2.29882248-rev5-windows/FindPhysX.cmake
+C:/Users/mrele/.o3de/3rdParty/packages/PhysX-4.1.2.29882248-rev5-windows/PackageInfo.json
+C:/Users/mrele/.o3de/3rdParty/packages/poly2tri-7f0487a-rev1-windows/Findpoly2tri.cmake
+C:/Users/mrele/.o3de/3rdParty/packages/poly2tri-7f0487a-rev1-windows/PackageInfo.json
+C:/Users/mrele/.o3de/3rdParty/packages/v-hacd-2.3-1a49edf-rev1-windows/Findv-hacd.cmake
+C:/Users/mrele/.o3de/3rdParty/packages/v-hacd-2.3-1a49edf-rev1-windows/PackageInfo.json

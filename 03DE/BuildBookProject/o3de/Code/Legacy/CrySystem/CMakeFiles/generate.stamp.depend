@@ -1,0 +1,10 @@
+# CMake generation dependency list for this directory.
+C:/O3DE/23.10.0/Code/Legacy/CrySystem/CMakeLists.txt
+C:/O3DE/23.10.0/Code/Legacy/CrySystem/Platform/Windows/Default/CrySystem.Static_profile.cmake
+C:/O3DE/23.10.0/Code/Legacy/CrySystem/Platform/Windows/Default/CrySystem_profile.cmake
+C:/O3DE/23.10.0/Code/Legacy/CrySystem/Platform/Windows/Default/permutation.cmake
+C:/O3DE/23.10.0/Code/Legacy/CrySystem/Platform/Windows/platform_windows.cmake
+C:/Users/mrele/.o3de/3rdParty/packages/expat-2.4.2-rev2-windows/Findexpat.cmake
+C:/Users/mrele/.o3de/3rdParty/packages/expat-2.4.2-rev2-windows/PackageInfo.json
+C:/Users/mrele/.o3de/3rdParty/packages/tiff-4.2.0.15-rev3-windows/FindTIFF.cmake
+C:/Users/mrele/.o3de/3rdParty/packages/tiff-4.2.0.15-rev3-windows/PackageInfo.json

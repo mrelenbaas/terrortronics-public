@@ -1,0 +1,17 @@
+#
+# Copyright (c) Contributors to the Open 3D Engine Project.
+# For complete copyright and license terms please see the LICENSE at the root of this distribution.
+#
+# SPDX-License-Identifier: Apache-2.0 OR MIT
+#
+#
+
+if(NOT TARGET GameState.Clients)
+   ly_create_alias( NAME GameState.Clients NAMESPACE Gem TARGETS GameState)
+endif()
+if(NOT TARGET GameState.Servers)
+   ly_create_alias( NAME GameState.Servers NAMESPACE Gem TARGETS GameState)
+endif()
+if(NOT TARGET GameState.Unified)
+   ly_create_alias( NAME GameState.Unified NAMESPACE Gem TARGETS GameState)
+endif()

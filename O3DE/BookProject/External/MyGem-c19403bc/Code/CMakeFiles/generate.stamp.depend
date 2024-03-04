@@ -1,0 +1,13 @@
+# CMake generation dependency list for this directory.
+C:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject/Gem/MyGem/Code/CMakeLists.txt
+C:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject/Gem/MyGem/Code/Platform/Windows/PAL_windows.cmake
+C:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject/Gem/MyGem/Code/Platform/Windows/mygem_api_files.cmake
+C:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject/Gem/MyGem/Code/Platform/Windows/mygem_editor_api_files.cmake
+C:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject/Gem/MyGem/Code/Platform/Windows/mygem_private_files.cmake
+C:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject/Gem/MyGem/Code/Platform/Windows/mygem_shared_files.cmake
+C:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject/Gem/MyGem/Code/mygem_api_files.cmake
+C:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject/Gem/MyGem/Code/mygem_editor_api_files.cmake
+C:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject/Gem/MyGem/Code/mygem_editor_private_files.cmake
+C:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject/Gem/MyGem/Code/mygem_editor_shared_files.cmake
+C:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject/Gem/MyGem/Code/mygem_private_files.cmake
+C:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject/Gem/MyGem/Code/mygem_shared_files.cmake

@@ -1,0 +1,11 @@
+# CMake generation dependency list for this directory.
+C:/O3DE/23.10.0/Gems/SceneProcessing/Code/CMakeLists.txt
+C:/O3DE/23.10.0/Gems/SceneProcessing/Code/Platform/Windows/Default/SceneProcessing.Editor.Static_profile.cmake
+C:/O3DE/23.10.0/Gems/SceneProcessing/Code/Platform/Windows/Default/SceneProcessing.Editor_profile.cmake
+C:/O3DE/23.10.0/Gems/SceneProcessing/Code/Platform/Windows/Default/SceneProcessing_profile.cmake
+C:/O3DE/23.10.0/Gems/SceneProcessing/Code/Platform/Windows/Default/permutation.cmake
+C:/O3DE/23.10.0/Gems/SceneProcessing/Code/Platform/Windows/platform_windows.cmake
+C:/Users/mrele/.o3de/3rdParty/packages/mikkelsen-1.0.0.4-windows/Findmikkelsen.cmake
+C:/Users/mrele/.o3de/3rdParty/packages/mikkelsen-1.0.0.4-windows/PackageInfo.json
+C:/Users/mrele/.o3de/3rdParty/packages/mikkelsen-1.0.0.4-windows/mikkelsen-config-version.cmake
+C:/Users/mrele/.o3de/3rdParty/packages/mikkelsen-1.0.0.4-windows/mikkelsen-config.cmake

@@ -1,0 +1,9 @@
+# CMake generation dependency list for this directory.
+C:/O3DE/23.10.0/Gems/Atom/RHI/Code/CMakeLists.txt
+C:/O3DE/23.10.0/Gems/Atom/RHI/Code/Platform/Windows/Default/Atom_RHI.Edit_profile.cmake
+C:/O3DE/23.10.0/Gems/Atom/RHI/Code/Platform/Windows/Default/Atom_RHI.Private.Static_profile.cmake
+C:/O3DE/23.10.0/Gems/Atom/RHI/Code/Platform/Windows/Default/Atom_RHI.Private_profile.cmake
+C:/O3DE/23.10.0/Gems/Atom/RHI/Code/Platform/Windows/Default/Atom_RHI.Public_profile.cmake
+C:/O3DE/23.10.0/Gems/Atom/RHI/Code/Platform/Windows/Default/Atom_RHI.Reflect_profile.cmake
+C:/O3DE/23.10.0/Gems/Atom/RHI/Code/Platform/Windows/Default/permutation.cmake
+C:/O3DE/23.10.0/Gems/Atom/RHI/Code/Platform/Windows/platform_windows.cmake

@@ -1,0 +1,12 @@
+# CMake generation dependency list for this directory.
+C:/O3DE/23.10.0/Gems/Atom/RHI/DX12/Code/CMakeLists.txt
+C:/O3DE/23.10.0/Gems/Atom/RHI/DX12/Code/Platform/Windows/Default/Amd_DX12MA_profile.cmake
+C:/O3DE/23.10.0/Gems/Atom/RHI/DX12/Code/Platform/Windows/Default/Atom_RHI_DX12.Builders.Static_profile.cmake
+C:/O3DE/23.10.0/Gems/Atom/RHI/DX12/Code/Platform/Windows/Default/Atom_RHI_DX12.Builders_profile.cmake
+C:/O3DE/23.10.0/Gems/Atom/RHI/DX12/Code/Platform/Windows/Default/Atom_RHI_DX12.Private.Static_profile.cmake
+C:/O3DE/23.10.0/Gems/Atom/RHI/DX12/Code/Platform/Windows/Default/Atom_RHI_DX12.Private_profile.cmake
+C:/O3DE/23.10.0/Gems/Atom/RHI/DX12/Code/Platform/Windows/Default/Atom_RHI_DX12.Reflect_profile.cmake
+C:/O3DE/23.10.0/Gems/Atom/RHI/DX12/Code/Platform/Windows/Default/permutation.cmake
+C:/O3DE/23.10.0/Gems/Atom/RHI/DX12/Code/Platform/Windows/platform_windows.cmake
+C:/Users/mrele/.o3de/3rdParty/packages/d3dx12-headers-rev1-windows/Findd3dx12.cmake
+C:/Users/mrele/.o3de/3rdParty/packages/d3dx12-headers-rev1-windows/PackageInfo.json

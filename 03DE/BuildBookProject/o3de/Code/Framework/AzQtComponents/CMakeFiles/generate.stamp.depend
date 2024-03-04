@@ -1,0 +1,8 @@
+# CMake generation dependency list for this directory.
+C:/O3DE/23.10.0/Code/Framework/AzQtComponents/CMakeLists.txt
+C:/O3DE/23.10.0/Code/Framework/AzQtComponents/Platform/Windows/Default/AzQtComponents_profile.cmake
+C:/O3DE/23.10.0/Code/Framework/AzQtComponents/Platform/Windows/Default/DPEDebugViewStandalone_profile.cmake
+C:/O3DE/23.10.0/Code/Framework/AzQtComponents/Platform/Windows/Default/O3DEQtControlGallery_profile.cmake
+C:/O3DE/23.10.0/Code/Framework/AzQtComponents/Platform/Windows/Default/ReflectedPropertyEditorStandalone_profile.cmake
+C:/O3DE/23.10.0/Code/Framework/AzQtComponents/Platform/Windows/Default/permutation.cmake
+C:/O3DE/23.10.0/Code/Framework/AzQtComponents/Platform/Windows/platform_windows.cmake

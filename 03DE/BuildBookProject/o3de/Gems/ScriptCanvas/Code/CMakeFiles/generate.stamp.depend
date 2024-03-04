@@ -1,0 +1,10 @@
+# CMake generation dependency list for this directory.
+C:/O3DE/23.10.0/Gems/ScriptCanvas/Code/CMakeLists.txt
+C:/O3DE/23.10.0/Gems/ScriptCanvas/Code/Platform/Windows/Default/ScriptCanvas.Editor.Static_profile.cmake
+C:/O3DE/23.10.0/Gems/ScriptCanvas/Code/Platform/Windows/Default/ScriptCanvas.Editor_profile.cmake
+C:/O3DE/23.10.0/Gems/ScriptCanvas/Code/Platform/Windows/Default/ScriptCanvas.Extensions_profile.cmake
+C:/O3DE/23.10.0/Gems/ScriptCanvas/Code/Platform/Windows/Default/ScriptCanvas.Static_profile.cmake
+C:/O3DE/23.10.0/Gems/ScriptCanvas/Code/Platform/Windows/Default/ScriptCanvasDebugger_profile.cmake
+C:/O3DE/23.10.0/Gems/ScriptCanvas/Code/Platform/Windows/Default/ScriptCanvas_profile.cmake
+C:/O3DE/23.10.0/Gems/ScriptCanvas/Code/Platform/Windows/Default/permutation.cmake
+C:/O3DE/23.10.0/Gems/ScriptCanvas/Code/Platform/Windows/platform_windows.cmake

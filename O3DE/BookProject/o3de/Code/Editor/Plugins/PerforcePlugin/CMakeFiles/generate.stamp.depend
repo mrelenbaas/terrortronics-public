@@ -1,0 +1,5 @@
+# CMake generation dependency list for this directory.
+C:/O3DE/23.10.0/Code/Editor/Plugins/PerforcePlugin/CMakeLists.txt
+C:/O3DE/23.10.0/Code/Editor/Plugins/PerforcePlugin/Platform/Windows/Default/PerforcePlugin_profile.cmake
+C:/O3DE/23.10.0/Code/Editor/Plugins/PerforcePlugin/Platform/Windows/Default/permutation.cmake
+C:/O3DE/23.10.0/Code/Editor/Plugins/PerforcePlugin/Platform/Windows/platform_windows.cmake

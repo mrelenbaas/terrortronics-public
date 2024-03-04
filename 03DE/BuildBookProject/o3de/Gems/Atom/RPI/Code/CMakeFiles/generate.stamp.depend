@@ -1,0 +1,11 @@
+# CMake generation dependency list for this directory.
+C:/O3DE/23.10.0/Gems/Atom/RPI/Code/CMakeLists.txt
+C:/O3DE/23.10.0/Gems/Atom/RPI/Code/Platform/Windows/Default/Atom_RPI.Builders.Static_profile.cmake
+C:/O3DE/23.10.0/Gems/Atom/RPI/Code/Platform/Windows/Default/Atom_RPI.Builders_profile.cmake
+C:/O3DE/23.10.0/Gems/Atom/RPI/Code/Platform/Windows/Default/Atom_RPI.Edit_profile.cmake
+C:/O3DE/23.10.0/Gems/Atom/RPI/Code/Platform/Windows/Default/Atom_RPI.Editor.Static_profile.cmake
+C:/O3DE/23.10.0/Gems/Atom/RPI/Code/Platform/Windows/Default/Atom_RPI.Editor_profile.cmake
+C:/O3DE/23.10.0/Gems/Atom/RPI/Code/Platform/Windows/Default/Atom_RPI.Private_profile.cmake
+C:/O3DE/23.10.0/Gems/Atom/RPI/Code/Platform/Windows/Default/Atom_RPI.Public_profile.cmake
+C:/O3DE/23.10.0/Gems/Atom/RPI/Code/Platform/Windows/Default/permutation.cmake
+C:/O3DE/23.10.0/Gems/Atom/RPI/Code/Platform/Windows/platform_windows.cmake

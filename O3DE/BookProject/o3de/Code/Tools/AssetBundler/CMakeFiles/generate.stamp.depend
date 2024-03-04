@@ -1,0 +1,7 @@
+# CMake generation dependency list for this directory.
+C:/O3DE/23.10.0/Code/Tools/AssetBundler/CMakeLists.txt
+C:/O3DE/23.10.0/Code/Tools/AssetBundler/Platform/Windows/Default/AssetBundlerBatch.Static_profile.cmake
+C:/O3DE/23.10.0/Code/Tools/AssetBundler/Platform/Windows/Default/AssetBundlerBatch_profile.cmake
+C:/O3DE/23.10.0/Code/Tools/AssetBundler/Platform/Windows/Default/AssetBundler_profile.cmake
+C:/O3DE/23.10.0/Code/Tools/AssetBundler/Platform/Windows/Default/permutation.cmake
+C:/O3DE/23.10.0/Code/Tools/AssetBundler/Platform/Windows/platform_windows.cmake

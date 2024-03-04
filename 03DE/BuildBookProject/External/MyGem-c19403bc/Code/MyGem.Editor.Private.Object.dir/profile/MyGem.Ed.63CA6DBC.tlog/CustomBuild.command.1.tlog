@@ -1,0 +1,10 @@
+^C:\USERS\MRELE\DOCUMENTS\TERRORTRONICS-PUBLIC\O3DE\BOOKPROJECT\GEM\MYGEM\CODE\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject -BC:/Users/mrele/Documents/terrortronics-public/03DE/BuildBookProject --check-stamp-file C:/Users/mrele/Documents/terrortronics-public/03DE/BuildBookProject/External/MyGem-c19403bc/Code/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

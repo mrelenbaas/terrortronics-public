@@ -1,0 +1,6 @@
+# CMake generation dependency list for this directory.
+C:/O3DE/23.10.0/Gems/Twitch/Code/CMakeLists.txt
+C:/O3DE/23.10.0/Gems/Twitch/Code/Platform/Windows/Default/Twitch.Static_profile.cmake
+C:/O3DE/23.10.0/Gems/Twitch/Code/Platform/Windows/Default/Twitch_profile.cmake
+C:/O3DE/23.10.0/Gems/Twitch/Code/Platform/Windows/Default/permutation.cmake
+C:/O3DE/23.10.0/Gems/Twitch/Code/Platform/Windows/platform_windows.cmake

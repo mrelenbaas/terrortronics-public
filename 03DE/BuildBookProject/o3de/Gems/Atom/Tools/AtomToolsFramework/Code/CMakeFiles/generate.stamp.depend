@@ -1,0 +1,6 @@
+# CMake generation dependency list for this directory.
+C:/O3DE/23.10.0/Gems/Atom/Tools/AtomToolsFramework/Code/CMakeLists.txt
+C:/O3DE/23.10.0/Gems/Atom/Tools/AtomToolsFramework/Code/Platform/Windows/Default/AtomToolsFramework.Editor_profile.cmake
+C:/O3DE/23.10.0/Gems/Atom/Tools/AtomToolsFramework/Code/Platform/Windows/Default/AtomToolsFramework.Static_profile.cmake
+C:/O3DE/23.10.0/Gems/Atom/Tools/AtomToolsFramework/Code/Platform/Windows/Default/permutation.cmake
+C:/O3DE/23.10.0/Gems/Atom/Tools/AtomToolsFramework/Code/Platform/Windows/platform_windows.cmake

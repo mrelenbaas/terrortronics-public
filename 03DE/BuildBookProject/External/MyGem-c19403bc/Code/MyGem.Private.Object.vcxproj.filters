@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\mrele\Documents\terrortronics-public\03DE\BuildBookProject\External\MyGem-c19403bc\Code\CMakeFiles\MyGem.Private.Object.dir\Unity\unity_0_cxx.cxx">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\Gem\MyGem\Code\Source\MyGemModuleInterface.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\Gem\MyGem\Code\Source\Clients\MyGemSystemComponent.cpp">
+      <Filter>Source\Clients</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\Gem\MyGem\Code\Source\Clients\ChickenControllerComponent.cpp">
+      <Filter>Source\Clients</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\Gem\MyGem\Code\Source\Clients\GoalDetectorComponent.cpp">
+      <Filter>Source\Clients</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\Gem\MyGem\Code\Source\Clients\UiScoreComponent.cpp">
+      <Filter>Source\Clients</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\Gem\MyGem\Code\Source\Clients\KickingComponent.cpp">
+      <Filter>Source\Clients</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\Gem\MyGem\Code\Source\Clients\ChickenAnimationComponent.cpp">
+      <Filter>Source\Clients</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\O3DE\23.10.0\cmake\Platform\Windows\Packaging\BootstrapperTheme.wxl.in">
+      <Filter>..\..\..\..\..\..\..\..\..\O3DE\23.10.0\cmake\Platform\Windows\Packaging</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\O3DE\23.10.0\cmake\Platform\Windows\Packaging\BootstrapperTheme.xml.in">
+      <Filter>..\..\..\..\..\..\..\..\..\O3DE\23.10.0\cmake\Platform\Windows\Packaging</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\O3DE\23.10.0\cmake\Platform\Windows\Packaging\Template.wxs.in">
+      <Filter>..\..\..\..\..\..\..\..\..\O3DE\23.10.0\cmake\Platform\Windows\Packaging</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\Gem\MyGem\Code\Source\MyGemModuleInterface.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\Gem\MyGem\Code\Source\Clients\MyGemSystemComponent.h">
+      <Filter>Source\Clients</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\Gem\MyGem\Code\Source\Clients\ChickenControllerComponent.h">
+      <Filter>Source\Clients</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\Gem\MyGem\Code\Source\Clients\UiScoreBus.h">
+      <Filter>Source\Clients</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\Gem\MyGem\Code\Source\Clients\GoalDetectorComponent.h">
+      <Filter>Source\Clients</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\Gem\MyGem\Code\Source\Clients\UiScoreComponent.h">
+      <Filter>Source\Clients</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\Gem\MyGem\Code\Source\Clients\KickingComponent.h">
+      <Filter>Source\Clients</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\Gem\MyGem\Code\Source\Clients\ChickenBus.h">
+      <Filter>Source\Clients</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\Gem\MyGem\Code\Source\Clients\ChickenAnimationComponent.h">
+      <Filter>Source\Clients</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\Gem\MyGem\Code\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Common\Configurations_common.cmake">
+      <Filter>..\..\..\..\..\..\..\..\..\O3DE\23.10.0\cmake\Platform\Common</Filter>
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Common\MSVC\Configurations_msvc.cmake">
+      <Filter>..\..\..\..\..\..\..\..\..\O3DE\23.10.0\cmake\Platform\Common\MSVC</Filter>
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Common\MSVC\Configurations_clang.cmake">
+      <Filter>..\..\..\..\..\..\..\..\..\O3DE\23.10.0\cmake\Platform\Common\MSVC</Filter>
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Common\MSVC\CodeAnalysis.ruleset">
+      <Filter>..\..\..\..\..\..\..\..\..\O3DE\23.10.0\cmake\Platform\Common\MSVC</Filter>
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Common\MSVC\Directory.Build.props">
+      <Filter>..\..\..\..\..\..\..\..\..\O3DE\23.10.0\cmake\Platform\Common\MSVC</Filter>
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Common\MSVC\TestProject.props">
+      <Filter>..\..\..\..\..\..\..\..\..\O3DE\23.10.0\cmake\Platform\Common\MSVC</Filter>
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Common\MSVC\VisualStudio_common.cmake">
+      <Filter>..\..\..\..\..\..\..\..\..\O3DE\23.10.0\cmake\Platform\Common\MSVC</Filter>
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Common\Install_common.cmake">
+      <Filter>..\..\..\..\..\..\..\..\..\O3DE\23.10.0\cmake\Platform\Common</Filter>
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Common\LYWrappers_default.cmake">
+      <Filter>..\..\..\..\..\..\..\..\..\O3DE\23.10.0\cmake\Platform\Common</Filter>
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Common\PackagingPostBuild_common.cmake">
+      <Filter>..\..\..\..\..\..\..\..\..\O3DE\23.10.0\cmake\Platform\Common</Filter>
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Common\PackagingPreBuild_common.cmake">
+      <Filter>..\..\..\..\..\..\..\..\..\O3DE\23.10.0\cmake\Platform\Common</Filter>
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Common\TargetIncludeSystemDirectories_unsupported.cmake">
+      <Filter>..\..\..\..\..\..\..\..\..\O3DE\23.10.0\cmake\Platform\Common</Filter>
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Windows\Configurations_windows.cmake">
+      <Filter>..\..\..\..\..\..\..\..\..\O3DE\23.10.0\cmake\Platform\Windows</Filter>
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Windows\LYTestWrappers_windows.cmake">
+      <Filter>..\..\..\..\..\..\..\..\..\O3DE\23.10.0\cmake\Platform\Windows</Filter>
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Windows\LYWrappers_windows.cmake">
+      <Filter>..\..\..\..\..\..\..\..\..\O3DE\23.10.0\cmake\Platform\Windows</Filter>
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Windows\PAL_windows.cmake">
+      <Filter>..\..\..\..\..\..\..\..\..\O3DE\23.10.0\cmake\Platform\Windows</Filter>
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Windows\PALDetection_windows.cmake">
+      <Filter>..\..\..\..\..\..\..\..\..\O3DE\23.10.0\cmake\Platform\Windows</Filter>
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Windows\Install_windows.cmake">
+      <Filter>..\..\..\..\..\..\..\..\..\O3DE\23.10.0\cmake\Platform\Windows</Filter>
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Windows\Packaging_windows.cmake">
+      <Filter>..\..\..\..\..\..\..\..\..\O3DE\23.10.0\cmake\Platform\Windows</Filter>
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Windows\PackagingCodeSign_windows.cmake">
+      <Filter>..\..\..\..\..\..\..\..\..\O3DE\23.10.0\cmake\Platform\Windows</Filter>
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Windows\PackagingPostBuild_windows.cmake">
+      <Filter>..\..\..\..\..\..\..\..\..\O3DE\23.10.0\cmake\Platform\Windows</Filter>
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Windows\PackagingPreBuild_windows.cmake">
+      <Filter>..\..\..\..\..\..\..\..\..\O3DE\23.10.0\cmake\Platform\Windows</Filter>
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Windows\Packaging\Bootstrapper.wxs">
+      <Filter>..\..\..\..\..\..\..\..\..\O3DE\23.10.0\cmake\Platform\Windows\Packaging</Filter>
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Windows\Packaging\Shortcuts.wxs">
+      <Filter>..\..\..\..\..\..\..\..\..\O3DE\23.10.0\cmake\Platform\Windows\Packaging</Filter>
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Windows\platform_windows_files.cmake">
+      <Filter>..\..\..\..\..\..\..\..\..\O3DE\23.10.0\cmake\Platform\Windows</Filter>
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\3rdParty\Platform\Windows\BuiltInPackages_windows.cmake">
+      <Filter>..\..\..\..\..\..\..\..\..\O3DE\23.10.0\cmake\3rdParty\Platform\Windows</Filter>
+    </None>
+    <None Include="C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\Gem\MyGem\Code\mygem_private_files.cmake" />
+    <None Include="C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\Gem\MyGem\Code\Platform\Windows\mygem_private_files.cmake">
+      <Filter>Platform\Windows</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="..">
+      <UniqueIdentifier>{93D8BEC0-02E9-35FE-ADBA-782A0D8EE9F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..">
+      <UniqueIdentifier>{C455537E-B05D-31D7-BBF0-B367FE58F61A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..">
+      <UniqueIdentifier>{C749F34C-BB8A-3AA5-AC7F-49DF619BDAEA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\..">
+      <UniqueIdentifier>{19B315F1-F4F5-3019-A28B-3DE564B974DA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\..\..">
+      <UniqueIdentifier>{C54E1D31-C4F3-3B56-9A57-A5919B91B1A3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\..\..\..">
+      <UniqueIdentifier>{E54A9E28-9437-3040-9538-6CD4709DA06A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\..\..\..\..">
+      <UniqueIdentifier>{3F3932F5-DB81-386D-951A-2394256512C8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\..\..\..\..\..">
+      <UniqueIdentifier>{233A8479-52AA-3AF9-94B4-8C2623E2A4C1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\..\..\..\..\..\..">
+      <UniqueIdentifier>{3386EA75-8C45-301E-BF9E-E258EE0994F9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\..\..\..\..\..\..\O3DE">
+      <UniqueIdentifier>{6B947886-8B56-344B-869C-37649E03D215}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\..\..\..\..\..\..\O3DE\23.10.0">
+      <UniqueIdentifier>{781AA028-D55A-3819-9473-5B7743C0832F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\..\..\..\..\..\..\O3DE\23.10.0\cmake">
+      <UniqueIdentifier>{DBEAC61A-0B68-30A6-A45E-7F6BBF6529E6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\..\..\..\..\..\..\O3DE\23.10.0\cmake\3rdParty">
+      <UniqueIdentifier>{09ED5C3D-7B84-3E98-8C01-56B2F633C7A8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\..\..\..\..\..\..\O3DE\23.10.0\cmake\3rdParty\Platform">
+      <UniqueIdentifier>{716856B3-AC35-3E8C-8265-1C7EA6305D32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\..\..\..\..\..\..\O3DE\23.10.0\cmake\3rdParty\Platform\Windows">
+      <UniqueIdentifier>{5A6926AA-69ED-3537-8CBA-D7E99824B0C0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\..\..\..\..\..\..\O3DE\23.10.0\cmake\Platform">
+      <UniqueIdentifier>{4955EAB5-CF66-30BA-A5FA-2FC325A72747}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\..\..\..\..\..\..\O3DE\23.10.0\cmake\Platform\Common">
+      <UniqueIdentifier>{BAB89606-9E38-3AE1-9804-2BCEEDD52197}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\..\..\..\..\..\..\O3DE\23.10.0\cmake\Platform\Common\MSVC">
+      <UniqueIdentifier>{427F5A5F-650A-3D72-9AD5-42E64D63A9B6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\..\..\..\..\..\..\O3DE\23.10.0\cmake\Platform\Windows">
+      <UniqueIdentifier>{34A1D06C-A325-3059-84DC-86C1BE87F7B1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\..\..\..\..\..\..\O3DE\23.10.0\cmake\Platform\Windows\Packaging">
+      <UniqueIdentifier>{FC6642AA-0FF1-35EF-B064-5CD3CF32098C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{02997500-C15A-3C90-AC80-3B1FA9491F62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{228B7E82-67DE-324C-8F0B-D45E643BBD59}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{0F3BB726-5F36-3244-9225-9DFFA55A61CC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{22EEE3DE-47B2-34CB-BB85-18CA1803C7E7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Clients">
+      <UniqueIdentifier>{D4E2C440-ADB3-3796-9C6A-CB9A7E4B060D}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

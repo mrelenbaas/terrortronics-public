@@ -1,0 +1,7 @@
+# CMake generation dependency list for this directory.
+C:/O3DE/23.10.0/Gems/Camera/Code/CMakeLists.txt
+C:/O3DE/23.10.0/Gems/Camera/Code/Platform/Windows/Default/Camera.Editor_profile.cmake
+C:/O3DE/23.10.0/Gems/Camera/Code/Platform/Windows/Default/Camera.Static_profile.cmake
+C:/O3DE/23.10.0/Gems/Camera/Code/Platform/Windows/Default/Camera_profile.cmake
+C:/O3DE/23.10.0/Gems/Camera/Code/Platform/Windows/Default/permutation.cmake
+C:/O3DE/23.10.0/Gems/Camera/Code/Platform/Windows/platform_windows.cmake

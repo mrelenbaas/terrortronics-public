@@ -1,0 +1,15 @@
+# CMake generation dependency list for this directory.
+C:/Users/mrele/.o3de/o3de_manifest.json
+C:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject/Gem/CMakeLists.txt
+C:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject/Gem/Platform/Windows/PAL_windows.cmake
+C:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject/Gem/Platform/Windows/bookproject_shared_windows_files.cmake
+C:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject/Gem/Platform/Windows/bookproject_windows_files.cmake
+C:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject/Gem/bookproject_files.cmake
+C:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject/Gem/bookproject_shared_files.cmake
+C:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject/Gem/gem.json
+C:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject/project.json
+C:/Users/mrele/O3DE/Restricted/Engines/o3de/restricted.json
+C:/Users/mrele/O3DE/Restricted/Gems/CustomMadeGem088/restricted.json
+C:/Users/mrele/O3DE/Restricted/Gems/MyGem/restricted.json
+C:/Users/mrele/O3DE/Restricted/Gems/WindowPosition/restricted.json
+C:/Users/mrele/O3DE/Restricted/Projects/MyProject/restricted.json

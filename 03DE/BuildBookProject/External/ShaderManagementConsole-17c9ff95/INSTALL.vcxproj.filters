@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\mrele\Documents\terrortronics-public\03DE\BuildBookProject\CMakeFiles\7b6be69f12638a32a9d857a5973c3955\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{FDA6FC3D-EBE2-3FB5-BB3C-C3B04C07DB02}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

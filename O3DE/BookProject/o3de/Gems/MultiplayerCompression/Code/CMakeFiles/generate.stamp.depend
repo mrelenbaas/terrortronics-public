@@ -1,0 +1,6 @@
+# CMake generation dependency list for this directory.
+C:/O3DE/23.10.0/Gems/MultiplayerCompression/Code/CMakeLists.txt
+C:/O3DE/23.10.0/Gems/MultiplayerCompression/Code/Platform/Windows/Default/MultiplayerCompression.Static_profile.cmake
+C:/O3DE/23.10.0/Gems/MultiplayerCompression/Code/Platform/Windows/Default/MultiplayerCompression_profile.cmake
+C:/O3DE/23.10.0/Gems/MultiplayerCompression/Code/Platform/Windows/Default/permutation.cmake
+C:/O3DE/23.10.0/Gems/MultiplayerCompression/Code/Platform/Windows/platform_windows.cmake

@@ -1,0 +1,7 @@
+# CMake generation dependency list for this directory.
+C:/O3DE/23.10.0/Gems/Terrain/Code/CMakeLists.txt
+C:/O3DE/23.10.0/Gems/Terrain/Code/Platform/Windows/Default/Terrain.Editor_profile.cmake
+C:/O3DE/23.10.0/Gems/Terrain/Code/Platform/Windows/Default/Terrain.Static_profile.cmake
+C:/O3DE/23.10.0/Gems/Terrain/Code/Platform/Windows/Default/Terrain_profile.cmake
+C:/O3DE/23.10.0/Gems/Terrain/Code/Platform/Windows/Default/permutation.cmake
+C:/O3DE/23.10.0/Gems/Terrain/Code/Platform/Windows/platform_windows.cmake

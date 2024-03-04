@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\mrele\Documents\terrortronics-public\03DE\BuildBookProject\CMakeFiles\379884a8cc12097d6f48d8d4c95cf13d\NightlyMemoryCheck.rule">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\O3DE\23.10.0\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\mrele\Documents\terrortronics-public\03DE\BuildBookProject\o3de\CMakeFiles\NightlyMemoryCheck">
+      <Filter>Generated Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{02997500-C15A-3C90-AC80-3B1FA9491F62}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

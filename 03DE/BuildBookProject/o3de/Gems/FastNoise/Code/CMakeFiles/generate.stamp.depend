@@ -1,0 +1,8 @@
+# CMake generation dependency list for this directory.
+C:/O3DE/23.10.0/Gems/FastNoise/Code/CMakeLists.txt
+C:/O3DE/23.10.0/Gems/FastNoise/Code/Platform/Windows/Default/FastNoise.Editor.Static_profile.cmake
+C:/O3DE/23.10.0/Gems/FastNoise/Code/Platform/Windows/Default/FastNoise.Editor_profile.cmake
+C:/O3DE/23.10.0/Gems/FastNoise/Code/Platform/Windows/Default/FastNoise.Static_profile.cmake
+C:/O3DE/23.10.0/Gems/FastNoise/Code/Platform/Windows/Default/FastNoise_profile.cmake
+C:/O3DE/23.10.0/Gems/FastNoise/Code/Platform/Windows/Default/permutation.cmake
+C:/O3DE/23.10.0/Gems/FastNoise/Code/Platform/Windows/platform_windows.cmake

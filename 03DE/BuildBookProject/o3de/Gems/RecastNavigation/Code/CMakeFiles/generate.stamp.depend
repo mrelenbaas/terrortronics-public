@@ -1,0 +1,10 @@
+# CMake generation dependency list for this directory.
+C:/O3DE/23.10.0/Gems/RecastNavigation/Code/CMakeLists.txt
+C:/O3DE/23.10.0/Gems/RecastNavigation/Code/Platform/Windows/Default/RecastNavigation.API_profile.cmake
+C:/O3DE/23.10.0/Gems/RecastNavigation/Code/Platform/Windows/Default/RecastNavigation.Editor.API_profile.cmake
+C:/O3DE/23.10.0/Gems/RecastNavigation/Code/Platform/Windows/Default/RecastNavigation.Editor.Private.Object_profile.cmake
+C:/O3DE/23.10.0/Gems/RecastNavigation/Code/Platform/Windows/Default/RecastNavigation.Editor_profile.cmake
+C:/O3DE/23.10.0/Gems/RecastNavigation/Code/Platform/Windows/Default/RecastNavigation.Private.Object_profile.cmake
+C:/O3DE/23.10.0/Gems/RecastNavigation/Code/Platform/Windows/Default/RecastNavigation_profile.cmake
+C:/O3DE/23.10.0/Gems/RecastNavigation/Code/Platform/Windows/Default/permutation.cmake
+C:/O3DE/23.10.0/Gems/RecastNavigation/Code/Platform/Windows/platform_windows.cmake

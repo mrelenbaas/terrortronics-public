@@ -1,0 +1,9 @@
+# CMake generation dependency list for this directory.
+C:/O3DE/23.10.0/Gems/ImGui/Code/CMakeLists.txt
+C:/O3DE/23.10.0/Gems/ImGui/Code/Platform/Windows/Default/ImGui.Editor_profile.cmake
+C:/O3DE/23.10.0/Gems/ImGui/Code/Platform/Windows/Default/ImGui.ImGuiLYUtils_profile.cmake
+C:/O3DE/23.10.0/Gems/ImGui/Code/Platform/Windows/Default/ImGui.Static_profile.cmake
+C:/O3DE/23.10.0/Gems/ImGui/Code/Platform/Windows/Default/ImGui.imguilib_profile.cmake
+C:/O3DE/23.10.0/Gems/ImGui/Code/Platform/Windows/Default/ImGui_profile.cmake
+C:/O3DE/23.10.0/Gems/ImGui/Code/Platform/Windows/Default/permutation.cmake
+C:/O3DE/23.10.0/Gems/ImGui/Code/Platform/Windows/platform_windows.cmake

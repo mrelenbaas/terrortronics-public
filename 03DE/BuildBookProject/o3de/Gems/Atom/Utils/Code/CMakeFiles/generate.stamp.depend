@@ -1,0 +1,6 @@
+# CMake generation dependency list for this directory.
+C:/O3DE/23.10.0/Gems/Atom/Utils/Code/CMakeLists.txt
+C:/O3DE/23.10.0/Gems/Atom/Utils/Code/Platform/Windows/Default/Atom_Utils.Static_profile.cmake
+C:/O3DE/23.10.0/Gems/Atom/Utils/Code/Platform/Windows/Default/Atom_Utils.TestUtils.Static_profile.cmake
+C:/O3DE/23.10.0/Gems/Atom/Utils/Code/Platform/Windows/Default/permutation.cmake
+C:/O3DE/23.10.0/Gems/Atom/Utils/Code/Platform/Windows/platform_windows.cmake

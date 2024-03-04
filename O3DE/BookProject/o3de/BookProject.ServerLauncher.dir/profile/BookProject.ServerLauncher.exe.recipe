@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <ProjectOutputs>
+    <ProjectOutput>
+      <FullPath>C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\x64\profile\ZERO_CHECK</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\bin\profile\BookProject.dll</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\External\MyGem-c19403bc\Code\x64\profile\MyGem.API</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\bin\profile\MyGem.dll</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\bin\profile\BookProject.ServerLauncher.exe</FullPath>
+    </ProjectOutput>
+  </ProjectOutputs>
+  <ContentFiles />
+  <SatelliteDlls />
+  <NonRecipeFileRefs />
+</Project>

@@ -1,0 +1,9 @@
+# CMake generation dependency list for this directory.
+C:/O3DE/23.10.0/Gems/AWSCore/Code/CMakeLists.txt
+C:/O3DE/23.10.0/Gems/AWSCore/Code/Platform/Windows/Default/AWSCore.Editor.Static_profile.cmake
+C:/O3DE/23.10.0/Gems/AWSCore/Code/Platform/Windows/Default/AWSCore.Editor_profile.cmake
+C:/O3DE/23.10.0/Gems/AWSCore/Code/Platform/Windows/Default/AWSCore.ResourceMappingTool_profile.cmake
+C:/O3DE/23.10.0/Gems/AWSCore/Code/Platform/Windows/Default/AWSCore.Static_profile.cmake
+C:/O3DE/23.10.0/Gems/AWSCore/Code/Platform/Windows/Default/AWSCore_profile.cmake
+C:/O3DE/23.10.0/Gems/AWSCore/Code/Platform/Windows/Default/permutation.cmake
+C:/O3DE/23.10.0/Gems/AWSCore/Code/Platform/Windows/platform_windows.cmake

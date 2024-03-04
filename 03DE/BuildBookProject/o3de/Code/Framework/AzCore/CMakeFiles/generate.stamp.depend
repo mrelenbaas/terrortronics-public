@@ -1,0 +1,14 @@
+# CMake generation dependency list for this directory.
+C:/O3DE/23.10.0/Code/Framework/AzCore/CMakeLists.txt
+C:/O3DE/23.10.0/Code/Framework/AzCore/Platform/Windows/Default/AzCore_profile.cmake
+C:/O3DE/23.10.0/Code/Framework/AzCore/Platform/Windows/Default/O3DEKernel_profile.cmake
+C:/O3DE/23.10.0/Code/Framework/AzCore/Platform/Windows/Default/permutation.cmake
+C:/O3DE/23.10.0/Code/Framework/AzCore/Platform/Windows/platform_windows.cmake
+C:/Users/mrele/.o3de/3rdParty/packages/Lua-5.4.4-rev1-windows/FindLua.cmake
+C:/Users/mrele/.o3de/3rdParty/packages/Lua-5.4.4-rev1-windows/PackageInfo.json
+C:/Users/mrele/.o3de/3rdParty/packages/RapidXML-1.13-rev1-multiplatform/FindRapidXML.cmake
+C:/Users/mrele/.o3de/3rdParty/packages/RapidXML-1.13-rev1-multiplatform/PackageInfo.json
+C:/Users/mrele/.o3de/3rdParty/packages/cityhash-1.1-multiplatform/Findcityhash.cmake
+C:/Users/mrele/.o3de/3rdParty/packages/cityhash-1.1-multiplatform/PackageInfo.json
+C:/Users/mrele/.o3de/3rdParty/packages/zstd-1.35-multiplatform/Findzstd.cmake
+C:/Users/mrele/.o3de/3rdParty/packages/zstd-1.35-multiplatform/PackageInfo.json

@@ -1,0 +1,8 @@
+# CMake generation dependency list for this directory.
+C:/O3DE/23.10.0/Code/Tools/AWSNativeSDKInit/CMakeLists.txt
+C:/O3DE/23.10.0/Code/Tools/AWSNativeSDKInit/Platform/Windows/Default/AWSNativeSDKInit_profile.cmake
+C:/O3DE/23.10.0/Code/Tools/AWSNativeSDKInit/Platform/Windows/Default/permutation.cmake
+C:/O3DE/23.10.0/Code/Tools/AWSNativeSDKInit/Platform/Windows/platform_windows.cmake
+C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeParseArguments.cmake
+C:/Users/mrele/.o3de/3rdParty/packages/AWSNativeSDK-1.9.50-rev2-windows/FindAWSNativeSDK.cmake
+C:/Users/mrele/.o3de/3rdParty/packages/AWSNativeSDK-1.9.50-rev2-windows/PackageInfo.json

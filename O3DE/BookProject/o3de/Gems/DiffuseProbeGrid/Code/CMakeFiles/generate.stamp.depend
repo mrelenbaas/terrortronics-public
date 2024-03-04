@@ -1,0 +1,7 @@
+# CMake generation dependency list for this directory.
+C:/O3DE/23.10.0/Gems/DiffuseProbeGrid/Code/CMakeLists.txt
+C:/O3DE/23.10.0/Gems/DiffuseProbeGrid/Code/Platform/Windows/Default/DiffuseProbeGrid.Editor_profile.cmake
+C:/O3DE/23.10.0/Gems/DiffuseProbeGrid/Code/Platform/Windows/Default/DiffuseProbeGrid.Static_profile.cmake
+C:/O3DE/23.10.0/Gems/DiffuseProbeGrid/Code/Platform/Windows/Default/DiffuseProbeGrid_profile.cmake
+C:/O3DE/23.10.0/Gems/DiffuseProbeGrid/Code/Platform/Windows/Default/permutation.cmake
+C:/O3DE/23.10.0/Gems/DiffuseProbeGrid/Code/Platform/Windows/platform_windows.cmake

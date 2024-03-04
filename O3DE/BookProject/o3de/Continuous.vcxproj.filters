@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\CMakeFiles\c9efe399f65b6b9d1c87a4d12cd69603\Continuous.rule">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\O3DE\23.10.0\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\o3de\CMakeFiles\Continuous">
+      <Filter>Generated Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{6880D1CF-6D2B-33A3-8F8E-E8A49E1019FD}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

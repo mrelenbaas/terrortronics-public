@@ -1,0 +1,5 @@
+# CMake generation dependency list for this directory.
+C:/O3DE/23.10.0/Code/Editor/Plugins/FFMPEGPlugin/CMakeLists.txt
+C:/O3DE/23.10.0/Code/Editor/Plugins/FFMPEGPlugin/Platform/Windows/Default/FFMPEGPlugin_profile.cmake
+C:/O3DE/23.10.0/Code/Editor/Plugins/FFMPEGPlugin/Platform/Windows/Default/permutation.cmake
+C:/O3DE/23.10.0/Code/Editor/Plugins/FFMPEGPlugin/Platform/Windows/platform_windows.cmake

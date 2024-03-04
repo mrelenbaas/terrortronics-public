@@ -1,0 +1,133 @@
+{
+	"BUILD_DIR" : "C:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject/External/MyGem-c19403bc/Code/MyGem.Editor_autogen",
+	"CMAKE_BINARY_DIR" : "C:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject",
+	"CMAKE_CURRENT_BINARY_DIR" : "C:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject/External/MyGem-c19403bc/Code",
+	"CMAKE_CURRENT_SOURCE_DIR" : "C:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject/Gem/MyGem/Code",
+	"CMAKE_EXECUTABLE" : "C:/Program Files/CMake/bin/cmake.exe",
+	"CMAKE_LIST_FILES" : 
+	[
+		"C:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject/Gem/MyGem/Code/CMakeLists.txt",
+		"C:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject/Gem/MyGem/Code/Platform/Windows/PAL_windows.cmake",
+		"C:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject/Gem/MyGem/Code/mygem_api_files.cmake",
+		"C:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject/Gem/MyGem/Code/Platform/Windows/mygem_api_files.cmake",
+		"C:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject/Gem/MyGem/Code/mygem_private_files.cmake",
+		"C:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject/Gem/MyGem/Code/Platform/Windows/mygem_private_files.cmake",
+		"C:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject/Gem/MyGem/Code/mygem_shared_files.cmake",
+		"C:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject/Gem/MyGem/Code/Platform/Windows/mygem_shared_files.cmake",
+		"C:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject/Gem/MyGem/Code/mygem_editor_api_files.cmake",
+		"C:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject/Gem/MyGem/Code/Platform/Windows/mygem_editor_api_files.cmake",
+		"C:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject/Gem/MyGem/Code/mygem_editor_private_files.cmake",
+		"C:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject/Gem/MyGem/Code/mygem_editor_shared_files.cmake"
+	],
+	"CMAKE_SOURCE_DIR" : "C:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject",
+	"DEP_FILE" : "",
+	"DEP_FILE_RULE_NAME" : "",
+	"HEADERS" : 
+	[
+		[
+			"C:/O3DE/23.10.0/cmake/Platform/Windows/Packaging/BootstrapperTheme.wxl.in",
+			"Mu",
+			"Z2OWMFWGYG/moc_BootstrapperTheme.wxl.cpp",
+			null
+		],
+		[
+			"C:/O3DE/23.10.0/cmake/Platform/Windows/Packaging/BootstrapperTheme.xml.in",
+			"Mu",
+			"Z2OWMFWGYG/moc_BootstrapperTheme.xml.cpp",
+			null
+		],
+		[
+			"C:/O3DE/23.10.0/cmake/Platform/Windows/Packaging/Template.wxs.in",
+			"Mu",
+			"Z2OWMFWGYG/moc_Template.wxs.cpp",
+			null
+		]
+	],
+	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
+	"INCLUDE_DIR" : "C:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject/External/MyGem-c19403bc/Code/MyGem.Editor_autogen/include",
+	"INCLUDE_DIR_profile" : "C:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject/External/MyGem-c19403bc/Code/MyGem.Editor_autogen/include_profile",
+	"MOC_COMPILATION_FILE" : "C:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject/External/MyGem-c19403bc/Code/MyGem.Editor_autogen/mocs_compilation.cpp",
+	"MOC_COMPILATION_FILE_profile" : "C:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject/External/MyGem-c19403bc/Code/MyGem.Editor_autogen/mocs_compilation_profile.cpp",
+	"MOC_DEFINITIONS" : [],
+	"MOC_DEFINITIONS_profile" : 
+	[
+		"AZ_BUILD_CONFIGURATION_TYPE=\"profile\"",
+		"AZ_ENABLE_DEBUG_TOOLS",
+		"AZ_ENABLE_TRACING",
+		"AZ_PROFILE_BUILD",
+		"MyGem_Editor_EXPORTS",
+		"NDEBUG",
+		"NOMINMAX",
+		"QT_CORE_LIB",
+		"QT_GUI_LIB",
+		"QT_NO_DEBUG",
+		"QT_SVG_LIB",
+		"QT_WIDGETS_LIB",
+		"QT_XML_LIB",
+		"WIN32",
+		"WIN64",
+		"_ENABLE_EXTENDED_ALIGNED_STORAGE",
+		"_HAS_EXCEPTIONS=0",
+		"_PROFILE",
+		"_WIN32",
+		"_WIN64"
+	],
+	"MOC_DEPEND_FILTERS" : 
+	[
+		[
+			"Q_PLUGIN_METADATA",
+			"[\n][ \t]*Q_PLUGIN_METADATA[ \t]*\\([^\\)]*FILE[ \t]*\"([^\"]+)\""
+		]
+	],
+	"MOC_INCLUDES" : [],
+	"MOC_INCLUDES_profile" : 
+	[
+		"C:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject/Gem/MyGem/Code/Source",
+		"C:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject/Gem/MyGem/Code/Include",
+		"C:/O3DE/23.10.0/Code/Framework/AzToolsFramework",
+		"C:/O3DE/23.10.0/Code/Framework/AzToolsFramework/AzToolsFramework",
+		"C:/O3DE/23.10.0/Code/Framework/AzToolsFramework/Platform/Windows",
+		"C:/O3DE/23.10.0/Code/Framework/AzFramework",
+		"C:/O3DE/23.10.0/Code/Framework/AzFramework/Platform/Windows",
+		"C:/O3DE/23.10.0/Code/Framework/AzNetworking",
+		"C:/O3DE/23.10.0/Code/Framework/AzNetworking/Platform/Common",
+		"C:/O3DE/23.10.0/Code/Framework/AzNetworking/Platform/Windows",
+		"C:/O3DE/23.10.0/build/windows/Code/Framework/AzNetworking/Azcg/Generated/AzNetworking",
+		"C:/O3DE/23.10.0/Code/Framework/AzCore",
+		"C:/O3DE/23.10.0/Code/Framework/AzCore/Platform/Windows",
+		"C:/O3DE/23.10.0/Code/Framework/AzCore/Platform/Common",
+		"C:/O3DE/23.10.0/Code/Framework/AzQtComponents",
+		"C:/O3DE/23.10.0/Code/Framework/AzQtComponents/Platform/Windows"
+	],
+	"MOC_MACRO_NAMES" : [ "Q_OBJECT", "Q_GADGET", "Q_NAMESPACE", "Q_NAMESPACE_EXPORT" ],
+	"MOC_OPTIONS" : [],
+	"MOC_PATH_PREFIX" : false,
+	"MOC_PREDEFS_CMD" : [],
+	"MOC_PREDEFS_FILE" : "",
+	"MOC_RELAXED_MODE" : false,
+	"MOC_SKIP" : [],
+	"MULTI_CONFIG" : true,
+	"PARALLEL" : 10,
+	"PARSE_CACHE_FILE" : "C:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject/External/MyGem-c19403bc/Code/CMakeFiles/MyGem.Editor_autogen.dir/ParseCache.txt",
+	"PARSE_CACHE_FILE_profile" : "C:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject/External/MyGem-c19403bc/Code/CMakeFiles/MyGem.Editor_autogen.dir/ParseCache_profile.txt",
+	"QT_MOC_EXECUTABLE" : "C:/Users/mrele/.o3de/3rdParty/packages/qt-5.15.2-rev7-windows/qt/bin/moc.exe",
+	"QT_UIC_EXECUTABLE" : "",
+	"QT_VERSION_MAJOR" : 5,
+	"QT_VERSION_MINOR" : 15,
+	"SETTINGS_FILE" : "C:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject/External/MyGem-c19403bc/Code/CMakeFiles/MyGem.Editor_autogen.dir/AutogenUsed.txt",
+	"SETTINGS_FILE_profile" : "C:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject/External/MyGem-c19403bc/Code/CMakeFiles/MyGem.Editor_autogen.dir/AutogenUsed_profile.txt",
+	"SOURCES" : 
+	[
+		[
+			"C:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject/External/MyGem-c19403bc/Code/CMakeFiles/MyGem.Editor.dir/Unity/unity_0_cxx.cxx",
+			"Mu",
+			null
+		],
+		[
+			"C:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject/Gem/MyGem/Code/Source/Tools/MyGemEditorModule.cpp",
+			"Mu",
+			null
+		]
+	],
+	"VERBOSITY" : 0
+}

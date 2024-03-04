@@ -1,0 +1,6 @@
+# CMake generation dependency list for this directory.
+C:/O3DE/23.10.0/Gems/PhysXDebug/Code/CMakeLists.txt
+C:/O3DE/23.10.0/Gems/PhysXDebug/Code/Platform/Windows/Default/PhysXDebug.Editor_profile.cmake
+C:/O3DE/23.10.0/Gems/PhysXDebug/Code/Platform/Windows/Default/PhysXDebug_profile.cmake
+C:/O3DE/23.10.0/Gems/PhysXDebug/Code/Platform/Windows/Default/permutation.cmake
+C:/O3DE/23.10.0/Gems/PhysXDebug/Code/Platform/Windows/platform_windows.cmake

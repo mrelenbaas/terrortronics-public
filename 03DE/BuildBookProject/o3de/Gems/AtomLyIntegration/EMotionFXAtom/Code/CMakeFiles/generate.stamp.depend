@@ -1,0 +1,7 @@
+# CMake generation dependency list for this directory.
+C:/O3DE/23.10.0/Gems/AtomLyIntegration/EMotionFXAtom/Code/CMakeLists.txt
+C:/O3DE/23.10.0/Gems/AtomLyIntegration/EMotionFXAtom/Code/Platform/Windows/Default/EMotionFX_Atom.Editor_profile.cmake
+C:/O3DE/23.10.0/Gems/AtomLyIntegration/EMotionFXAtom/Code/Platform/Windows/Default/EMotionFX_Atom.Static_profile.cmake
+C:/O3DE/23.10.0/Gems/AtomLyIntegration/EMotionFXAtom/Code/Platform/Windows/Default/EMotionFX_Atom_profile.cmake
+C:/O3DE/23.10.0/Gems/AtomLyIntegration/EMotionFXAtom/Code/Platform/Windows/Default/permutation.cmake
+C:/O3DE/23.10.0/Gems/AtomLyIntegration/EMotionFXAtom/Code/Platform/Windows/platform_windows.cmake

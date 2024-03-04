@@ -1,0 +1,8 @@
+# CMake generation dependency list for this directory.
+C:/O3DE/23.10.0/Code/Tools/ProjectManager/CMakeLists.txt
+C:/O3DE/23.10.0/Code/Tools/ProjectManager/Platform/Windows/Default/ProjectManager.Static_profile.cmake
+C:/O3DE/23.10.0/Code/Tools/ProjectManager/Platform/Windows/Default/ProjectManager_profile.cmake
+C:/O3DE/23.10.0/Code/Tools/ProjectManager/Platform/Windows/Default/permutation.cmake
+C:/O3DE/23.10.0/Code/Tools/ProjectManager/Platform/Windows/platform_windows.cmake
+C:/Users/mrele/.o3de/3rdParty/packages/pybind11-2.10.0-rev1-multiplatform/Findpybind11.cmake
+C:/Users/mrele/.o3de/3rdParty/packages/pybind11-2.10.0-rev1-multiplatform/PackageInfo.json

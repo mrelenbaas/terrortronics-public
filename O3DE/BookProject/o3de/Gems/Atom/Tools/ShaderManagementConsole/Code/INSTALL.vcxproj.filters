@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\CMakeFiles\f2242c4453ef11e30b6064d93ce2bc29\INSTALL_force.rule">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{6880D1CF-6D2B-33A3-8F8E-E8A49E1019FD}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,6 @@
+# CMake generation dependency list for this directory.
+C:/O3DE/23.10.0/Gems/Prefab/PrefabBuilder/CMakeLists.txt
+C:/O3DE/23.10.0/Gems/Prefab/PrefabBuilder/Platform/Windows/Default/PrefabBuilder.Builders_profile.cmake
+C:/O3DE/23.10.0/Gems/Prefab/PrefabBuilder/Platform/Windows/Default/PrefabBuilder.Static_profile.cmake
+C:/O3DE/23.10.0/Gems/Prefab/PrefabBuilder/Platform/Windows/Default/permutation.cmake
+C:/O3DE/23.10.0/Gems/Prefab/PrefabBuilder/Platform/Windows/platform_windows.cmake

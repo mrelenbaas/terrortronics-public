@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="profile|x64">
+      <Configuration>profile</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{EE10107F-8CA1-35EB-AAC1-4519E5BBF6E0}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22000.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>BookProject.UnifiedLauncher</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='profile|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='profile|x64'">C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\bin\profile\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='profile|x64'">BookProject.UnifiedLauncher.dir\profile\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='profile|x64'">BookProject.UnifiedLauncher</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='profile|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='profile|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='profile|x64'">true</GenerateManifest>
+    <LocalDebuggerCommandArguments Condition="'$(Configuration)|$(Platform)'=='profile|x64'">--project-path="C:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject" </LocalDebuggerCommandArguments>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='profile|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\O3DE\23.10.0\.;C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\o3de\BookProject.UnifiedLauncher\Includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/O3DE/23.10.0/Code/Framework/AzCore/." /external:I "C:/O3DE/23.10.0/Code/Framework/AzCore/Platform/Windows" /external:I "C:/O3DE/23.10.0/Code/Framework/AzCore/Platform/Common" /external:I "C:/O3DE/23.10.0/Code/Framework/AzGameFramework/AzGameFramework/.." /external:I "C:/O3DE/23.10.0/Code/Framework/AzFramework/." /external:I "C:/O3DE/23.10.0/Code/Framework/AzFramework/Platform/Windows" /external:I "C:/O3DE/23.10.0/Code/Framework/AzNetworking/." /external:I "C:/O3DE/23.10.0/Code/Framework/AzNetworking/Platform/Common" /external:I "C:/O3DE/23.10.0/Code/Framework/AzNetworking/Platform/Windows" /external:I "C:/O3DE/23.10.0/Code/Framework/AzNetworking/../../../build/windows/Code/Framework/AzNetworking/Azcg/Generated/AzNetworking" /external:I "C:/O3DE/23.10.0/Code/Legacy/CryCommon/." /external:I "C:/O3DE/23.10.0/Code/Legacy/CryCommon/.." /external:I "C:/O3DE/23.10.0/Code/Legacy/CryCommon/Platform/Windows" /Zc:__cplusplus /Zc:lambda /favor:AMD64 /bigobj /experimental:external -external:IC:/Users/mrele/.o3de/3rdParty/packages/Lua-5.4.4-rev1-windows/Lua/include -external:IC:/Users/mrele/.o3de/3rdParty/packages/RapidJSON-1.1.0-rev1-multiplatform/RapidJSON/include -external:IC:/Users/mrele/.o3de/3rdParty/packages/RapidXML-1.13-rev1-multiplatform/RapidXML/include -external:IC:/Users/mrele/.o3de/3rdParty/packages/zlib-1.2.11-rev5-windows/zlib/include -external:IC:/Users/mrele/.o3de/3rdParty/packages/zstd-1.35-multiplatform/zstd/lib -external:IC:/Users/mrele/.o3de/3rdParty/packages/cityhash-1.1-multiplatform/cityhash/src -external:IC:/Users/mrele/.o3de/3rdParty/packages/OpenSSL-1.1.1o-rev1-windows/OpenSSL/include -external:IC:/Users/mrele/.o3de/3rdParty/packages/lz4-1.9.4-rev1-windows/lz4/include</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CallingConvention>Cdecl</CallingConvention>
+      <ConformanceMode>true</ConformanceMode>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DiagnosticsFormat>Caret</DiagnosticsFormat>
+      <DisableSpecificWarnings>4201;4324</DisableSpecificWarnings>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData>true</RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <StringPooling>true</StringPooling>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatSpecificWarningsAsErrors>4263;4264;4265;4266;4296;4426;4437;4774;4777;5031;5032;5233</TreatSpecificWarningsAsErrors>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <UseFullPaths>false</UseFullPaths>
+      <UseStandardPreprocessor>true</UseStandardPreprocessor>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);LY_PROJECT_NAME="BookProject";LY_CMAKE_TARGET="BookProject_UnifiedLauncher";_HAS_EXCEPTIONS=0;_PROFILE;AZ_PROFILE_BUILD;NDEBUG;AZ_ENABLE_TRACING;AZ_ENABLE_DEBUG_TOOLS;AZ_BUILD_CONFIGURATION_TYPE="profile";_ENABLE_EXTENDED_ALIGNED_STORAGE;_WIN32;WIN32;_WIN64;WIN64;NOMINMAX;CMAKE_INTDIR="profile"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);LY_PROJECT_NAME=\"BookProject\";LY_CMAKE_TARGET=\"BookProject_UnifiedLauncher\";_HAS_EXCEPTIONS=0;_PROFILE;AZ_PROFILE_BUILD;NDEBUG;AZ_ENABLE_TRACING;AZ_ENABLE_DEBUG_TOOLS;AZ_BUILD_CONFIGURATION_TYPE=\"profile\";_ENABLE_EXTENDED_ALIGNED_STORAGE;_WIN32;WIN32;_WIN64;WIN64;NOMINMAX;CMAKE_INTDIR=\"profile\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\O3DE\23.10.0\.;C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\o3de\BookProject.UnifiedLauncher\Includes;C:\O3DE\23.10.0\Code\Framework\AzCore\.;C:\O3DE\23.10.0\Code\Framework\AzCore\Platform\Windows;C:\O3DE\23.10.0\Code\Framework\AzCore\Platform\Common;C:\O3DE\23.10.0\Code\Framework\AzGameFramework\AzGameFramework\..;C:\O3DE\23.10.0\Code\Framework\AzFramework\.;C:\O3DE\23.10.0\Code\Framework\AzFramework\Platform\Windows;C:\O3DE\23.10.0\Code\Framework\AzNetworking\.;C:\O3DE\23.10.0\Code\Framework\AzNetworking\Platform\Common;C:\O3DE\23.10.0\Code\Framework\AzNetworking\Platform\Windows;C:\O3DE\23.10.0\Code\Framework\AzNetworking\..\..\..\build\windows\Code\Framework\AzNetworking\Azcg\Generated\AzNetworking;C:\O3DE\23.10.0\Code\Legacy\CryCommon\.;C:\O3DE\23.10.0\Code\Legacy\CryCommon\..;C:\O3DE\23.10.0\Code\Legacy\CryCommon\Platform\Windows;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\O3DE\23.10.0\.;C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\o3de\BookProject.UnifiedLauncher\Includes;C:\O3DE\23.10.0\Code\Framework\AzCore\.;C:\O3DE\23.10.0\Code\Framework\AzCore\Platform\Windows;C:\O3DE\23.10.0\Code\Framework\AzCore\Platform\Common;C:\O3DE\23.10.0\Code\Framework\AzGameFramework\AzGameFramework\..;C:\O3DE\23.10.0\Code\Framework\AzFramework\.;C:\O3DE\23.10.0\Code\Framework\AzFramework\Platform\Windows;C:\O3DE\23.10.0\Code\Framework\AzNetworking\.;C:\O3DE\23.10.0\Code\Framework\AzNetworking\Platform\Common;C:\O3DE\23.10.0\Code\Framework\AzNetworking\Platform\Windows;C:\O3DE\23.10.0\Code\Framework\AzNetworking\..\..\..\build\windows\Code\Framework\AzNetworking\Azcg\Generated\AzNetworking;C:\O3DE\23.10.0\Code\Legacy\CryCommon\.;C:\O3DE\23.10.0\Code\Legacy\CryCommon\..;C:\O3DE\23.10.0\Code\Legacy\CryCommon\Platform\Windows;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>C:\O3DE\23.10.0\lib\Windows\profile\Default\Launcher.Static.lib;C:\O3DE\23.10.0\lib\Windows\profile\Default\Launcher.Unified.Static.lib;C:\O3DE\23.10.0\lib\Windows\profile\Default\AzGameFramework.lib;C:\O3DE\23.10.0\lib\Windows\profile\Default\CryCommon.lib;C:\O3DE\23.10.0\lib\Windows\profile\Default\AzFramework.lib;C:\O3DE\23.10.0\lib\Windows\profile\Default\AzNetworking.lib;C:\O3DE\23.10.0\lib\Windows\profile\Default\AzCore.lib;C:\Users\mrele\.o3de\3rdParty\packages\Lua-5.4.4-rev1-windows\Lua\lib\release\lualib.lib;C:\Users\mrele\.o3de\3rdParty\packages\zlib-1.2.11-rev5-windows\zlib\lib\zlibstatic.lib;C:\Users\mrele\.o3de\3rdParty\packages\cityhash-1.1-multiplatform\cityhash\build\win_x64\vc140\release\cityhash.lib;C:\O3DE\23.10.0\lib\Windows\profile\Default\O3DEKernel.lib;C:\Users\mrele\.o3de\3rdParty\packages\zstd-1.35-multiplatform\zstd\bin\win-x64-vc140\release\zstd.lib;C:\Users\mrele\.o3de\3rdParty\packages\OpenSSL-1.1.1o-rev1-windows\OpenSSL\lib\libssl.lib;C:\Users\mrele\.o3de\3rdParty\packages\OpenSSL-1.1.1o-rev1-windows\OpenSSL\lib\libcrypto.lib;crypt32.lib;ws2_32.lib;ws2_32.lib;C:\Users\mrele\.o3de\3rdParty\packages\lz4-1.9.4-rev1-windows\lz4\lib\lz4.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject/lib/profile/BookProject.UnifiedLauncher.lib</ImportLibrary>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ProgramDataBaseFile>C:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject/bin/profile/BookProject.UnifiedLauncher.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <Manifest>
+      <EnableDpiAwareness>PerMonitorHighDPIAware</EnableDpiAwareness>
+    </Manifest>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\CMakeFiles\5d0ce02da15397a1ebfd78c07749c8b2\BookProject.UnifiedLauncher.stamp.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='profile|x64'">Copying BookProject.UnifiedLauncher runtime dependencies to output...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='profile|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -P C:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject/runtime_dependencies/profile/BookProject.UnifiedLauncher.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='profile|x64'">C:\Users\mrele\.o3de\3rdParty\packages\vulkan-validationlayers-1.3.261-rev1-windows\vulkan-validationlayers\lib\release\VkLayer_khronos_validation.json;C:\Users\mrele\.o3de\3rdParty\packages\vulkan-validationlayers-1.3.261-rev1-windows\vulkan-validationlayers\lib\release\VkLayer_khronos_validation.dll;C:\Users\mrele\.o3de\3rdParty\packages\PhysX-4.1.2.29882248-rev5-windows\PhysX\shared\profile\bin\PhysX_64.dll;C:\Users\mrele\.o3de\3rdParty\packages\PhysX-4.1.2.29882248-rev5-windows\PhysX\shared\profile\bin\PhysXCooking_64.dll;C:\Users\mrele\.o3de\3rdParty\packages\PhysX-4.1.2.29882248-rev5-windows\PhysX\shared\profile\bin\PhysXFoundation_64.dll;C:\Users\mrele\.o3de\3rdParty\packages\PhysX-4.1.2.29882248-rev5-windows\PhysX\shared\profile\bin\PhysXCommon_64.dll;C:\Users\mrele\.o3de\3rdParty\packages\PhysX-4.1.2.29882248-rev5-windows\PhysX\shared\profile\bin\PhysXDevice64.dll;C:\Users\mrele\.o3de\3rdParty\packages\PhysX-4.1.2.29882248-rev5-windows\PhysX\shared\profile\bin\PhysXGpu_64.dll;C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\bin\profile\Registry\cmake_dependencies.bookproject_unifiedlauncher.setreg;C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\bin\profile\Registry\cmake_dependencies.bookproject.bookproject_unifiedlauncher.setreg;C:\O3DE\23.10.0\bin\Windows\profile\Default\O3DEKernel.dll;C:\O3DE\23.10.0\bin\Windows\profile\Default\ImGui.imguilib.dll;C:\Users\mrele\.o3de\3rdParty\packages\AWSNativeSDK-1.9.50-rev2-windows\AWSNativeSDK\bin\Release\aws-c-auth.dll;C:\Users\mrele\.o3de\3rdParty\packages\AWSNativeSDK-1.9.50-rev2-windows\AWSNativeSDK\bin\Release\aws-c-cal.dll;C:\Users\mrele\.o3de\3rdParty\packages\AWSNativeSDK-1.9.50-rev2-windows\AWSNativeSDK\bin\Release\aws-c-common.dll;C:\Users\mrele\.o3de\3rdParty\packages\AWSNativeSDK-1.9.50-rev2-windows\AWSNativeSDK\bin\Release\aws-c-compression.dll;C:\Users\mrele\.o3de\3rdParty\packages\AWSNativeSDK-1.9.50-rev2-windows\AWSNativeSDK\bin\Release\aws-c-event-stream.dll;C:\Users\mrele\.o3de\3rdParty\packages\AWSNativeSDK-1.9.50-rev2-windows\AWSNativeSDK\bin\Release\aws-c-http.dll;C:\Users\mrele\.o3de\3rdParty\packages\AWSNativeSDK-1.9.50-rev2-windows\AWSNativeSDK\bin\Release\aws-c-io.dll;C:\Users\mrele\.o3de\3rdParty\packages\AWSNativeSDK-1.9.50-rev2-windows\AWSNativeSDK\bin\Release\aws-c-mqtt.dll;C:\Users\mrele\.o3de\3rdParty\packages\AWSNativeSDK-1.9.50-rev2-windows\AWSNativeSDK\bin\Release\aws-c-s3.dll;C:\Users\mrele\.o3de\3rdParty\packages\AWSNativeSDK-1.9.50-rev2-windows\AWSNativeSDK\bin\Release\aws-checksums.dll;C:\Users\mrele\.o3de\3rdParty\packages\AWSNativeSDK-1.9.50-rev2-windows\AWSNativeSDK\bin\Release\aws-cpp-sdk-core.dll;C:\Users\mrele\.o3de\3rdParty\packages\AWSNativeSDK-1.9.50-rev2-windows\AWSNativeSDK\bin\Release\aws-crt-cpp.dll;C:\Users\mrele\.o3de\3rdParty\packages\AWSNativeSDK-1.9.50-rev2-windows\AWSNativeSDK\bin\Release\aws-cpp-sdk-dynamodb.dll;C:\Users\mrele\.o3de\3rdParty\packages\AWSNativeSDK-1.9.50-rev2-windows\AWSNativeSDK\bin\Release\aws-cpp-sdk-lambda.dll;C:\Users\mrele\.o3de\3rdParty\packages\AWSNativeSDK-1.9.50-rev2-windows\AWSNativeSDK\bin\Release\aws-cpp-sdk-s3.dll;C:\O3DE\23.10.0\bin\Windows\profile\Default\AWSCore.dll;C:\O3DE\23.10.0\bin\Windows\profile\Default\AtomFont.dll;C:\O3DE\23.10.0\bin\Windows\profile\Default\LmbrCentral.dll;C:\O3DE\23.10.0\bin\Windows\profile\Default\AtomImGuiTools.dll;C:\O3DE\23.10.0\bin\Windows\profile\Default\Atom_RHI.Private.dll;C:\O3DE\23.10.0\bin\Windows\profile\Default\Atom_RPI.Private.dll;C:\O3DE\23.10.0\bin\Windows\profile\Default\AtomLyIntegration_CommonFeatures.dll;C:\O3DE\23.10.0\bin\Windows\profile\Default\AtomViewportDisplayInfo.dll;C:\O3DE\23.10.0\bin\Windows\profile\Default\Atom_Bootstrap.dll;C:\O3DE\23.10.0\bin\Windows\profile\Default\Atom_Component_DebugCamera.dll;C:\O3DE\23.10.0\bin\Windows\profile\Default\Atom_RHI_DX12.Private.dll;C:\O3DE\23.10.0\bin\Windows\profile\Default\Atom_RHI_Null.Private.dll;C:\O3DE\23.10.0\bin\Windows\profile\Default\Atom_RHI_Vulkan.Private.dll;C:\O3DE\23.10.0\bin\Windows\profile\Default\Atom_Feature_Common.dll;C:\O3DE\23.10.0\bin\Windows\profile\Default\EMotionFX.dll;C:\O3DE\23.10.0\bin\Windows\profile\Default\EMotionFX_Atom.dll;C:\O3DE\23.10.0\bin\Windows\profile\Default\ImguiAtom.dll;C:\O3DE\23.10.0\bin\Windows\profile\Default\Atom_AtomBridge.dll;C:\O3DE\23.10.0\bin\Windows\profile\Default\AudioSystem.dll;C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\bin\profile\BookProject.dll;C:\O3DE\23.10.0\bin\Windows\profile\Default\Camera.dll;C:\O3DE\23.10.0\bin\Windows\profile\Default\CameraFramework.dll;C:\O3DE\23.10.0\bin\Windows\profile\Default\GradientSignal.dll;C:\O3DE\23.10.0\bin\Windows\profile\Default\Compression.dll;C:\O3DE\23.10.0\bin\Windows\profile\Default\DebugDraw.dll;C:\O3DE\23.10.0\bin\Windows\profile\Default\DiffuseProbeGrid.dll;C:\O3DE\23.10.0\bin\Windows\profile\Default\GameState.dll;C:\O3DE\23.10.0\bin\Windows\profile\Default\ImGui.dll;C:\O3DE\23.10.0\bin\Windows\profile\Default\CrySystem.dll;C:\O3DE\23.10.0\bin\Windows\profile\Default\TextureAtlas.dll;C:\O3DE\23.10.0\bin\Windows\profile\Default\LyShine.dll;C:\O3DE\23.10.0\bin\Windows\profile\Default\LyShineExamples.dll;C:\O3DE\23.10.0\bin\Windows\profile\Default\Maestro.dll;C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\bin\profile\MyGem.dll;C:\O3DE\23.10.0\bin\Windows\profile\Default\NvCloth.Gem.dll;C:\O3DE\23.10.0\bin\Windows\profile\Default\PhysX.Gem.dll;C:\O3DE\23.10.0\bin\Windows\profile\Default\ExpressionEvaluation.dll;C:\O3DE\23.10.0\bin\Windows\profile\Default\ScriptEvents.dll;C:\O3DE\23.10.0\bin\Windows\profile\Default\ScriptCanvas.dll;C:\O3DE\23.10.0\bin\Windows\profile\Default\ScriptCanvasPhysics.dll;C:\O3DE\23.10.0\bin\Windows\profile\Default\StartingPointInput.dll;C:\O3DE\23.10.0\bin\Windows\profile\Default\WhiteBox.dll;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='profile|x64'">C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\runtime_dependencies\profile\BookProject.UnifiedLauncher.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='profile|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\O3DE\23.10.0\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='profile|x64'">Building Custom Rule C:/O3DE/23.10.0/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='profile|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject -BC:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject --check-stamp-file C:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject/o3de/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='profile|x64'">C:\O3DE\23.10.0\Gems\AWSClientAuth\gem.json;C:\O3DE\23.10.0\Gems\AWSCore\gem.json;C:\O3DE\23.10.0\Gems\AWSGameLift\gem.json;C:\O3DE\23.10.0\Gems\AWSMetrics\gem.json;C:\O3DE\23.10.0\Gems\Achievements\gem.json;C:\O3DE\23.10.0\Gems\Archive\gem.json;C:\O3DE\23.10.0\Gems\AssetValidation\gem.json;C:\O3DE\23.10.0\Gems\Atom\Asset\ImageProcessingAtom\gem.json;C:\O3DE\23.10.0\Gems\Atom\Asset\Shader\gem.json;C:\O3DE\23.10.0\Gems\Atom\Bootstrap\gem.json;C:\O3DE\23.10.0\Gems\Atom\Component\DebugCamera\gem.json;C:\O3DE\23.10.0\Gems\Atom\Feature\Common\gem.json;C:\O3DE\23.10.0\Gems\Atom\RHI\DX12\gem.json;C:\O3DE\23.10.0\Gems\Atom\RHI\Metal\gem.json;C:\O3DE\23.10.0\Gems\Atom\RHI\Null\gem.json;C:\O3DE\23.10.0\Gems\Atom\RHI\Vulkan\gem.json;C:\O3DE\23.10.0\Gems\Atom\RHI\gem.json;C:\O3DE\23.10.0\Gems\Atom\RPI\gem.json;C:\O3DE\23.10.0\Gems\Atom\Tools\AtomToolsFramework\gem.json;C:\O3DE\23.10.0\Gems\Atom\Tools\MaterialCanvas\gem.json;C:\O3DE\23.10.0\Gems\Atom\Tools\MaterialEditor\gem.json;C:\O3DE\23.10.0\Gems\Atom\Tools\PassCanvas\gem.json;C:\O3DE\23.10.0\Gems\Atom\Tools\ShaderManagementConsole\gem.json;C:\O3DE\23.10.0\Gems\Atom\gem.json;C:\O3DE\23.10.0\Gems\AtomContent\ReferenceMaterials\gem.json;C:\O3DE\23.10.0\Gems\AtomContent\Sponza\gem.json;C:\O3DE\23.10.0\Gems\AtomContent\TestData\gem.json;C:\O3DE\23.10.0\Gems\AtomContent\gem.json;C:\O3DE\23.10.0\Gems\AtomLyIntegration\AtomBridge\gem.json;C:\O3DE\23.10.0\Gems\AtomLyIntegration\AtomFont\gem.json;C:\O3DE\23.10.0\Gems\AtomLyIntegration\AtomImGuiTools\gem.json;C:\O3DE\23.10.0\Gems\AtomLyIntegration\AtomViewportDisplayIcons\gem.json;C:\O3DE\23.10.0\Gems\AtomLyIntegration\AtomViewportDisplayInfo\gem.json;C:\O3DE\23.10.0\Gems\AtomLyIntegration\CommonFeatures\gem.json;C:\O3DE\23.10.0\Gems\AtomLyIntegration\EMotionFXAtom\gem.json;C:\O3DE\23.10.0\Gems\AtomLyIntegration\EditorModeFeedback\gem.json;C:\O3DE\23.10.0\Gems\AtomLyIntegration\ImguiAtom\gem.json;C:\O3DE\23.10.0\Gems\AtomLyIntegration\TechnicalArt\DccScriptingInterface\gem.json;C:\O3DE\23.10.0\Gems\AtomLyIntegration\gem.json;C:\O3DE\23.10.0\Gems\AtomTressFX\gem.json;C:\O3DE\23.10.0\Gems\AudioEngineWwise\gem.json;C:\O3DE\23.10.0\Gems\AudioSystem\gem.json;C:\O3DE\23.10.0\Gems\BarrierInput\gem.json;C:\O3DE\23.10.0\Gems\Camera\gem.json;C:\O3DE\23.10.0\Gems\CameraFramework\gem.json;C:\O3DE\23.10.0\Gems\CertificateManager\gem.json;C:\O3DE\23.10.0\Gems\Compression\gem.json;C:\O3DE\23.10.0\Gems\CrashReporting\gem.json;C:\O3DE\23.10.0\Gems\CustomAssetExample\gem.json;C:\O3DE\23.10.0\Gems\DebugDraw\gem.json;C:\O3DE\23.10.0\Gems\DevTextures\gem.json;C:\O3DE\23.10.0\Gems\DiffuseProbeGrid\gem.json;C:\O3DE\23.10.0\Gems\EMotionFX\gem.json;C:\O3DE\23.10.0\Gems\EditorPythonBindings\gem.json;C:\O3DE\23.10.0\Gems\ExpressionEvaluation\gem.json;C:\O3DE\23.10.0\Gems\FastNoise\gem.json;C:\O3DE\23.10.0\Gems\GameState\gem.json;C:\O3DE\23.10.0\Gems\GameStateSamples\gem.json;C:\O3DE\23.10.0\Gems\Gestures\gem.json;C:\O3DE\23.10.0\Gems\GradientSignal\gem.json;C:\O3DE\23.10.0\Gems\GraphCanvas\gem.json;C:\O3DE\23.10.0\Gems\GraphModel\gem.json;C:\O3DE\23.10.0\Gems\HttpRequestor\gem.json;C:\O3DE\23.10.0\Gems\ImGui\gem.json;C:\O3DE\23.10.0\Gems\InAppPurchases\gem.json;C:\O3DE\23.10.0\Gems\LandscapeCanvas\gem.json;C:\O3DE\23.10.0\Gems\LmbrCentral\gem.json;C:\O3DE\23.10.0\Gems\LocalUser\gem.json;C:\O3DE\23.10.0\Gems\LyShine\gem.json;C:\O3DE\23.10.0\Gems\LyShineExamples\gem.json;C:\O3DE\23.10.0\Gems\Maestro\gem.json;C:\O3DE\23.10.0\Gems\MessagePopup\gem.json;C:\O3DE\23.10.0\Gems\Metastream\gem.json;C:\O3DE\23.10.0\Gems\Microphone\gem.json;C:\O3DE\23.10.0\Gems\MotionMatching\gem.json;C:\O3DE\23.10.0\Gems\Multiplayer\Multiplayer_ScriptCanvas\gem.json;C:\O3DE\23.10.0\Gems\Multiplayer\gem.json;C:\O3DE\23.10.0\Gems\MultiplayerCompression\gem.json;C:\O3DE\23.10.0\Gems\NvCloth\gem.json;C:\O3DE\23.10.0\Gems\PhysX\gem.json;C:\O3DE\23.10.0\Gems\PhysXDebug\gem.json;C:\O3DE\23.10.0\Gems\Prefab\PrefabBuilder\gem.json;C:\O3DE\23.10.0\Gems\Presence\gem.json;C:\O3DE\23.10.0\Gems\PrimitiveAssets\gem.json;C:\O3DE\23.10.0\Gems\Profiler\gem.json;C:\O3DE\23.10.0\Gems\PythonAssetBuilder\gem.json;C:\O3DE\23.10.0\Gems\QtForPython\gem.json;C:\O3DE\23.10.0\Gems\RecastNavigation\gem.json;C:\O3DE\23.10.0\Gems\RemoteTools\gem.json;C:\O3DE\23.10.0\Gems\SaveData\gem.json;C:\O3DE\23.10.0\Gems\SceneLoggingExample\gem.json;C:\O3DE\23.10.0\Gems\SceneProcessing\gem.json;C:\O3DE\23.10.0\Gems\ScriptAutomation\gem.json;C:\O3DE\23.10.0\Gems\ScriptCanvas\gem.json;C:\O3DE\23.10.0\Gems\ScriptCanvasDeveloper\gem.json;C:\O3DE\23.10.0\Gems\ScriptCanvasPhysics\gem.json;C:\O3DE\23.10.0\Gems\ScriptCanvasTesting\gem.json;C:\O3DE\23.10.0\Gems\ScriptEvents\gem.json;C:\O3DE\23.10.0\Gems\ScriptedEntityTweener\gem.json;C:\O3DE\23.10.0\Gems\SliceFavorites\gem.json;C:\O3DE\23.10.0\Gems\Stars\gem.json;C:\O3DE\23.10.0\Gems\StartingPointCamera\gem.json;C:\O3DE\23.10.0\Gems\StartingPointInput\gem.json;C:\O3DE\23.10.0\Gems\StartingPointMovement\gem.json;C:\O3DE\23.10.0\Gems\Streamer\StreamerProfiler\gem.json;C:\O3DE\23.10.0\Gems\Streamer\gem.json;C:\O3DE\23.10.0\Gems\SurfaceData\gem.json;C:\O3DE\23.10.0\Gems\Terrain\gem.json;C:\O3DE\23.10.0\Gems\TestAssetBuilder\gem.json;C:\O3DE\23.10.0\Gems\TextureAtlas\gem.json;C:\O3DE\23.10.0\Gems\TickBusOrderViewer\gem.json;C:\O3DE\23.10.0\Gems\Twitch\gem.json;C:\O3DE\23.10.0\Gems\UiBasics\gem.json;C:\O3DE\23.10.0\Gems\Vegetation\gem.json;C:\O3DE\23.10.0\Gems\VideoPlaybackFramework\gem.json;C:\O3DE\23.10.0\Gems\VirtualGamepad\gem.json;C:\O3DE\23.10.0\Gems\WhiteBox\gem.json;C:\O3DE\23.10.0\LauncherGenerator\Platform\Windows\Launcher.rc.in;C:\O3DE\23.10.0\LauncherGenerator\Platform\Windows\LauncherUnified_traits_windows.cmake;C:\O3DE\23.10.0\LauncherGenerator\Platform\Windows\launcher_project_windows.cmake;C:\O3DE\23.10.0\LauncherGenerator\launcher_generator.cmake;C:\O3DE\23.10.0\LauncherGenerator\launcher_project_files.cmake;C:\O3DE\23.10.0\cmake\3rdParty.cmake;C:\O3DE\23.10.0\cmake\3rdParty\BuiltInPackages.cmake;C:\O3DE\23.10.0\cmake\3rdParty\Platform\Windows\BuiltInPackages_windows.cmake;C:\O3DE\23.10.0\cmake\3rdParty\Platform\Windows\Default\BuiltInPackages_windows.cmake;C:\O3DE\23.10.0\cmake\3rdPartyPackages.cmake;C:\O3DE\23.10.0\cmake\CMakeFiles.cmake;C:\O3DE\23.10.0\cmake\ConfigurationTypes.cmake;C:\O3DE\23.10.0\cmake\Configurations.cmake;C:\O3DE\23.10.0\cmake\Dependencies.cmake;C:\O3DE\23.10.0\cmake\Deployment.cmake;C:\O3DE\23.10.0\cmake\FileUtil.cmake;C:\O3DE\23.10.0\cmake\FindLauncherGenerator.cmake;C:\O3DE\23.10.0\cmake\Gems.cmake;C:\O3DE\23.10.0\cmake\GeneralSettings.cmake;C:\O3DE\23.10.0\cmake\Install.cmake;C:\O3DE\23.10.0\cmake\LYPackage_S3Downloader.cmake;C:\O3DE\23.10.0\cmake\LYPython.cmake;C:\O3DE\23.10.0\cmake\LYTestWrappers.cmake;C:\O3DE\23.10.0\cmake\LYWrappers.cmake;C:\O3DE\23.10.0\cmake\LyAutoGen.cmake;C:\O3DE\23.10.0\cmake\LySet.cmake;C:\O3DE\23.10.0\cmake\Monolithic.cmake;C:\O3DE\23.10.0\cmake\O3DEJson.cmake;C:\O3DE\23.10.0\cmake\OutputDirectory.cmake;C:\O3DE\23.10.0\cmake\PAL.cmake;C:\O3DE\23.10.0\cmake\PALTools.cmake;C:\O3DE\23.10.0\cmake\Packaging.cmake;C:\O3DE\23.10.0\cmake\Platform\Android\PALDetection_android.cmake;C:\O3DE\23.10.0\cmake\Platform\Common\Configurations_common.cmake;C:\O3DE\23.10.0\cmake\Platform\Common\Install_common.cmake;C:\O3DE\23.10.0\cmake\Platform\Common\LYWrappers_default.cmake;C:\O3DE\23.10.0\cmake\Platform\Common\MSVC\Configurations_msvc.cmake;C:\O3DE\23.10.0\cmake\Platform\Common\MSVC\Directory.Build.props;C:\O3DE\23.10.0\cmake\Platform\Common\MSVC\VisualStudio_common.cmake;C:\O3DE\23.10.0\cmake\Platform\Common\RuntimeDependencies_common.cmake;C:\O3DE\23.10.0\cmake\Platform\Common\TargetIncludeSystemDirectories_unsupported.cmake;C:\O3DE\23.10.0\cmake\Platform\Common\runtime_dependencies_common.cmake.in;C:\O3DE\23.10.0\cmake\Platform\Linux\PALDetection_linux.cmake;C:\O3DE\23.10.0\cmake\Platform\Mac\PALDetection_mac.cmake;C:\O3DE\23.10.0\cmake\Platform\Windows\Configurations_windows.cmake;C:\O3DE\23.10.0\cmake\Platform\Windows\Default\ConfigurationTypes_profile.cmake;C:\O3DE\23.10.0\cmake\Platform\Windows\Default\o3de_subdirectories_windows.cmake;C:\O3DE\23.10.0\cmake\Platform\Windows\Install_windows.cmake;C:\O3DE\23.10.0\cmake\Platform\Windows\LYWrappers_windows.cmake;C:\O3DE\23.10.0\cmake\Platform\Windows\PALDetection_windows.cmake;C:\O3DE\23.10.0\cmake\Platform\Windows\PAL_windows.cmake;C:\O3DE\23.10.0\cmake\Platform\Windows\Packaging_windows.cmake;C:\O3DE\23.10.0\cmake\Platform\Windows\RuntimeDependencies_windows.cmake;C:\O3DE\23.10.0\cmake\Platform\Windows\platform_windows_files.cmake;C:\O3DE\23.10.0\cmake\Platform\iOS\PALDetection_ios.cmake;C:\O3DE\23.10.0\cmake\Projects.cmake;C:\O3DE\23.10.0\cmake\RuntimeDependencies.cmake;C:\O3DE\23.10.0\cmake\SettingsRegistry.cmake;C:\O3DE\23.10.0\cmake\Subdirectories.cmake;C:\O3DE\23.10.0\cmake\TestImpactFramework\LYTestImpactFramework.cmake;C:\O3DE\23.10.0\cmake\TestImpactFramework\TestImpactTestTargetConfig.cmake;C:\O3DE\23.10.0\cmake\UnitTest.cmake;C:\O3DE\23.10.0\cmake\Version.cmake;C:\O3DE\23.10.0\cmake\install\ConfigurationType_config.cmake.in;C:\O3DE\23.10.0\cmake\install\Copyright.in;C:\O3DE\23.10.0\cmake\install\Findo3de.cmake.in;C:\O3DE\23.10.0\cmake\install\InstalledTarget.in;C:\O3DE\23.10.0\cmake\install\engine.json.in;C:\O3DE\23.10.0\engine.json;C:\O3DE\23.10.0\python\requirements.txt;C:\O3DE\23.10.0\python\runtime\python-3.10.5-rev1-windows\FindPython.cmake;C:\O3DE\23.10.0\python\runtime\python-3.10.5-rev1-windows\PackageInfo.json;C:\O3DE\23.10.0\python\runtime\python-3.10.5-rev1-windows\python-config-version.cmake;C:\O3DE\23.10.0\python\runtime\python-3.10.5-rev1-windows\python-config.cmake;C:\O3DE\23.10.0\scripts\o3de\setup.py;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeFindDependencyMacro.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CTest.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CTestTargets.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CTestUseLaunchers.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CheckPIESupported.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\DartConfiguration.tcl.in;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Internal\CheckLinkerFlag.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Internal\CheckSourceCompiles.cmake;C:\Users\mrele\.o3de\3rdParty\packages\OpenEXR-3.1.3-rev5-windows\FindImath.cmake;C:\Users\mrele\.o3de\3rdParty\packages\OpenEXR-3.1.3-rev5-windows\FindOpenEXR.cmake;C:\Users\mrele\.o3de\3rdParty\packages\OpenEXR-3.1.3-rev5-windows\OpenEXR\lib\cmake\Imath\ImathConfig.cmake;C:\Users\mrele\.o3de\3rdParty\packages\OpenEXR-3.1.3-rev5-windows\OpenEXR\lib\cmake\Imath\ImathConfigVersion.cmake;C:\Users\mrele\.o3de\3rdParty\packages\OpenEXR-3.1.3-rev5-windows\OpenEXR\lib\cmake\Imath\ImathTargets-debug.cmake;C:\Users\mrele\.o3de\3rdParty\packages\OpenEXR-3.1.3-rev5-windows\OpenEXR\lib\cmake\Imath\ImathTargets-release.cmake;C:\Users\mrele\.o3de\3rdParty\packages\OpenEXR-3.1.3-rev5-windows\OpenEXR\lib\cmake\Imath\ImathTargets.cmake;C:\Users\mrele\.o3de\3rdParty\packages\OpenEXR-3.1.3-rev5-windows\OpenEXR\lib\cmake\OpenEXR\OpenEXRConfig.cmake;C:\Users\mrele\.o3de\3rdParty\packages\OpenEXR-3.1.3-rev5-windows\OpenEXR\lib\cmake\OpenEXR\OpenEXRConfigVersion.cmake;C:\Users\mrele\.o3de\3rdParty\packages\OpenEXR-3.1.3-rev5-windows\OpenEXR\lib\cmake\OpenEXR\OpenEXRTargets-debug.cmake;C:\Users\mrele\.o3de\3rdParty\packages\OpenEXR-3.1.3-rev5-windows\OpenEXR\lib\cmake\OpenEXR\OpenEXRTargets-release.cmake;C:\Users\mrele\.o3de\3rdParty\packages\OpenEXR-3.1.3-rev5-windows\OpenEXR\lib\cmake\OpenEXR\OpenEXRTargets.cmake;C:\Users\mrele\.o3de\3rdParty\packages\OpenEXR-3.1.3-rev5-windows\o3de_package_utilities.cmake;C:\Users\mrele\.o3de\3rdParty\packages\assimp-5.2.5-rev1-windows\Findassimplib.cmake;C:\Users\mrele\.o3de\3rdParty\packages\qt-5.15.2-rev7-windows\FindQt.cmake;C:\Users\mrele\.o3de\3rdParty\packages\qt-5.15.2-rev7-windows\PackageInfo.json;C:\Users\mrele\.o3de\3rdParty\packages\qt-5.15.2-rev7-windows\Platform\Windows\QtPlugin_windows.cmake;C:\Users\mrele\.o3de\3rdParty\packages\qt-5.15.2-rev7-windows\Platform\Windows\Qt_windows.cmake;C:\Users\mrele\.o3de\3rdParty\packages\qt-5.15.2-rev7-windows\qt\lib\cmake\Qt5\Qt5Config.cmake;C:\Users\mrele\.o3de\3rdParty\packages\qt-5.15.2-rev7-windows\qt\lib\cmake\Qt5\Qt5ConfigVersion.cmake;C:\Users\mrele\.o3de\3rdParty\packages\qt-5.15.2-rev7-windows\qt\lib\cmake\Qt5\Qt5ModuleLocation.cmake;C:\Users\mrele\.o3de\3rdParty\packages\qt-5.15.2-rev7-windows\qt\lib\cmake\Qt5Concurrent\Qt5ConcurrentConfig.cmake;C:\Users\mrele\.o3de\3rdParty\packages\qt-5.15.2-rev7-windows\qt\lib\cmake\Qt5Concurrent\Qt5ConcurrentConfigVersion.cmake;C:\Users\mrele\.o3de\3rdParty\packages\qt-5.15.2-rev7-windows\qt\lib\cmake\Qt5Core\Qt5CoreConfig.cmake;C:\Users\mrele\.o3de\3rdParty\packages\qt-5.15.2-rev7-windows\qt\lib\cmake\Qt5Core\Qt5CoreConfigExtras.cmake;C:\Users\mrele\.o3de\3rdParty\packages\qt-5.15.2-rev7-windows\qt\lib\cmake\Qt5Core\Qt5CoreConfigExtrasMkspecDir.cmake;C:\Users\mrele\.o3de\3rdParty\packages\qt-5.15.2-rev7-windows\qt\lib\cmake\Qt5Core\Qt5CoreConfigVersion.cmake;C:\Users\mrele\.o3de\3rdParty\packages\qt-5.15.2-rev7-windows\qt\lib\cmake\Qt5Core\Qt5CoreMacros.cmake;C:\Users\mrele\.o3de\3rdParty\packages\qt-5.15.2-rev7-windows\qt\lib\cmake\Qt5Gui\Qt5GuiConfig.cmake;C:\Users\mrele\.o3de\3rdParty\packages\qt-5.15.2-rev7-windows\qt\lib\cmake\Qt5Gui\Qt5GuiConfigExtras.cmake;C:\Users\mrele\.o3de\3rdParty\packages\qt-5.15.2-rev7-windows\qt\lib\cmake\Qt5Gui\Qt5GuiConfigVersion.cmake;C:\Users\mrele\.o3de\3rdParty\packages\qt-5.15.2-rev7-windows\qt\lib\cmake\Qt5Gui\Qt5Gui_QGifPlugin.cmake;C:\Users\mrele\.o3de\3rdParty\packages\qt-5.15.2-rev7-windows\qt\lib\cmake\Qt5Gui\Qt5Gui_QICNSPlugin.cmake;C:\Users\mrele\.o3de\3rdParty\packages\qt-5.15.2-rev7-windows\qt\lib\cmake\Qt5Gui\Qt5Gui_QICOPlugin.cmake;C:\Users\mrele\.o3de\3rdParty\packages\qt-5.15.2-rev7-windows\qt\lib\cmake\Qt5Gui\Qt5Gui_QJpegPlugin.cmake;C:\Users\mrele\.o3de\3rdParty\packages\qt-5.15.2-rev7-windows\qt\lib\cmake\Qt5Gui\Qt5Gui_QMinimalIntegrationPlugin.cmake;C:\Users\mrele\.o3de\3rdParty\packages\qt-5.15.2-rev7-windows\qt\lib\cmake\Qt5Gui\Qt5Gui_QOffscreenIntegrationPlugin.cmake;C:\Users\mrele\.o3de\3rdParty\packages\qt-5.15.2-rev7-windows\qt\lib\cmake\Qt5Gui\Qt5Gui_QSvgIconPlugin.cmake;C:\Users\mrele\.o3de\3rdParty\packages\qt-5.15.2-rev7-windows\qt\lib\cmake\Qt5Gui\Qt5Gui_QSvgPlugin.cmake;C:\Users\mrele\.o3de\3rdParty\packages\qt-5.15.2-rev7-windows\qt\lib\cmake\Qt5Gui\Qt5Gui_QTgaPlugin.cmake;C:\Users\mrele\.o3de\3rdParty\packages\qt-5.15.2-rev7-windows\qt\lib\cmake\Qt5Gui\Qt5Gui_QTiffPlugin.cmake;C:\Users\mrele\.o3de\3rdParty\packages\qt-5.15.2-rev7-windows\qt\lib\cmake\Qt5Gui\Qt5Gui_QTuioTouchPlugin.cmake;C:\Users\mrele\.o3de\3rdParty\packages\qt-5.15.2-rev7-windows\qt\lib\cmake\Qt5Gui\Qt5Gui_QWbmpPlugin.cmake;C:\Users\mrele\.o3de\3rdParty\packages\qt-5.15.2-rev7-windows\qt\lib\cmake\Qt5Gui\Qt5Gui_QWebpPlugin.cmake;C:\Users\mrele\.o3de\3rdParty\packages\qt-5.15.2-rev7-windows\qt\lib\cmake\Qt5Gui\Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake;C:\Users\mrele\.o3de\3rdParty\packages\qt-5.15.2-rev7-windows\qt\lib\cmake\Qt5Gui\Qt5Gui_QWindowsIntegrationPlugin.cmake;C:\Users\mrele\.o3de\3rdParty\packages\qt-5.15.2-rev7-windows\qt\lib\cmake\Qt5Gui\Qt5Gui_QXdgDesktopPortalThemePlugin.cmake;C:\Users\mrele\.o3de\3rdParty\packages\qt-5.15.2-rev7-windows\qt\lib\cmake\Qt5LinguistTools\Qt5LinguistToolsConfig.cmake;C:\Users\mrele\.o3de\3rdParty\packages\qt-5.15.2-rev7-windows\qt\lib\cmake\Qt5LinguistTools\Qt5LinguistToolsConfigVersion.cmake;C:\Users\mrele\.o3de\3rdParty\packages\qt-5.15.2-rev7-windows\qt\lib\cmake\Qt5LinguistTools\Qt5LinguistToolsMacros.cmake;C:\Users\mrele\.o3de\3rdParty\packages\qt-5.15.2-rev7-windows\qt\lib\cmake\Qt5Network\Qt5NetworkConfig.cmake;C:\Users\mrele\.o3de\3rdParty\packages\qt-5.15.2-rev7-windows\qt\lib\cmake\Qt5Network\Qt5NetworkConfigVersion.cmake;C:\Users\mrele\.o3de\3rdParty\packages\qt-5.15.2-rev7-windows\qt\lib\cmake\Qt5Network\Qt5Network_QGenericEnginePlugin.cmake;C:\Users\mrele\.o3de\3rdParty\packages\qt-5.15.2-rev7-windows\qt\lib\cmake\Qt5OpenGL\Qt5OpenGLConfig.cmake;C:\Users\mrele\.o3de\3rdParty\packages\qt-5.15.2-rev7-windows\qt\lib\cmake\Qt5OpenGL\Qt5OpenGLConfigVersion.cmake;C:\Users\mrele\.o3de\3rdParty\packages\qt-5.15.2-rev7-windows\qt\lib\cmake\Qt5Svg\Qt5SvgConfig.cmake;C:\Users\mrele\.o3de\3rdParty\packages\qt-5.15.2-rev7-windows\qt\lib\cmake\Qt5Svg\Qt5SvgConfigVersion.cmake;C:\Users\mrele\.o3de\3rdParty\packages\qt-5.15.2-rev7-windows\qt\lib\cmake\Qt5Test\Qt5TestConfig.cmake;C:\Users\mrele\.o3de\3rdParty\packages\qt-5.15.2-rev7-windows\qt\lib\cmake\Qt5Test\Qt5TestConfigExtras.cmake;C:\Users\mrele\.o3de\3rdParty\packages\qt-5.15.2-rev7-windows\qt\lib\cmake\Qt5Test\Qt5TestConfigVersion.cmake;C:\Users\mrele\.o3de\3rdParty\packages\qt-5.15.2-rev7-windows\qt\lib\cmake\Qt5Widgets\Qt5WidgetsConfig.cmake;C:\Users\mrele\.o3de\3rdParty\packages\qt-5.15.2-rev7-windows\qt\lib\cmake\Qt5Widgets\Qt5WidgetsConfigExtras.cmake;C:\Users\mrele\.o3de\3rdParty\packages\qt-5.15.2-rev7-windows\qt\lib\cmake\Qt5Widgets\Qt5WidgetsConfigVersion.cmake;C:\Users\mrele\.o3de\3rdParty\packages\qt-5.15.2-rev7-windows\qt\lib\cmake\Qt5Widgets\Qt5WidgetsMacros.cmake;C:\Users\mrele\.o3de\3rdParty\packages\qt-5.15.2-rev7-windows\qt\lib\cmake\Qt5Widgets\Qt5Widgets_QWindowsVistaStylePlugin.cmake;C:\Users\mrele\.o3de\3rdParty\packages\qt-5.15.2-rev7-windows\qt\lib\cmake\Qt5Xml\Qt5XmlConfig.cmake;C:\Users\mrele\.o3de\3rdParty\packages\qt-5.15.2-rev7-windows\qt\lib\cmake\Qt5Xml\Qt5XmlConfigVersion.cmake;C:\Users\mrele\.o3de\3rdParty\packages\zlib-1.2.11-rev5-windows\FindZLIB.cmake;C:\Users\mrele\.o3de\3rdParty\packages\zlib-1.2.11-rev5-windows\PackageInfo.json;C:\Users\mrele\.o3de\o3de_manifest.json;C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\Gem\MyGem\gem.json;C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\Gem\gem.json;C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\project.json;C:\Users\mrele\O3DE\CustomGems\CustomMadeGem088\gem.json;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='profile|x64'">C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\o3de\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='profile|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <PropertyGroup>
+    <EnableUnitySupport>true</EnableUnitySupport>
+  </PropertyGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\o3de\CMakeFiles\BookProject.UnifiedLauncher.dir\Unity\unity_0_cxx.cxx" IncludeInUnityFile="false" CustomUnityFile="true" UnityFilesDirectory="C:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject/o3de/CMakeFiles/BookProject.UnifiedLauncher.dir/Unity" />
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Common\Configurations_common.cmake">
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Common\MSVC\Configurations_msvc.cmake">
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Common\MSVC\Configurations_clang.cmake">
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Common\MSVC\CodeAnalysis.ruleset">
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Common\MSVC\Directory.Build.props">
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Common\MSVC\TestProject.props">
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Common\MSVC\VisualStudio_common.cmake">
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Common\Install_common.cmake">
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Common\LYWrappers_default.cmake">
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Common\PackagingPostBuild_common.cmake">
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Common\PackagingPreBuild_common.cmake">
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Common\TargetIncludeSystemDirectories_unsupported.cmake">
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Windows\Configurations_windows.cmake">
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Windows\LYTestWrappers_windows.cmake">
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Windows\LYWrappers_windows.cmake">
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Windows\PAL_windows.cmake">
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Windows\PALDetection_windows.cmake">
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Windows\Install_windows.cmake">
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Windows\Packaging_windows.cmake">
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Windows\PackagingCodeSign_windows.cmake">
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Windows\PackagingPostBuild_windows.cmake">
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Windows\PackagingPreBuild_windows.cmake">
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Windows\Packaging\Bootstrapper.wxs">
+    </None>
+    <ClInclude Include="C:\O3DE\23.10.0\cmake\Platform\Windows\Packaging\BootstrapperTheme.wxl.in" />
+    <ClInclude Include="C:\O3DE\23.10.0\cmake\Platform\Windows\Packaging\BootstrapperTheme.xml.in" />
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Windows\Packaging\Shortcuts.wxs">
+    </None>
+    <ClInclude Include="C:\O3DE\23.10.0\cmake\Platform\Windows\Packaging\Template.wxs.in" />
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Windows\platform_windows_files.cmake">
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\3rdParty\Platform\Windows\BuiltInPackages_windows.cmake">
+    </None>
+    <ClCompile Include="C:\O3DE\23.10.0\LauncherGenerator\LauncherProject.cpp" IncludeInUnityFile="true" CustomUnityFile="true" UnityFilesDirectory="C:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject/o3de/CMakeFiles/BookProject.UnifiedLauncher.dir/Unity" />
+    <ClInclude Include="C:\O3DE\23.10.0\LauncherGenerator\StaticModules.in" />
+    <None Include="C:\O3DE\23.10.0\LauncherGenerator\launcher_generator.cmake">
+    </None>
+    <None Include="C:\O3DE\23.10.0\LauncherGenerator\launcher_project_files.cmake">
+    </None>
+    <None Include="C:\O3DE\23.10.0\LauncherGenerator\Platform\Windows\launcher_project_windows.cmake">
+    </None>
+    <ResourceCompile Include="C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\o3de\BookProject.GameLauncher.rc" />
+    <None Include="C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\runtime_dependencies\profile\BookProject.UnifiedLauncher.stamp">
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\ZERO_CHECK.vcxproj">
+      <Project>{525FC9A3-9790-39FF-B1F5-953D70AF2263}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\External\Gem-34bae4f8\BookProject.vcxproj">
+      <Project>{4721CDA9-E5C5-3E2D-BB6A-BAB98CE65F2E}</Project>
+      <Name>BookProject</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\External\MyGem-c19403bc\Code\MyGem.vcxproj">
+      <Project>{B7BC10E0-F3A3-37B8-87F2-77EB988D4402}</Project>
+      <Name>MyGem</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

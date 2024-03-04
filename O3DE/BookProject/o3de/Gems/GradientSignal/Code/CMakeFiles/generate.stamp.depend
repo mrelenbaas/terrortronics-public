@@ -1,0 +1,36 @@
+# CMake generation dependency list for this directory.
+C:/O3DE/23.10.0/Gems/GradientSignal/Code/CMakeLists.txt
+C:/O3DE/23.10.0/Gems/GradientSignal/Code/Platform/Windows/Default/GradientSignal.Editor.Static_profile.cmake
+C:/O3DE/23.10.0/Gems/GradientSignal/Code/Platform/Windows/Default/GradientSignal.Editor_profile.cmake
+C:/O3DE/23.10.0/Gems/GradientSignal/Code/Platform/Windows/Default/GradientSignal.Static_profile.cmake
+C:/O3DE/23.10.0/Gems/GradientSignal/Code/Platform/Windows/Default/GradientSignal_profile.cmake
+C:/O3DE/23.10.0/Gems/GradientSignal/Code/Platform/Windows/Default/permutation.cmake
+C:/O3DE/23.10.0/Gems/GradientSignal/Code/Platform/Windows/platform_windows.cmake
+C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeFindDependencyMacro.cmake
+C:/Program Files/CMake/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake
+C:/Program Files/CMake/share/cmake-3.28/Modules/CheckIncludeFile.cmake
+C:/Program Files/CMake/share/cmake-3.28/Modules/CheckLibraryExists.cmake
+C:/Program Files/CMake/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-3.28/Modules/FindPackageMessage.cmake
+C:/Program Files/CMake/share/cmake-3.28/Modules/FindThreads.cmake
+C:/Users/mrele/.o3de/3rdParty/packages/OpenEXR-3.1.3-rev5-windows/FindImath.cmake
+C:/Users/mrele/.o3de/3rdParty/packages/OpenEXR-3.1.3-rev5-windows/FindOpenEXR.cmake
+C:/Users/mrele/.o3de/3rdParty/packages/OpenEXR-3.1.3-rev5-windows/OpenEXR/lib/cmake/Imath/ImathConfig.cmake
+C:/Users/mrele/.o3de/3rdParty/packages/OpenEXR-3.1.3-rev5-windows/OpenEXR/lib/cmake/Imath/ImathConfigVersion.cmake
+C:/Users/mrele/.o3de/3rdParty/packages/OpenEXR-3.1.3-rev5-windows/OpenEXR/lib/cmake/Imath/ImathTargets-debug.cmake
+C:/Users/mrele/.o3de/3rdParty/packages/OpenEXR-3.1.3-rev5-windows/OpenEXR/lib/cmake/Imath/ImathTargets-release.cmake
+C:/Users/mrele/.o3de/3rdParty/packages/OpenEXR-3.1.3-rev5-windows/OpenEXR/lib/cmake/Imath/ImathTargets.cmake
+C:/Users/mrele/.o3de/3rdParty/packages/OpenEXR-3.1.3-rev5-windows/OpenEXR/lib/cmake/OpenEXR/OpenEXRConfig.cmake
+C:/Users/mrele/.o3de/3rdParty/packages/OpenEXR-3.1.3-rev5-windows/OpenEXR/lib/cmake/OpenEXR/OpenEXRConfigVersion.cmake
+C:/Users/mrele/.o3de/3rdParty/packages/OpenEXR-3.1.3-rev5-windows/OpenEXR/lib/cmake/OpenEXR/OpenEXRTargets-debug.cmake
+C:/Users/mrele/.o3de/3rdParty/packages/OpenEXR-3.1.3-rev5-windows/OpenEXR/lib/cmake/OpenEXR/OpenEXRTargets-release.cmake
+C:/Users/mrele/.o3de/3rdParty/packages/OpenEXR-3.1.3-rev5-windows/OpenEXR/lib/cmake/OpenEXR/OpenEXRTargets.cmake
+C:/Users/mrele/.o3de/3rdParty/packages/OpenEXR-3.1.3-rev5-windows/o3de_package_utilities.cmake
+C:/Users/mrele/.o3de/3rdParty/packages/freetype-2.11.1-rev1-windows/FindFreetype.cmake
+C:/Users/mrele/.o3de/3rdParty/packages/freetype-2.11.1-rev1-windows/PackageInfo.json
+C:/Users/mrele/.o3de/3rdParty/packages/openimageio-opencolorio-2.3.17-rev4-windows/FindOpenColorIO.cmake
+C:/Users/mrele/.o3de/3rdParty/packages/openimageio-opencolorio-2.3.17-rev4-windows/FindOpenImageIO.cmake
+C:/Users/mrele/.o3de/3rdParty/packages/openimageio-opencolorio-2.3.17-rev4-windows/PackageInfo.json
+C:/Users/mrele/.o3de/3rdParty/packages/png-1.6.37-rev2-windows/FindPNG.cmake
+C:/Users/mrele/.o3de/3rdParty/packages/png-1.6.37-rev2-windows/PackageInfo.json
+C:/Users/mrele/.o3de/3rdParty/packages/zlib-1.2.11-rev5-windows/FindZLIB.cmake

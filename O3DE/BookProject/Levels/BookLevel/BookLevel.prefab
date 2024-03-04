@@ -404,6 +404,17 @@
                     "$type": "EditorPendingCompositionComponent",
                     "Id": 745311463078198712
                 },
+                "EditorScriptCanvasComponent": {
+                    "$type": "EditorScriptCanvasComponent",
+                    "Id": 17118900554176866254,
+                    "configuration": {
+                        "sourceHandle": {
+                            "id": "{87357648-AFCF-5FBC-B165-7ABB1AA6C532}",
+                            "path": "Gem/Source/ToggleLight.scriptcanvas"
+                        },
+                        "sourceName": "ToggleLight.scriptcanvas"
+                    }
+                },
                 "EditorVisibilityComponent": {
                     "$type": "EditorVisibilityComponent",
                     "Id": 743846614890103730

@@ -1,0 +1,7 @@
+# CMake generation dependency list for this directory.
+C:/O3DE/23.10.0/Code/Tools/AssetProcessor/AssetBuilderSDK/CMakeLists.txt
+C:/O3DE/23.10.0/Code/Tools/AssetProcessor/AssetBuilderSDK/Platform/Windows/Default/AssetBuilderSDK_profile.cmake
+C:/O3DE/23.10.0/Code/Tools/AssetProcessor/AssetBuilderSDK/Platform/Windows/Default/permutation.cmake
+C:/O3DE/23.10.0/Code/Tools/AssetProcessor/AssetBuilderSDK/Platform/Windows/platform_windows.cmake
+C:/Users/mrele/.o3de/3rdParty/packages/xxhash-0.7.4-rev1-multiplatform/Findxxhash.cmake
+C:/Users/mrele/.o3de/3rdParty/packages/xxhash-0.7.4-rev1-multiplatform/PackageInfo.json

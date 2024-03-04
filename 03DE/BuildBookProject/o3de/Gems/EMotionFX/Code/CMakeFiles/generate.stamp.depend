@@ -1,0 +1,13 @@
+# CMake generation dependency list for this directory.
+C:/O3DE/23.10.0/Gems/EMotionFX/Code/CMakeLists.txt
+C:/O3DE/23.10.0/Gems/EMotionFX/Code/Platform/Windows/Default/EMotionFX.Editor.Static_profile.cmake
+C:/O3DE/23.10.0/Gems/EMotionFX/Code/Platform/Windows/Default/EMotionFX.Editor_profile.cmake
+C:/O3DE/23.10.0/Gems/EMotionFX/Code/Platform/Windows/Default/EMotionFX.Static_profile.cmake
+C:/O3DE/23.10.0/Gems/EMotionFX/Code/Platform/Windows/Default/EMotionFXStaticLib_profile.cmake
+C:/O3DE/23.10.0/Gems/EMotionFX/Code/Platform/Windows/Default/EMotionFX_profile.cmake
+C:/O3DE/23.10.0/Gems/EMotionFX/Code/Platform/Windows/Default/permutation.cmake
+C:/O3DE/23.10.0/Gems/EMotionFX/Code/Platform/Windows/platform_windows.cmake
+C:/O3DE/23.10.0/cmake/3rdParty/FindOpenGLInterface.cmake
+C:/Program Files/CMake/share/cmake-3.28/Modules/FindOpenGL.cmake
+C:/Program Files/CMake/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-3.28/Modules/FindPackageMessage.cmake

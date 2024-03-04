@@ -1,0 +1,10 @@
+# CMake generation dependency list for this directory.
+C:/O3DE/23.10.0/Gems/Compression/Code/CMakeLists.txt
+C:/O3DE/23.10.0/Gems/Compression/Code/Platform/Windows/Default/Compression.API_profile.cmake
+C:/O3DE/23.10.0/Gems/Compression/Code/Platform/Windows/Default/Compression.Editor.API_profile.cmake
+C:/O3DE/23.10.0/Gems/Compression/Code/Platform/Windows/Default/Compression.Editor.Private.Object_profile.cmake
+C:/O3DE/23.10.0/Gems/Compression/Code/Platform/Windows/Default/Compression.Editor_profile.cmake
+C:/O3DE/23.10.0/Gems/Compression/Code/Platform/Windows/Default/Compression.Private.Object_profile.cmake
+C:/O3DE/23.10.0/Gems/Compression/Code/Platform/Windows/Default/Compression_profile.cmake
+C:/O3DE/23.10.0/Gems/Compression/Code/Platform/Windows/Default/permutation.cmake
+C:/O3DE/23.10.0/Gems/Compression/Code/Platform/Windows/platform_windows.cmake

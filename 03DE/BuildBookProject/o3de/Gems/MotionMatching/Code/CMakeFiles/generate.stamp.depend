@@ -1,0 +1,8 @@
+# CMake generation dependency list for this directory.
+C:/O3DE/23.10.0/Gems/MotionMatching/Code/CMakeLists.txt
+C:/O3DE/23.10.0/Gems/MotionMatching/Code/Platform/Windows/Default/MotionMatching.Editor.Static_profile.cmake
+C:/O3DE/23.10.0/Gems/MotionMatching/Code/Platform/Windows/Default/MotionMatching.Editor_profile.cmake
+C:/O3DE/23.10.0/Gems/MotionMatching/Code/Platform/Windows/Default/MotionMatching.Static_profile.cmake
+C:/O3DE/23.10.0/Gems/MotionMatching/Code/Platform/Windows/Default/MotionMatching_profile.cmake
+C:/O3DE/23.10.0/Gems/MotionMatching/Code/Platform/Windows/Default/permutation.cmake
+C:/O3DE/23.10.0/Gems/MotionMatching/Code/Platform/Windows/platform_windows.cmake

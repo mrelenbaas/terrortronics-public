@@ -1,0 +1,6 @@
+# CMake generation dependency list for this directory.
+C:/O3DE/23.10.0/Code/Tools/CrashHandler/Tools/CMakeLists.txt
+C:/O3DE/23.10.0/Code/Tools/CrashHandler/Tools/Platform/Windows/Default/ToolsCrashHandler_profile.cmake
+C:/O3DE/23.10.0/Code/Tools/CrashHandler/Tools/Platform/Windows/Default/ToolsCrashUploader_profile.cmake
+C:/O3DE/23.10.0/Code/Tools/CrashHandler/Tools/Platform/Windows/Default/permutation.cmake
+C:/O3DE/23.10.0/Code/Tools/CrashHandler/Tools/Platform/Windows/platform_windows.cmake

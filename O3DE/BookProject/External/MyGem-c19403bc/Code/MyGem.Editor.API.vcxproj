@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="profile|x64">
+      <Configuration>profile</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8C063FAE-73DD-398B-BC38-434AC4C9805C}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22000.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>MyGem.Editor.API</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='profile|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='profile|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='profile|x64'" />
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\Gem\MyGem\Code\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='profile|x64'">Building Custom Rule C:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject/Gem/MyGem/Code/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='profile|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject -BC:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject --check-stamp-file C:/Users/mrele/Documents/terrortronics-public/O3DE/BookProject/External/MyGem-c19403bc/Code/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='profile|x64'">C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\Gem\MyGem\Code\Platform\Windows\PAL_windows.cmake;C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\Gem\MyGem\Code\Platform\Windows\mygem_api_files.cmake;C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\Gem\MyGem\Code\Platform\Windows\mygem_editor_api_files.cmake;C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\Gem\MyGem\Code\Platform\Windows\mygem_private_files.cmake;C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\Gem\MyGem\Code\Platform\Windows\mygem_shared_files.cmake;C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\Gem\MyGem\Code\mygem_api_files.cmake;C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\Gem\MyGem\Code\mygem_editor_api_files.cmake;C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\Gem\MyGem\Code\mygem_editor_private_files.cmake;C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\Gem\MyGem\Code\mygem_editor_shared_files.cmake;C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\Gem\MyGem\Code\mygem_private_files.cmake;C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\Gem\MyGem\Code\mygem_shared_files.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='profile|x64'">C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\External\MyGem-c19403bc\Code\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='profile|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Common\Configurations_common.cmake">
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Common\MSVC\Configurations_msvc.cmake">
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Common\MSVC\Configurations_clang.cmake">
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Common\MSVC\CodeAnalysis.ruleset">
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Common\MSVC\Directory.Build.props">
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Common\MSVC\TestProject.props">
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Common\MSVC\VisualStudio_common.cmake">
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Common\Install_common.cmake">
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Common\LYWrappers_default.cmake">
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Common\PackagingPostBuild_common.cmake">
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Common\PackagingPreBuild_common.cmake">
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Common\TargetIncludeSystemDirectories_unsupported.cmake">
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Windows\Configurations_windows.cmake">
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Windows\LYTestWrappers_windows.cmake">
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Windows\LYWrappers_windows.cmake">
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Windows\PAL_windows.cmake">
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Windows\PALDetection_windows.cmake">
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Windows\Install_windows.cmake">
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Windows\Packaging_windows.cmake">
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Windows\PackagingCodeSign_windows.cmake">
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Windows\PackagingPostBuild_windows.cmake">
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Windows\PackagingPreBuild_windows.cmake">
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Windows\Packaging\Bootstrapper.wxs">
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Windows\Packaging\BootstrapperTheme.wxl.in">
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Windows\Packaging\BootstrapperTheme.xml.in">
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Windows\Packaging\Shortcuts.wxs">
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Windows\Packaging\Template.wxs.in">
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\Platform\Windows\platform_windows_files.cmake">
+    </None>
+    <None Include="C:\O3DE\23.10.0\cmake\3rdParty\Platform\Windows\BuiltInPackages_windows.cmake">
+    </None>
+    <None Include="C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\Gem\MyGem\Code\mygem_editor_api_files.cmake">
+    </None>
+    <None Include="C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\Gem\MyGem\Code\Platform\Windows\mygem_editor_api_files.cmake">
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\mrele\Documents\terrortronics-public\O3DE\BookProject\ZERO_CHECK.vcxproj">
+      <Project>{525FC9A3-9790-39FF-B1F5-953D70AF2263}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

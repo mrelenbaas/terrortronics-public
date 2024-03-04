@@ -1,0 +1,36 @@
+# CMake generation dependency list for this directory.
+C:/O3DE/23.10.0/Gems/Atom/Asset/ImageProcessingAtom/Code/CMakeLists.txt
+C:/O3DE/23.10.0/Gems/Atom/Asset/ImageProcessingAtom/Code/Platform/Windows/Default/ImageProcessingAtom.Editor.Static_profile.cmake
+C:/O3DE/23.10.0/Gems/Atom/Asset/ImageProcessingAtom/Code/Platform/Windows/Default/ImageProcessingAtom.Editor_profile.cmake
+C:/O3DE/23.10.0/Gems/Atom/Asset/ImageProcessingAtom/Code/Platform/Windows/Default/ImageProcessingAtom.Headers_profile.cmake
+C:/O3DE/23.10.0/Gems/Atom/Asset/ImageProcessingAtom/Code/Platform/Windows/Default/permutation.cmake
+C:/O3DE/23.10.0/Gems/Atom/Asset/ImageProcessingAtom/Code/Platform/Windows/platform_windows.cmake
+C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeFindDependencyMacro.cmake
+C:/Program Files/CMake/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake
+C:/Program Files/CMake/share/cmake-3.28/Modules/CheckIncludeFile.cmake
+C:/Program Files/CMake/share/cmake-3.28/Modules/CheckLibraryExists.cmake
+C:/Program Files/CMake/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-3.28/Modules/FindPackageMessage.cmake
+C:/Program Files/CMake/share/cmake-3.28/Modules/FindThreads.cmake
+C:/Program Files/CMake/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake
+C:/Users/mrele/.o3de/3rdParty/packages/ISPCTexComp-36b80aa-rev1-windows/FindISPCTexComp.cmake
+C:/Users/mrele/.o3de/3rdParty/packages/ISPCTexComp-36b80aa-rev1-windows/PackageInfo.json
+C:/Users/mrele/.o3de/3rdParty/packages/OpenEXR-3.1.3-rev5-windows/FindImath.cmake
+C:/Users/mrele/.o3de/3rdParty/packages/OpenEXR-3.1.3-rev5-windows/FindOpenEXR.cmake
+C:/Users/mrele/.o3de/3rdParty/packages/OpenEXR-3.1.3-rev5-windows/OpenEXR/lib/cmake/Imath/ImathConfig.cmake
+C:/Users/mrele/.o3de/3rdParty/packages/OpenEXR-3.1.3-rev5-windows/OpenEXR/lib/cmake/Imath/ImathConfigVersion.cmake
+C:/Users/mrele/.o3de/3rdParty/packages/OpenEXR-3.1.3-rev5-windows/OpenEXR/lib/cmake/Imath/ImathTargets-debug.cmake
+C:/Users/mrele/.o3de/3rdParty/packages/OpenEXR-3.1.3-rev5-windows/OpenEXR/lib/cmake/Imath/ImathTargets-release.cmake
+C:/Users/mrele/.o3de/3rdParty/packages/OpenEXR-3.1.3-rev5-windows/OpenEXR/lib/cmake/Imath/ImathTargets.cmake
+C:/Users/mrele/.o3de/3rdParty/packages/OpenEXR-3.1.3-rev5-windows/OpenEXR/lib/cmake/OpenEXR/OpenEXRConfig.cmake
+C:/Users/mrele/.o3de/3rdParty/packages/OpenEXR-3.1.3-rev5-windows/OpenEXR/lib/cmake/OpenEXR/OpenEXRConfigVersion.cmake
+C:/Users/mrele/.o3de/3rdParty/packages/OpenEXR-3.1.3-rev5-windows/OpenEXR/lib/cmake/OpenEXR/OpenEXRTargets-debug.cmake
+C:/Users/mrele/.o3de/3rdParty/packages/OpenEXR-3.1.3-rev5-windows/OpenEXR/lib/cmake/OpenEXR/OpenEXRTargets-release.cmake
+C:/Users/mrele/.o3de/3rdParty/packages/OpenEXR-3.1.3-rev5-windows/OpenEXR/lib/cmake/OpenEXR/OpenEXRTargets.cmake
+C:/Users/mrele/.o3de/3rdParty/packages/OpenEXR-3.1.3-rev5-windows/PackageInfo.json
+C:/Users/mrele/.o3de/3rdParty/packages/OpenEXR-3.1.3-rev5-windows/o3de_package_utilities.cmake
+C:/Users/mrele/.o3de/3rdParty/packages/astc-encoder-3.2-rev2-windows/Findastc-encoder.cmake
+C:/Users/mrele/.o3de/3rdParty/packages/astc-encoder-3.2-rev2-windows/PackageInfo.json
+C:/Users/mrele/.o3de/3rdParty/packages/squish-ccr-deb557d-rev1-windows/Findsquish-ccr.cmake
+C:/Users/mrele/.o3de/3rdParty/packages/squish-ccr-deb557d-rev1-windows/PackageInfo.json
+C:/Users/mrele/.o3de/3rdParty/packages/zlib-1.2.11-rev5-windows/FindZLIB.cmake
