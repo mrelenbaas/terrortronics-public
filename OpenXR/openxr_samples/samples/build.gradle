@@ -1,0 +1,46 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+       google()
+       mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.4.2'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+// Perfom these steps after all subprojects are evaluated (so all android-related tasks exist)
+gradle.projectsEvaluated {
+    subprojects { Project subProject ->
+        if (subProject.name == 'app') {
+            task copyArtifactsDebug {
+                doLast {
+                    copy {
+                        from "${subProject.buildDir}/outputs/apk/ml2/debug/"
+                        into project.file("${rootDir}/out/openxr_device_samples/debug/")
+                        include '**/*.apk'
+                    }
+                }
+            }
+            task copyArtifactsRelease {
+                doLast {
+                    copy {
+                        from "${subProject.buildDir}/outputs/apk/ml2/release/"
+                        into project.file("${rootDir}/out/openxr_device_samples/release/")
+                        include '**/*.apk'
+                    }
+                }
+            }
+            assembleRelease.finalizedBy(copyArtifactsRelease)
+            assembleDebug.finalizedBy(copyArtifactsDebug)
+        }
+    }
+}

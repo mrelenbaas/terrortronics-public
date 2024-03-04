@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eye_gaze/app/samples.eye_gaze.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/eye_gaze/app/samples.eye_gaze.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hand_tracking/app/samples.hand_tracking.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/hand_tracking/app/samples.hand_tracking.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/plane_detection/app/samples.plane_detection.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/plane_detection/app/samples.plane_detection.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/simple/app/samples.simple.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/simple/app/samples.simple.app.main.iml" />
+    </modules>
+  </component>
+</project>

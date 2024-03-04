@@ -1,0 +1,10 @@
+rootProject.name='samples'
+
+def projects = [
+  ':eye_gaze:app',
+  ':hand_tracking:app',
+  ':plane_detection:app',
+  ':simple:app'
+]
+
+include projects as String[]

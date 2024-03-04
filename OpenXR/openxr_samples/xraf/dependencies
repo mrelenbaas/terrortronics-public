@@ -1,0 +1,13 @@
+This file lists the 3rd party dependencies.
+
+Downloaded at compile time
+--------------------------
+* OpenXR Headers (Apache 2.0)
+* Vulkan Headers (Apache 2.0)
+* stb (Public Domain / MIT)
+* tinygltf (MIT)
+* VMA (MIT)
+* imgui (MIT)
+* mio (MIT)
+* MikkTSpace (Permissive, MIT like: https://github.com/mmikk/MikkTSpace/blob/master/mikktspace.h)
+

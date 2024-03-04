@@ -1,0 +1,27 @@
+# %BANNER_BEGIN%
+# ---------------------------------------------------------------------
+# %COPYRIGHT_BEGIN%
+# Copyright (c) 2022 Magic Leap, Inc. All Rights Reserved.
+# Use of this file is governed by the Software License Agreement,
+# located here: https://www.magicleap.com/software-license-agreement-ml2
+# Terms and conditions applicable to third-party materials accompanying
+# this distribution may also be found in the top-level NOTICE file
+# appearing herein.
+# %COPYRIGHT_END%
+# ---------------------------------------------------------------------
+# %BANNER_END%
+
+cmake_minimum_required(VERSION 3.18.1)
+
+add_library(mikktspace STATIC
+        mikktspace.c
+)
+
+if (ML_TARGET STREQUAL ml2)
+    # nothing yet.
+else ()
+    target_compile_options(mikktspace PUBLIC -fPIC)
+endif ()
+
+target_include_directories(mikktspace PUBLIC ".")
+

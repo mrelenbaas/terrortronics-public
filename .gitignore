@@ -792,3 +792,7 @@ MIT/PycharmProjects/*/.idea/caches/build_file_checksums.ser
 **/latex/*
 **/Docs HTML/*
 **/Docs Latex/*
+OpenXR/openxr_samples/samples/plane_detection/app/build/intermediates/
+OpenXR/openxr_samples/samples/hand_tracking/app/build/intermediates/
+OpenXR/openxr_samples/samples/simple/app/build/intermediates/
+OpenXR/openxr_samples/samples/eye_gaze/app/build/intermediates/

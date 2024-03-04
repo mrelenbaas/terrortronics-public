@@ -1,0 +1,116 @@
+apply plugin: 'com.android.application'
+
+// When changing the two items below makes
+// sure to update the AndroidManifest.xml
+// and res/values/strings.xml to match.
+def application_name = "plane_detection";
+def application_id = "com.magicleap.capi.xr.sample." + application_name;
+
+def keystoreProperties = new Properties()
+def storeFilePrefix = ""
+if (project.hasProperty('root_path')) {
+    def keystorePropertiesFile = rootProject.file(root_path + "scripts/keystore.properties")
+    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+    storeFilePrefix = root_path
+}
+
+def useLocalDeps = 0
+if (project.hasProperty('use_local_deps')) {
+    useLocalDeps = use_local_deps
+}
+
+android {
+    compileSdkVersion 29
+    ndkVersion '25.0.8775105'
+    signingConfigs {
+        release {
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+            storeFile file(storeFilePrefix + keystoreProperties['storeFile'])
+            storePassword keystoreProperties['storePassword']
+        }
+    }
+
+    defaultConfig {
+        applicationId = application_id
+        minSdkVersion 29
+        targetSdkVersion 29
+        externalNativeBuild {
+            cmake {
+                arguments '-DANDROID_STL=c++_static', '-DAPP_ID=' + application_id, '-DAPP_NAME=' + application_name, '-DUSE_LOCAL_DEPS=' + useLocalDeps
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'),
+                    'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+
+    flavorDimensions 'cpuArch'
+    productFlavors {
+        ml2 {
+            dimension 'cpuArch'
+            ndk {
+                abiFilters 'x86_64'
+            }
+        }
+    }
+
+    externalNativeBuild {
+        cmake {
+            version '3.22.1+'
+            path 'src/main/cpp/CMakeLists.txt'
+        }
+
+        applicationVariants.all { variant ->
+            variant.outputs.all { output ->
+                outputFileName = applicationId;
+                if (variant.buildType.name == "release") {
+                    outputFileName += ".apk";
+                } else {
+                    outputFileName += "-debug.apk";
+                }
+            }
+        }
+    }
+    namespace application_id
+
+    lint {
+        disable 'ExpiredTargetSdkVersion'
+    }
+}
+
+gradle.projectsEvaluated {
+    task cleanCxx {
+        doLast {
+            delete project.file(".cxx")
+        }
+    }
+
+    task cleanCxxDebug {
+        doLast {
+            delete project.file(".cxx/Debug")
+        }
+    }
+
+    task cleanCxxRelease {
+        doLast {
+            delete project.file(".cxx/Release")
+        }
+    }
+
+    externalNativeBuildCleanMl2Debug.finalizedBy(cleanCxxDebug)
+    externalNativeBuildCleanMl2Release.finalizedBy(cleanCxxRelease)
+    clean.finalizedBy(cleanCxx)
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+}

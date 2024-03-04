@@ -1,0 +1,8 @@
+imgui,https://github.com/ocornut/imgui/archive/refs/tags/v1.88.zip,dcbd7d7786e1b507af3be287d37fd1ae
+openxr_source_sdk,https://github.com/KhronosGroup/OpenXR-SDK-Source/archive/refs/tags/release-1.0.29.zip,6f261f17e344ba360a4219ba3789557f
+tinygltf,https://github.com/syoyo/tinygltf/archive/refs/tags/v2.5.0.zip,8d38ad7ae8e557f2a8fc60a636335183
+vma,https://github.com/GPUOpen-LibrariesAndSDKs/VulkanMemoryAllocator/archive/refs/tags/v3.0.1.zip,22923b6c5f73cba34488153e262d837a
+vulkan_headers,https://github.com/KhronosGroup/Vulkan-Headers/archive/refs/tags/v1.3.215.zip,e968540deb47e8349f996a2354f4dd92
+stb,https://github.com/nothings/stb.git,af1a5bc352164740c1cc1354942b1c6b72eacb8a
+mio,https://github.com/mandreyel/mio.git,3f86a95c0784d73ce6815237ec33ed25f233b643
+MikkTSpace,https://github.com/mmikk/MikkTSpace.git,3e895b49d05ea07e4c2133156cfa94369e19e409

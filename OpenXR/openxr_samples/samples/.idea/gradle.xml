@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="testRunner" value="GRADLE" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="jbr-17" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/eye_gaze" />
+            <option value="$PROJECT_DIR$/eye_gaze/app" />
+            <option value="$PROJECT_DIR$/hand_tracking" />
+            <option value="$PROJECT_DIR$/hand_tracking/app" />
+            <option value="$PROJECT_DIR$/plane_detection" />
+            <option value="$PROJECT_DIR$/plane_detection/app" />
+            <option value="$PROJECT_DIR$/simple" />
+            <option value="$PROJECT_DIR$/simple/app" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
