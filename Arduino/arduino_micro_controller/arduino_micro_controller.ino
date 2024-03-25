@@ -30,9 +30,10 @@ void loop() {
     case updateTimerSuccessLessThanPeriod:
       break;
     case updateTimerSuccessGreaterThanPeriod:
-      minorTimerFunction();
       break;
   }
+  result = minorTimer.updateTimer();
+  result = stripTimer.updateTimer();
   timeoutTimer.updateTimer();
   for (unsigned int i = 0; i < buttonsSize; ++i) {
     if (buttons[i].updateButton() == 1) {
@@ -100,9 +101,119 @@ void loop() {
 // Timers //////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
 void mainTimerFunction() {
+  bool result;
   isBlocked = false;
   switch (state.getState()) {
     case stateAttract:
+      if (count > COUNT_MAX) {
+        lights[lightDebug].turnOff();
+        lights[lightRedLeft].turnOff();
+        lights[lightRedRight].turnOff();
+        lights[lightGreenLeft].turnOff();
+        lights[lightGreenRight].turnOff();
+        analogWrite(A0, ANALOG_MIN);
+        analogWrite(A1, ANALOG_MIN);
+        analogWrite(A2, ANALOG_MIN);
+        analogWrite(A3, ANALOG_MIN);
+        analogWrite(A4, ANALOG_MIN);
+        analogWrite(A5, ANALOG_MIN);
+        count = 0;
+      } else {
+        switch (count) {
+          case 1:
+            break;
+          case 2:
+            lights[lightDebug].turnOn();
+            break;
+          case 3:
+          case 4:
+          case 5:
+            break;
+          case 6:
+            lights[lightRedRight].turnOn();
+            break;
+          case 7:
+          case 8:
+          case 9:
+            break;
+          case 10:
+            lights[lightRedLeft].turnOn();
+            break;
+          case 11:
+          case 12:
+          case 13:
+            break;
+          case 14:
+            lights[lightGreenLeft].turnOn();
+            break;
+          case 15:
+          case 16:
+          case 17:
+            break;
+          case 18:
+            lights[lightGreenRight].turnOn();
+            break;
+          case 19:
+          case 20:
+          case 21:
+            break;
+          case 22:
+            analogWrite(A1, ANALOG_MAX);
+            break;
+          case 23:
+          case 24:
+            break;
+          case 25:
+            analogWrite(A2, ANALOG_MAX);
+            break;
+          case 26:
+          case 27:
+            break;
+          case 28:
+            analogWrite(A0, ANALOG_MAX);
+            break;
+          case 29:
+            break;
+          case 30:
+            analogWrite(A5, ANALOG_MAX);
+            break;
+          case 31:
+            break;
+          case 32:
+            analogWrite(A3, ANALOG_MAX);
+            break;
+          case 33:
+            break;
+          case 34:
+            analogWrite(A4, ANALOG_MAX);
+            break;
+          case 35:
+            break;
+          case 36:
+            break;
+        }
+        break;
+      case stateRunning:
+        break;
+      case stateTarget:
+        break;
+      case stateUntarget:
+        break;
+    }
+  }
+  ++count;
+}
+
+void stripTimerFunction() {
+  bool result;
+  switch (state.getState()) {
+    case stateAttract:
+      result = lights[lightRazer].turnOff();
+      result = lights[lightStripState].turnOff();
+      if (result == HIGH
+          && isStripBlocked == false) {
+        isStripBlocked = true;
+      }
       break;
     case stateRunning:
       break;
@@ -116,6 +227,12 @@ void mainTimerFunction() {
 void minorTimerFunction() {
   switch (state.getState()) {
     case stateAttract:
+      isStripOn = !isStripOn;
+      if (isStripOn) {
+        lights[lightStripPower].turnOn();
+      } else {
+        lights[lightStripPower].turnOff();
+      }
       break;
     case stateRunning:
       break;
@@ -143,8 +260,14 @@ void timeoutTimerFunction() {
 // Buttons /////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
 void startButtonFunctionPress() {
-  Serial.println("HERE");
-  lights[lightDebug].turnOn();
+  lights[lightRazer].turnOn();
+  result = lights[lightStripState].turnOn();
+  if (result = HIGH
+      && isStripBlocked == true) {
+    isStripBlocked = false;
+    stripTimer.reset();
+  }
+  /* TODO: Uncomment to reimplement IoTivity.
   if (!isTerminalStarted) {
     isTerminalStarted = true;
     startTerminal();
@@ -152,10 +275,10 @@ void startButtonFunctionPress() {
   } else {
     restartServer();
   }
+  */
 }
 
 void startButtonFunctionRelease() {
-  lights[lightDebug].turnOff();
 }
 
 ////////////////////////////////////////////////////////////////////////

@@ -165,8 +165,8 @@ class Light {
   public:
     Light(int);
     bool toggle();
-    void turnOn();
-    void turnOff();
+    bool turnOn();
+    bool turnOff();
   private:
     int pin;
     bool state;

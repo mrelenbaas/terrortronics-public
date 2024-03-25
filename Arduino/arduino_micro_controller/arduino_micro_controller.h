@@ -21,6 +21,7 @@
 // Function Stubs //////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
 void mainTimerFunction();
+void stripTimerFunction();
 void minorTimerFunction();
 void timeoutTimerFunction();
 void startTerminal();
@@ -32,8 +33,21 @@ void restartServer();
 // Pins ////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
 enum pinEnum {
-  pinButtonStart = 4,
-  pinLightDebug = 13
+  pinLightDebug = 5,
+  pinLightRazer = 6,
+  pinlightStripPowerPower = 7, // TODO: Fix capitalization.
+  pinlightStripPowerState = 8, // TODO: Fix capitalization.
+  pinLightRedLeft = 9,
+  pinLightRedRight = 10,
+  pinLightGreenLeft = 11,
+  pinLightGreenRight = 12,
+  pinButtonStart = 13,
+  //pinLightYellowRight = 14,
+  //pinLightBlueLeft = 15,
+  //pinLightBlueRight = 16,
+  //pinLightYellowLeft = 17,
+  //pinLightYellowMiddleleft = 18,
+  //pinLightYellowMiddleright = 19
 };
 
 ////////////////////////////////////////////////////////////////////////
@@ -53,8 +67,16 @@ SerialClient serialClient;
 ////////////////////////////////////////////////////////////////////////
 // Timers //////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
-const unsigned int MAIN_PERIOD = 3000L;
-Timer mainTimer = Timer(MAIN_PERIOD, mainTimerFunction);
+const unsigned int MAIN_PERIOD_MAX = 20;
+const unsigned int MAIN_PERIOD_MIN = 0;
+const unsigned int MAIN_PERIOD_STEP = 50;
+const unsigned int MINOR_PERIOD = 10000;
+const unsigned int STRIP_PERIOD = 300L;
+unsigned int mainPeriod = MAIN_PERIOD_MAX;
+bool isStripBlocked = true;
+Timer mainTimer = Timer(MAIN_PERIOD_MAX, mainTimerFunction);
+Timer minorTimer = Timer(MINOR_PERIOD, minorTimerFunction);
+Timer stripTimer = Timer(STRIP_PERIOD, stripTimerFunction);
 Timer timeoutTimer = Timer(TIMEOUT_PERIOD, timeoutTimerFunction);
 const long DELAY_BETWEEN_KEY_PRESS = 10;
 
@@ -80,11 +102,43 @@ unsigned int buttonsSize;
 ////////////////////////////////////////////////////////////////////////
 // Lights //////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
+const int ANALOG_MIN = 0;
+const int ANALOG_MAX = 255;
+const int COUNT_MIN = 0;
+const int COUNT_MAX = 72;
+int count;
+bool isStripOn;
 enum lightEnum {
-  lightDebug = 0
+  lightDebug = 0,
+  lightRazer = 1,
+  lightStripPower = 2,
+  lightStripState = 3,
+  lightRedLeft = 4,
+  lightRedRight = 5,
+  lightGreenLeft = 6,
+  lightGreenRight = 7,
+  //lightBlueLeft = 8,
+  //lightBlueRight = 9,
+  //lightYellowLeft = 10,
+  //lightYellowMiddleleft = 11,
+  //lightYellowMiddleright = 12,
+  //lightYellowRight = 13
 };
 Light lights[] {
-  Light(pinLightDebug)
+  Light(pinLightDebug),
+  Light(pinLightRazer),
+  Light(pinlightStripPowerPower),
+  Light(pinlightStripPowerState),
+  Light(pinLightRedLeft),
+  Light(pinLightRedRight),
+  Light(pinLightGreenLeft),
+  Light(pinLightGreenRight),
+  //Light(pinLightBlueLeft),
+  //Light(pinLightBlueRight),
+  //Light(pinLightYellowLeft),
+  //Light(pinLightYellowMiddleleft),
+  //Light(pinLightYellowMiddleright),
+  //Light(pinLightYellowRight)
 };
 
 ////////////////////////////////////////////////////////////////////////

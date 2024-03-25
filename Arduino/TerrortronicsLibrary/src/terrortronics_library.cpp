@@ -264,7 +264,9 @@ void ButtonActiveLow::reset() {
 ////////////////////////////////////////////////////////////////////////
 Light::Light(int pin) {
   this->pin = pin;
-  pinMode(pin, OUTPUT);
+  if (pin < 15) {
+    pinMode(pin, OUTPUT);
+  }
 }
 
 bool Light::toggle() {
@@ -278,12 +280,32 @@ bool Light::toggle() {
   return result;
 }
 
-void Light::turnOn() {
+bool Light::turnOn() {
+  bool result;
+  if (state == HIGH) {
+    return result;
+  }
+  result = true;
   state = HIGH;
-  digitalWrite(pin, state);
+  if (pin < 15) {
+    digitalWrite(pin, state);
+  } else {
+    analogWrite(pin, 200);
+  }
+  return result;
 }
 
-void Light::turnOff() {
+bool Light::turnOff() {
+  bool result;
+  if (state == LOW) {
+    return result;
+  }
+  result = true;
   state = LOW;
-  digitalWrite(pin, state);
+  if (pin < 15) {
+    digitalWrite(pin, state);
+  } else {
+    analogWrite(pin, 0);
+  }
+  return result;
 }
