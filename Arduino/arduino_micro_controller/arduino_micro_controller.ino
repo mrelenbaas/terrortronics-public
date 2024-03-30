@@ -16,8 +16,8 @@
 #include "arduino_micro_controller.h"
 
 void setup() {
-  Serial.begin(BAUD_RATE);
   Keyboard.begin();
+  Mouse.begin();
   state.startAttract();
   buttonsSize = sizeof(buttons) / sizeof(ButtonActiveLow);
 }
@@ -267,15 +267,14 @@ void startButtonFunctionPress() {
     isStripBlocked = false;
     stripTimer.reset();
   }
-  /* TODO: Uncomment to reimplement IoTivity.
   if (!isTerminalStarted) {
     isTerminalStarted = true;
     startTerminal();
-    startServer();
+    startChillHopLounge();
+    // startServer(); // TODO: Uncomment to reimplement IoTivity.
   } else {
-    restartServer();
+    // restartServer(); // TODO: Uncomment to reimplement IoTivity.
   }
-  */
 }
 
 void startButtonFunctionRelease() {
@@ -290,12 +289,25 @@ void startButtonFunctionRelease() {
 ////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////////
-// Reused Variables ////////////////////////////////////////////////////
+// Mouse and Keyboard //////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
+void startChillHopLounge() {
+  for (int i = 0; i < (sizeof(TERMINAL_STARTUP) / sizeof(char)); ++i) {
+    Keyboard.press(TERMINAL_STARTUP[i]);
+    delay(DELAY_BETWEEN_KEY_PRESS);
+    Keyboard.release(TERMINAL_STARTUP[i]);
+  }
+  Keyboard.press(KEY_RETURN);
+  delay(DELAY_BETWEEN_KEY_PRESS);
+  Keyboard.release(KEY_RETURN);
+  delay(DELAY_FOR_APPLICATION_LAUNCH);
+  Mouse.move(X_POSITION, Y_POSITION, 0);
+  delay(DELAY_BEFORE_CLICKS);
+  Mouse.click();
+  delay(DELAY_BETWEEN_CLICKS);
+  Mouse.click();
+}
 
-////////////////////////////////////////////////////////////////////////
-// Untested ////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////
 void startTerminal() {
   delay(5000);
   Keyboard.press(KEY_LEFT_CTRL);
@@ -447,3 +459,11 @@ void restartServer() {
   delay(1000);
   startServer();
 }
+
+////////////////////////////////////////////////////////////////////////
+// Reused Variables ////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////
+// Untested ////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
