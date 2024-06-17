@@ -1,21 +1,14 @@
 import os
-import pathlib
 import random
-import sched
-import sys
-import threading
-import time
 
 import pygame
 import pygame.mixer
-import serial
 
 import keyboard
 import outputer
 import pygame_background
 import pygame_cloud
 import pygame_tile
-import utility_file_io
 import utility_pygame
 
 
@@ -28,131 +21,131 @@ FRAMES_PER_SECOND = 60
 HOT_KEYBOARD = {
     # F Row Keys
     # REMEMBER: Esc key is used to teardown application.
-    'f1':282,
-    'f2':283,
-    'f3':284,
-    'f4':285,
-    'f5':286,
-    'f6':287,
-    'f7':288,
-    'f8':289,
-    'f9':290,
-    'f10':291,
-    'f11':292,
-    'f12':293,
+    'f1': 282,
+    'f2': 283,
+    'f3': 284,
+    'f4': 285,
+    'f5': 286,
+    'f6': 287,
+    'f7': 288,
+    'f8': 289,
+    'f9': 290,
+    'f10': 291,
+    'f11': 292,
+    'f12': 293,
     # REMEMBER: Music key is unknown by Pygame.
     # REMEMBER: Screen key is unknown by Pygame.
     # Print Screen Row Keys
-    'print_screen':316,
-    'scroll_lock':302,
-    'pause':19,
+    'print_screen': 316,
+    'scroll_lock': 302,
+    'pause': 19,
     # Mute Row Keys
     # REMEMBER: Mute key is unknown by Pygame.
     # REMEMBER: Sound down key is unknown by Pygame.
     # REMEMBER: Sound up key is unknown by Pygame.
     # REMEMBER: Calculator key is unknown by Pygame.
     # Number Row Keys
-    'tilde':96,
-    'one_top':49,
-    'two_top':50,
-    'three_top':51,
-    'four_top':52,
-    'five_top':53,
-    'six_top':54,
-    'seven_top':55,
-    'eight_top':56,
-    'nine_top':57,
-    'zero_top':48,
-    'minus_top':45,
-    'plus_top':61,
-    'backspace':8,
+    'tilde': 96,
+    'one_top': 49,
+    'two_top': 50,
+    'three_top': 51,
+    'four_top': 52,
+    'five_top': 53,
+    'six_top': 54,
+    'seven_top': 55,
+    'eight_top': 56,
+    'nine_top': 57,
+    'zero_top': 48,
+    'minus_top': 45,
+    'plus_top': 61,
+    'backspace': 8,
     # Insert Row Keys
-    'insert':247,
-    'home':278,
-    'page_up':280,
+    'insert': 247,
+    'home': 278,
+    'page_up': 280,
     # Num Lock Row Keys
-    'num_lock':300,
-    'divide':267,
-    'multiply':268,
-    'minus':269,
+    'num_lock': 300,
+    'divide': 267,
+    'multiply': 268,
+    'minus': 269,
     # Tab Row Keys
-    'tab':9,
-    'q':113,
-    'w':119,
-    'e':101,
-    'r':114,
-    't':216,
-    'y':221,
-    'u':117,
-    'i':105,
-    'o':111,
-    'p':112,
-    'left_bracket':91,
-    'right_bracket':93,
-    'backslash':92,
+    'tab': 9,
+    'q': 113,
+    'w': 119,
+    'e': 101,
+    'r': 114,
+    't': 216,
+    'y': 221,
+    'u': 117,
+    'i': 105,
+    'o': 111,
+    'p': 112,
+    'left_bracket': 91,
+    'right_bracket': 93,
+    'backslash': 92,
     # Delete Row Keys
-    'delete':127,
-    'end':279,
-    'page_down':281,
+    'delete': 127,
+    'end': 279,
+    'page_down': 281,
     # Seven Row Keys
-    'seven':263,
-    'eight':264,
-    'nine':265,
-    'plus':270,
+    'seven': 263,
+    'eight': 264,
+    'nine': 265,
+    'plus': 270,
     # Caps Lock Row Keys
-    'cap_locks':301,
-    'a':97,
-    's':115,
-    'd':100,
-    'f':102,
-    'g':104,
-    'h':105,
-    'j':106,
-    'k':107,
-    'l':108,
-    'semi_colon':59,
-    'comma':39,
-    'enter':13,
+    'cap_locks': 301,
+    'a': 97,
+    's': 115,
+    'd': 100,
+    'f': 102,
+    'g': 104,
+    'h': 105,
+    'j': 106,
+    'k': 107,
+    'l': 108,
+    'semi_colon': 59,
+    'comma': 39,
+    'enter': 13,
     # Four Row Keys
-    'four':260,
-    'five':261,
-    'six':262,
+    'four': 260,
+    'five': 261,
+    'six': 262,
     # Shift Row Keys
-    'shift_left':305,
-    'z':122,
-    'x':120,
-    'c':99,
-    'v':118,
-    'b':98,
-    'n':110,
-    'm':109,
-    ',':44,
-    '.':47,
-    'forwardslash':48,
-    'shift_right':303,
+    'shift_left': 305,
+    'z': 122,
+    'x': 120,
+    'c': 99,
+    'v': 118,
+    'b': 98,
+    'n': 110,
+    'm': 109,
+    ',': 44,
+    '.': 47,
+    'forwardslash': 48,
+    'shift_right': 303,
     # Up Arrow Row Keys
-    'arrow_up':273,
+    'arrow_up': 273,
     # One Row Keys
-    'one':257,
-    'two':258,
-    'three':259,
-    'enter_numpad':272,
+    'one': 257,
+    'two': 258,
+    'three': 259,
+    'enter_numpad': 272,
     # Ctrl Row Keys
-    'ctrl_left':306,
-    'windows':311,
-    'alt_left':308,
-    'space':32,
-    'alt_right':307,
-    'special':319,
+    'ctrl_left': 306,
+    'windows': 311,
+    'alt_left': 308,
+    'space': 32,
+    'alt_right': 307,
+    'special': 319,
     # REMEMBER: Function key is unknown by Pygame.
-    'ctrl_right':305,
+    'ctrl_right': 305,
     # Left Arrow Row Keys
-    'arrow_left':76,
-    'arrow_down':74,
-    'arrow_right':75,
+    'arrow_left': 76,
+    'arrow_down': 74,
+    'arrow_right': 75,
     # Zero Row Keys
-    'zero':256,
-    'period':266
+    'zero': 256,
+    'period': 266
 }
 
 
@@ -178,7 +171,6 @@ class Main:
             self.__game.get_screen())
         self.__clouds_background = pygame_cloud.Clouds(
             self.__game.get_screen())
-        # self.__clouds_foreground = pygame_cloud.Clouds(self.__game)
         self.__tiles = pygame_tile.Tiles(
             self.__game.get_screen(),
             "black",
